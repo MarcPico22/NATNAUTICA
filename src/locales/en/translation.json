@@ -12,8 +12,8 @@
     ]
   },
   "nav": {
-    "brandName": "NatNáutica",
-    "brandTagline": "Electronics & Naval Systems",
+    "brandName": "Netnautica",
+    "brandTagline": "Smart yachting technology",
     "links": {
       "solutions": "Solutions",
       "services": "Services",
@@ -23,11 +23,26 @@
     "cta": "Request a quote"
   },
   "hero": {
+    "badge": "Superyacht technology specialists",
     "eyebrow": "Trusted marine technology",
     "title": "We upgrade your vessel with smart electronic solutions and a dedicated technical crew.",
     "description": "From design to commissioning, we support shipowners, shipyards and professionals to ensure safe, efficient and connected navigation all year round.",
     "primary": "View solutions",
     "secondary": "Talk to a specialist",
+    "features": [
+      {
+        "label": "Premium integrations",
+        "detail": "Tailored technology and connectivity for superyachts over 30 metres."
+      },
+      {
+        "label": "Immersive experiences",
+        "detail": "AV, automation and secure networks curated for demanding guests."
+      },
+      {
+        "label": "Global 24/7 support",
+        "detail": "Deployable teams across the Mediterranean, Caribbean and key marinas."
+      }
+    ],
     "plan": {
       "title": "360° full service plan",
       "description": "Audit, installation, training and ongoing maintenance with tailored reports for every vessel.",
@@ -100,7 +115,7 @@
     "button": "Write an email"
   },
   "footer": {
-    "brand": "NatNáutica 2.0",
+    "brand": "Netnautica 2.0",
     "description": "Specialists in marine electronics and telecommunications since 1998.",
     "address": "Port of Valencia · Eastern Quay",
     "phone": "+34 689 123 456",

@@ -1,6 +1,7 @@
 ﻿import { useTranslation } from 'react-i18next';
 
 import LanguageSwitcher from './LanguageSwitcher';
+import logo from '../assets/netnautica-logo.png';
 
 const Navigation = () => {
   const { t } = useTranslation();
@@ -9,13 +10,13 @@ const Navigation = () => {
   return (
     <nav className="main-nav">
       <div className="container nav-content">
-        <div className="logo">
-          <span className="logo-mark">NN</span>
+        <a className="logo" href="#nosotros" aria-label={t('nav.brandName')}>
+          <img src={logo} alt={t('nav.brandName')} />
           <div className="logo-text">
             <strong>{t('nav.brandName')}</strong>
             <small>{t('nav.brandTagline')}</small>
           </div>
-        </div>
+        </a>
         <div className="nav-links">
           <a href="#soluciones">{links.solutions}</a>
           <a href="#servicios">{links.services}</a>

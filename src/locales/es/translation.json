@@ -12,8 +12,8 @@
     ]
   },
   "nav": {
-    "brandName": "NatNáutica",
-    "brandTagline": "Electrónica & Sistemas navales",
+    "brandName": "Netnautica",
+    "brandTagline": "Smart yachting technology",
     "links": {
       "solutions": "Soluciones",
       "services": "Servicios",
@@ -23,11 +23,26 @@
     "cta": "Solicitar propuesta"
   },
   "hero": {
+    "badge": "Especialistas en superyates",
     "eyebrow": "Tecnología naval de confianza",
     "title": "Evolucionamos tu embarcación con soluciones electrónicas inteligentes y un equipo técnico cercano.",
     "description": "Desde el diseño hasta la puesta en marcha, acompañamos a armadores, astilleros y profesionales para garantizar navegación segura, eficiente y conectada durante todo el año.",
     "primary": "Ver soluciones",
     "secondary": "Habla con un experto",
+    "features": [
+      {
+        "label": "Integración premium",
+        "detail": "Tecnología y conectividad a medida para superyates de más de 30 metros."
+      },
+      {
+        "label": "Experiencias inmersivas",
+        "detail": "Sistemas AV, domótica y redes seguras para huéspedes exigentes."
+      },
+      {
+        "label": "Soporte global 24/7",
+        "detail": "Equipos desplazables en Mediterráneo, Caribe y puertos estratégicos."
+      }
+    ],
     "plan": {
       "title": "Plan integral 360°",
       "description": "Auditoría, instalación, formación y mantenimiento continuo con informes personalizados para cada embarcación.",
@@ -100,7 +115,7 @@
     "button": "Escribir correo"
   },
   "footer": {
-    "brand": "NatNáutica 2.0",
+    "brand": "Netnautica 2.0",
     "description": "Especialistas en electrónica y telecomunicaciones navales desde 1998.",
     "address": "Puerto de Valencia · Muelle de Levante",
     "phone": "+34 689 123 456",
