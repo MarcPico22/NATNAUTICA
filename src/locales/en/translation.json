@@ -1,124 +1,314 @@
-﻿{
+{
   "language": {
-    "selectLabel": "Language",
+    "label": "Language",
+    "selectLabel": "Select language",
     "es": "Spanish",
-    "en": "English"
+    "en": "English",
+    "fr": "French"
   },
   "announcement": {
     "items": [
-      "Technical support across the Mediterranean coast",
-      "info@natnautica.es",
-      "+34 689 123 456"
+      "Telematics & computer engineers for luxury yachts",
+      "Based in Palma de Mallorca",
+      "hello@netnautica.es"
     ]
   },
   "nav": {
     "brandName": "Netnautica",
-    "brandTagline": "Smart yachting technology",
     "links": {
-      "solutions": "Solutions",
+      "solutions": "About",
       "services": "Services",
-      "about": "About",
+      "technology": "Technology",
       "contact": "Contact"
     },
-    "cta": "Request a quote"
+    "cta": "Request consultation",
+    "menuToggle": "Open or close navigation"
   },
   "hero": {
-    "badge": "Superyacht technology specialists",
-    "eyebrow": "Trusted marine technology",
-    "title": "We upgrade your vessel with smart electronic solutions and a dedicated technical crew.",
-    "description": "From design to commissioning, we support shipowners, shipyards and professionals to ensure safe, efficient and connected navigation all year round.",
-    "primary": "View solutions",
-    "secondary": "Talk to a specialist",
+    "badge": "Boutique engineering for yachts",
+    "eyebrow": "Connectivity, cybersecurity & AV mastery",
+    "title": "We craft resilient technology ecosystems for yachts that demand safety and comfort at sea.",
+    "description": "We are telematics and computer engineers. Founded in 2024, we have already delivered our first end-to-end project featuring Starlink connectivity, secure networks and bespoke AV automation. We design, integrate and support every detail as if we were sailing with you.",
+    "primary": "Explore services",
+    "secondary": "Talk to an engineer",
     "features": [
       {
-        "label": "Premium integrations",
-        "detail": "Tailored technology and connectivity for superyachts over 30 metres."
+        "label": "Certified team",
+        "detail": "Specialists in satellite communications, secure networking and onboard automation."
       },
       {
-        "label": "Immersive experiences",
-        "detail": "AV, automation and secure networks curated for demanding guests."
+        "label": "Founder-led delivery",
+        "detail": "Direct involvement of the founders across planning, installation and long-term support."
       },
       {
-        "label": "Global 24/7 support",
-        "detail": "Deployable teams across the Mediterranean, Caribbean and key marinas."
+        "label": "Resilient architectures",
+        "detail": "Automatic failover networks, proactive cybersecurity and remote monitoring."
       }
     ],
     "plan": {
-      "title": "360° full service plan",
-      "description": "Audit, installation, training and ongoing maintenance with tailored reports for every vessel.",
+      "title": "Our commitment",
+      "description": "Full lifecycle partnership: audit, execution and remote support to keep your vessel always connected.",
       "stats": [
         {
-          "value": "150+",
-          "label": "Marine projects delivered successfully"
+          "id": "projects",
+          "value": "01",
+          "label": "Complete superyacht project delivered"
         },
         {
-          "value": "25",
-          "label": "Years of combined experience in our technical team"
+          "id": "year",
+          "value": "2024",
+          "label": "Launch year of Netnautica"
         },
         {
-          "value": "48h",
-          "label": "Average response time for emergency services"
+          "id": "team",
+          "value": "Engineering",
+          "label": "Telematics + computer science with a marine focus"
         }
       ]
     }
   },
   "solutions": {
-    "eyebrow": "Tailored solutions",
-    "title": "We integrate leading technology for every type of vessel",
-    "description": "We partner with top manufacturers to deploy robust systems that enhance safety, comfort and energy efficiency for leisure and professional fleets alike.",
-    "more": "Learn more →",
+    "eyebrow": "Who we are",
+    "title": "Next-generation marine engineering for ambitious new projects",
+    "description": "Netnautica was born to elevate luxury yacht technology with a boutique mindset. From Palma de Mallorca we partner with captains, shipyards and owners in every international marina.",
+    "highlights": [
+      "Experience in critical networks and cybersecurity",
+      "Installations personally supervised by the founders",
+      "Planning, execution and after-project care"
+    ],
     "items": [
       {
         "icon": "🧭",
-        "title": "Navigation systems",
-        "description": "Installation and upkeep of radars, autopilots, electronic charts and next-generation sensors."
+        "title": "Specialist engineers",
+        "description": "Telematics and computer science backgrounds with certifications in networking, satellite and marine electronics."
       },
       {
-        "icon": "📡",
-        "title": "Marine communications",
-        "description": "End-to-end radio, satellite, AIS and data network solutions for reliable offshore connectivity."
+        "icon": "🛠️",
+        "title": "Extreme integration",
+        "description": "We combine connectivity, cybersecurity, AV, IoT and NMEA 2000 monitoring in a single coherent ecosystem."
       },
       {
-        "icon": "⚡",
-        "title": "Power and control",
-        "description": "Electrical panels, smart batteries and monitoring systems that optimise onboard energy performance."
+        "icon": "🤝",
+        "title": "Long-term partners",
+        "description": "Remote follow-up, scheduled audits and preventive support so the crew can sail with confidence."
       }
     ]
   },
   "services": {
-    "eyebrow": "Specialised services",
-    "title": "We manage the full lifecycle of your electronic equipment",
-    "description": "We coordinate turnkey projects: design, certified installation, calibration, onboard training and preventive support to avoid unexpected downtime.",
+    "eyebrow": "Flagship services",
+    "title": "Solutions that balance comfort, security and global connectivity",
+    "description": "Click each service to discover how we deploy it on board your yacht.",
     "items": [
       {
-        "title": "Expert consulting",
-        "description": "Specialised engineers who tailor every project to the needs of each vessel."
+        "id": "connectivity",
+        "title": "Worldwide Connectivity",
+        "subtitle": "Yacht connectivity systems",
+        "summary": "Multi-WAN architecture with Starlink, 4G/5G and optimised WiFi 6 networks for large vessels.",
+        "headline": "Global Coverage",
+        "subheadline": "Stay connected anywhere in the world",
+        "features": [
+          "Infrastructure to support multiple internet connections with automatic failover",
+          "Starlink LEO constellation and 4G/5G cellular communication systems",
+          "Optimized WiFi networks for maximum onboard comfort and performance",
+          "Advanced QoS management for priority applications"
+        ]
       },
       {
-        "title": "End-to-end integrations",
-        "description": "We coordinate multi-brand equipment to deliver a seamless navigation experience."
+        "id": "cyber",
+        "title": "Cybersecurity",
+        "subtitle": "Yacht cybersecurity systems",
+        "summary": "Robust digital perimeters with next-gen firewalls, segmentation and ongoing monitoring.",
+        "headline": "Digital Fortress at Sea",
+        "subheadline": "Protection for your connected yacht ecosystem",
+        "features": [
+          "Next-gen firewalls configuration",
+          "Multi-layered network segmentation",
+          "Security audits and vulnerability assessments",
+          "IoT device security and firmware update management"
+        ]
       },
       {
-        "title": "24/7 support",
-        "description": "Always-on technical service to solve issues quickly in any harbour."
+        "id": "av",
+        "title": "AV System Integration",
+        "subtitle": "Yacht AV entertainment systems",
+        "summary": "Tailored audiovisual experiences with centralised control and venue-specific acoustics.",
+        "headline": "Cinematic Experience at Sea",
+        "subheadline": "AV systems for ultimate luxury entertainment",
+        "features": [
+          "Multi-room video distribution with 4K matrix switching",
+          "Conference and presentation systems for business meetings",
+          "Custom soundproofing solutions",
+          "Distributed audio system with zone control",
+          "IPTV & Plex Server Stream"
+        ]
+      },
+      {
+        "id": "iot",
+        "title": "IoT & Video Surveillance Systems",
+        "subtitle": "Yacht IoT automation systems",
+        "summary": "Automation, intelligent lighting and centralised surveillance with secure remote access.",
+        "headline": "Intelligent Control & Security",
+        "subheadline": "Advanced automation with comprehensive video monitoring",
+        "features": [
+          "Centralized smart home automation platform",
+          "Smart lighting systems",
+          "Guest cabin personalization with individual environment controls",
+          "Remote surveillance access via mobile applications and web portals",
+          "Real-time streaming capabilities for multiple viewing stations"
+        ]
+      }
+    ]
+  },
+  "technologies": {
+    "eyebrow": "Trusted technology",
+    "title": "We deploy brands that set the onboard benchmark",
+    "description": "Hardware and software carefully curated to deliver resilience, performance and security on every crossing.",
+    "items": [
+      {
+        "slug": "starlink",
+        "name": "Starlink",
+        "tagline": "LEO satellite connectivity",
+        "description": "Flat High Performance antennas with remote management and maritime-optimised plans."
+      },
+      {
+        "slug": "unifi",
+        "name": "Ubiquiti UniFi",
+        "tagline": "WiFi 6 and managed switching",
+        "description": "Controller-driven access points for seamless coverage across every deck."
+      },
+      {
+        "slug": "peplink",
+        "name": "Peplink",
+        "tagline": "Bonding & multi-WAN routers",
+        "description": "Dynamic load balancing, SD-WAN orchestration and cloud monitoring for satellite + 4G/5G setups."
+      },
+      {
+        "slug": "fortinet",
+        "name": "Fortinet",
+        "tagline": "Cybersecurity & SASE",
+        "description": "Next-generation firewalls, Zero Trust policies and managed services to shield every onboard device."
+      },
+      {
+        "slug": "crestron",
+        "name": "Crestron",
+        "tagline": "AV control & automation",
+        "description": "Tailored interfaces, smart scenes and integration with hotel-style entertainment."
+      },
+      {
+        "slug": "nmea2000",
+        "name": "NMEA 2000",
+        "tagline": "Marine systems integration",
+        "description": "Real-time telemetry and critical data monitoring for a truly connected bridge."
       }
     ]
   },
   "partners": {
-    "eyebrow": "Certified partners",
-    "items": ["Raymarine", "Garmin", "Simrad", "Furuno", "B&G"]
+    "eyebrow": "Global coverage",
+    "title": "Based in Palma · Operating worldwide",
+    "description": "From Palma de Mallorca we coordinate deployments to the Balearics, Barcelona, the Côte d'Azur and any international marina along your itinerary.",
+    "items": [
+      {
+        "title": "24/7 remote support",
+        "description": "Proactive monitoring, guided troubleshooting and crew coordination to minimise downtime."
+      },
+      {
+        "title": "Tailored technical visits",
+        "description": "Scheduled interventions and full audits ahead of crossings or crew rotations."
+      },
+      {
+        "title": "Expert network",
+        "description": "Collaboration with certified shipyards, electrical installers and marine automation specialists."
+      }
+    ]
   },
   "cta": {
-    "eyebrow": "Get in touch",
-    "title": "Schedule a technical visit or request an onboard demo",
-    "description": "Tell us what you need and we will prepare a tailored proposal for your vessel or fleet. We operate from Valencia, Alicante, the Balearic Islands and Barcelona.",
-    "button": "Write an email"
+    "eyebrow": "Request Consultation",
+    "title": "Schedule a strategic session with our team",
+    "description": "Share the current state of your yacht and we'll build a realistic technology roadmap—no overstatements.",
+    "contact": {
+      "emailLabel": "Direct email",
+      "email": "hello@netnautica.es",
+      "phoneLabel": "Immediate assistance",
+      "phone": "+34 689 123 456",
+      "phoneHref": "+34689123456"
+    },
+    "form": {
+      "title": "Request a tailored consultation",
+      "subtitle": "Tell us what you need and we'll prepare a realistic technology roadmap for your yacht.",
+      "progress": [
+        "Contact",
+        "Project",
+        "Schedule"
+      ],
+      "steps": {
+        "contact": {
+          "title": "Your contact details",
+          "description": "We use this information to share the proposal and coordinate the technical session.",
+          "fields": {
+            "name": "Full name *",
+            "email": "Corporate email *",
+            "phone": "Contact phone *",
+            "company": "Company / Yacht name"
+          }
+        },
+        "project": {
+          "title": "Current setup & goals",
+          "description": "Pick your priority services and add context so we can prepare the meeting.",
+          "fields": {
+            "service": "Services of interest",
+            "needs": "Describe your needs, current setup, and expectations...",
+            "attachment": "Yacht deck plan, rack photo, or documentation (optional)",
+            "attachmentHint": "Accepted formats: PDF, PNG, JPG. Maximum 10 MB."
+          },
+          "services": [
+            "Worldwide Connectivity",
+            "Cybersecurity",
+            "AV System Integration",
+            "IoT & Video Surveillance",
+            "Other / Full engineering scope"
+          ]
+        },
+        "schedule": {
+          "title": "Schedule your technical visit",
+          "description": "Suggest a preferred date and time. We confirm within one business hour.",
+          "fields": {
+            "date": "Preferred date *",
+            "time": "Preferred time *",
+            "timezone": "Time zone"
+          },
+          "confirmation": "An automatic confirmation email with next steps is sent immediately."
+        }
+      },
+      "actions": {
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Send consultation request",
+        "saving": "Sending..."
+      },
+      "validations": {
+        "required": "This field is required.",
+        "email": "Enter a valid email address.",
+        "phone": "Enter a valid phone number.",
+        "date": "Select a valid date.",
+        "time": "Select a valid time.",
+        "file": "The file exceeds the 10 MB limit."
+      },
+      "upload": {
+        "button": "Attach file",
+        "placeholder": "No file selected",
+        "remove": "Remove file"
+      },
+      "policy": "Your information is secure and will only be used to contact you about our services.",
+      "success": "Thank you. We have received your request and will get back within one business hour.",
+      "autoReply": "An automated confirmation email with helpful links has been sent.",
+      "subtitleReview": "Review the details before submitting."
+    }
   },
   "footer": {
-    "brand": "Netnautica 2.0",
-    "description": "Specialists in marine electronics and telecommunications since 1998.",
-    "address": "Port of Valencia · Eastern Quay",
+    "brand": "Netnautica",
+    "description": "Telematics and computer engineering for luxury yachts. Founded in 2024 in Palma de Mallorca.",
+    "address": "Based in Palma · Operating worldwide",
     "phone": "+34 689 123 456",
-    "email": "info@natnautica.es"
+    "email": "hello@netnautica.es"
   }
 }

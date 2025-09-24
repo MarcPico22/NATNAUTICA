@@ -1,0 +1,314 @@
+﻿{
+    "language":  {
+                     "label":  "Langue",
+                     "selectLabel":  "Choisir la langue",
+                     "es":  "Espagnol",
+                     "en":  "Anglais",
+                     "fr":  "FranÃ§ais"
+                 },
+    "announcement":  {
+                         "items":  [
+                                       "IngÃ©nieurs tÃ©lÃ©coms et informatiques pour yachts de luxe",
+                                       "BasÃ©s Ã  Palma de Majorque",
+                                       "hello@netnautica.es"
+                                   ]
+                     },
+    "nav":  {
+                "brandName":  "Netnautica",
+                "links":  {
+                              "solutions":  "Ã€ propos",
+                              "services":  "Services",
+                              "technology":  "Technologie",
+                              "contact":  "Contact"
+                          },
+                "cta":  "Demander une consultation",
+                "menuToggle":  "Ouvrir ou fermer la navigation"
+            },
+    "hero":  {
+                 "badge":  "IngÃ©nierie boutique pour yachts",
+                 "eyebrow":  "ConnectivitÃ©, cybersÃ©curitÃ© \u0026 AV haut de gamme",
+                 "title":  "Nous crÃ©ons des Ã©cosystÃ¨mes technologiques fiables pour des yachts qui exigent sÃ©curitÃ© et confort en mer.",
+                 "description":  "Nous sommes des ingÃ©nieurs en tÃ©lÃ©communications et en informatique. FondÃ©s en 2024, nous avons dÃ©jÃ  livrÃ© notre premier projet clÃ© en main avec connectivitÃ© Starlink, rÃ©seaux sÃ©curisÃ©s et automatisation AV sur mesure. Nous concevons, intÃ©grons et assurons le suivi de chaque dÃ©tail comme si nous naviguions avec vous.",
+                 "primary":  "DÃ©couvrir les services",
+                 "secondary":  "Parler Ã  un ingÃ©nieur",
+                 "features":  [
+                                  {
+                                      "label":  "Ã‰quipe certifiÃ©e",
+                                      "detail":  "SpÃ©cialistes des communications satellitaires, des rÃ©seaux sÃ©curisÃ©s et de l\u0027automatisation Ã  bord."
+                                  },
+                                  {
+                                      "label":  "Suivi par les fondateurs",
+                                      "detail":  "Implication directe des fondateurs dans la planification, l\u0027installation et l\u0027assistance continue."
+                                  },
+                                  {
+                                      "label":  "Architectures rÃ©silientes",
+                                      "detail":  "RÃ©seaux Ã  basculement automatique, cybersÃ©curitÃ© proactive et supervision Ã  distance."
+                                  }
+                              ],
+                 "plan":  {
+                              "title":  "Notre engagement",
+                              "description":  "Partenariat sur tout le cycle de vie : audit, exÃ©cution et support Ã  distance pour rester connectÃ© en permanence.",
+                              "stats":  [
+                                            {
+                                                "id":  "projects",
+                                                "value":  "01",
+                                                "label":  "Projet complet livrÃ© sur superyacht"
+                                            },
+                                            {
+                                                "id":  "year",
+                                                "value":  "2024",
+                                                "label":  "AnnÃ©e de lancement de Netnautica"
+                                            },
+                                            {
+                                                "id":  "team",
+                                                "value":  "IngÃ©nierie",
+                                                "label":  "TÃ©lÃ©coms + informatique avec vision marine"
+                                            }
+                                        ]
+                          }
+             },
+    "solutions":  {
+                      "eyebrow":  "Qui sommes-nous",
+                      "title":  "IngÃ©nierie marine nouvelle gÃ©nÃ©ration pour des projets ambitieux",
+                      "description":  "Netnautica est nÃ©e pour Ã©lever la technologie des yachts de luxe avec une approche boutique. Depuis Palma de Majorque, nous accompagnons capitaines, chantiers et propriÃ©taires dans chaque port international.",
+                      "highlights":  [
+                                         "ExpÃ©rience en rÃ©seaux critiques et cybersÃ©curitÃ©",
+                                         "Installations supervisÃ©es directement par les fondateurs",
+                                         "Planification, exÃ©cution et suivi post-projet"
+                                     ],
+                      "items":  [
+                                    {
+                                        "icon":  "ðŸ§­",
+                                        "title":  "IngÃ©nieurs spÃ©cialisÃ©s",
+                                        "description":  "Profils en tÃ©lÃ©communications et informatique avec certifications en rÃ©seaux, satellite et Ã©lectronique navale."
+                                    },
+                                    {
+                                        "icon":  "ðŸ› ï¸",
+                                        "title":  "IntÃ©gration extrÃªme",
+                                        "description":  "Nous unifions connectivitÃ©, cybersÃ©curitÃ©, AV, IoT et supervision NMEA 2000 dans un mÃªme Ã©cosystÃ¨me."
+                                    },
+                                    {
+                                        "icon":  "ðŸ¤",
+                                        "title":  "Partenaires durables",
+                                        "description":  "Suivi Ã  distance, audits programmÃ©s et support prÃ©ventif pour naviguer l\u0027esprit tranquille."
+                                    }
+                                ]
+                  },
+    "services":  {
+                     "eyebrow":  "Services phares",
+                     "title":  "Des solutions qui allient confort, sÃ©curitÃ© et connectivitÃ© mondiale",
+                     "description":  "Cliquez sur chaque service pour dÃ©couvrir notre maniÃ¨re de le dÃ©ployer Ã  bord.",
+                     "items":  [
+                                   {
+                                       "id":  "connectivity",
+                                       "title":  "Connectivité mondiale",
+                                       "subtitle":  "Systèmes de connectivité pour yachts",
+                                       "summary":  "Architecture multi-WAN avec Starlink, 4G/5G et réseaux WiFi 6 optimisés pour les grandes unités.",
+                                       "headline":  "Couverture globale",
+                                       "subheadline":  "Restez connectés partout dans le monde",
+                                       "features":  [
+                                                        "Infrastructure pour plusieurs liaisons internet avec bascule automatique.",
+                                                        "Constellation Starlink LEO et communications cellulaires 4G/5G.",
+                                                        "Réseaux WiFi 6 optimisés pour un confort et des performances maximales à bord.",
+                                                        "Gestion QoS avancée pour les applications prioritaires."
+                                                    ]
+                                   },
+                                   {
+                                       "id":  "cyber",
+                                       "title":  "Cybersécurité",
+                                       "subtitle":  "Systèmes de cybersécurité pour yachts",
+                                       "summary":  "Nous concevons des périmètres numériques robustes : firewalls nouvelle génération, segmentation et supervision continue.",
+                                       "headline":  "Forteresse numérique en mer",
+                                       "subheadline":  "Protégez l’écosystème connecté de votre yacht",
+                                       "features":  [
+                                                        "Configuration de firewalls nouvelle génération.",
+                                                        "Segmentation réseau multicouche.",
+                                                        "Audits de sécurité et analyses de vulnérabilités.",
+                                                        "Sécurisation des appareils IoT et gestion des firmwares."
+                                                    ]
+                                   },
+                                   {
+                                       "id":  "av",
+                                       "title":  "Intégration de systèmes AV",
+                                       "subtitle":  "Divertissement audiovisuel pour yachts",
+                                       "summary":  "Expériences audiovisuelles sur mesure avec contrôle centralisé et acoustique adaptée à chaque zone.",
+                                       "headline":  "Expérience cinématographique en mer",
+                                       "subheadline":  "Des systèmes AV pour un divertissement haut de gamme",
+                                       "features":  [
+                                                        "Distribution vidéo multi-zone avec matrices 4K.",
+                                                        "Systèmes de conférence et de présentation pour réunions à bord.",
+                                                        "Solutions acoustiques personnalisées.",
+                                                        "Audio distribué avec contrôle par zone.",
+                                                        "Streaming IPTV et serveur Plex sur mesure."
+                                                    ]
+                                   },
+                                   {
+                                       "id":  "iot",
+                                       "title":  "Systèmes IoT et vidéosurveillance",
+                                       "subtitle":  "Automatisation IoT pour yachts",
+                                       "summary":  "Automatisation, éclairage intelligent et vidéosurveillance centralisée avec accès distant sécurisé.",
+                                       "headline":  "Contrôle intelligent et sécurité",
+                                       "subheadline":  "Automatisation avancée avec vidéosurveillance intégrée",
+                                       "features":  [
+                                                        "Plateforme centralisée d’automatisation à bord.",
+                                                        "Systèmes d’éclairage intelligent.",
+                                                        "Personnalisation des cabines avec contrôle individuel de l’ambiance.",
+                                                        "Accès distant sécurisé via applications mobiles et portails web.",
+                                                        "Streaming en temps réel pour plusieurs postes de visualisation."
+                                                    ]
+                                   }
+                               ]
+                 },
+    "technologies":  {
+                         "eyebrow":  "Technologie de confiance",
+                         "title":  "Nous choisissons des fabricants qui font rÃ©fÃ©rence Ã  bord",
+                         "description":  "MatÃ©riel et logiciels triÃ©s sur le volet pour garantir rÃ©silience, performances et sÃ©curitÃ© Ã  chaque traversÃ©e.",
+                         "items":  [
+                                       {
+                                           "slug":  "starlink",
+                                           "name":  "Starlink",
+                                           "tagline":  "ConnectivitÃ© satellite LEO",
+                                           "description":  "Antennes Flat High Performance avec gestion Ã  distance et forfaits maritimes optimisÃ©s."
+                                       },
+                                       {
+                                           "slug":  "unifi",
+                                           "name":  "Ubiquiti UniFi",
+                                           "tagline":  "WiFi 6 et commutation gÃ©rÃ©e",
+                                           "description":  "Points d\u0027accÃ¨s pilotÃ©s par contrÃ´leur pour une couverture homogÃ¨ne sur tous les ponts."
+                                       },
+                                       {
+                                           "slug":  "peplink",
+                                           "name":  "Peplink",
+                                           "tagline":  "Routeurs bonding \u0026 multi-WAN",
+                                           "description":  "RÃ©partition dynamique, SD-WAN et monitoring cloud pour combiner satellite et 4G/5G."
+                                       },
+                                       {
+                                           "slug":  "fortinet",
+                                           "name":  "Fortinet",
+                                           "tagline":  "CybersÃ©curitÃ© \u0026 SASE",
+                                           "description":  "Firewalls nouvelle gÃ©nÃ©ration, politiques Zero Trust et services managÃ©s pour sÃ©curiser chaque appareil."
+                                       },
+                                       {
+                                           "slug":  "crestron",
+                                           "name":  "Crestron",
+                                           "tagline":  "ContrÃ´le et automatisation AV",
+                                           "description":  "Interfaces personnalisÃ©es, scÃ©narios intelligents et intÃ©gration avec les systÃ¨mes de divertissement."
+                                       },
+                                       {
+                                           "slug":  "nmea2000",
+                                           "name":  "NMEA 2000",
+                                           "tagline":  "IntÃ©gration systÃ¨mes marins",
+                                           "description":  "TÃ©lÃ©mÃ©trie en temps rÃ©el et surveillance des donnÃ©es critiques pour une passerelle connectÃ©e."
+                                       }
+                                   ]
+                     },
+    "partners":  {
+                     "eyebrow":  "Couverture mondiale",
+                     "title":  "BasÃ©s Ã  Palma Â· OpÃ©rations worldwide",
+                     "description":  "Depuis Palma de Majorque, nous coordonnons des interventions aux BalÃ©ares, Barcelone, CÃ´te d\u0027Azur et dans tout port international selon votre itinÃ©raire.",
+                     "items":  [
+                                   {
+                                       "title":  "Support Ã  distance 24/7",
+                                       "description":  "Supervision proactive, assistance guidÃ©e et coordination avec l\u0027Ã©quipage pour rÃ©duire les arrÃªts."
+                                   },
+                                   {
+                                       "title":  "Visites techniques sur mesure",
+                                       "description":  "Interventions planifiÃ©es et audits complets avant traversÃ©es ou rotations d\u0027Ã©quipage."
+                                   },
+                                   {
+                                       "title":  "RÃ©seau d\u0027experts",
+                                       "description":  "Collaboration avec chantiers certifiÃ©s, installateurs Ã©lectriques et spÃ©cialistes de la domotique marine."
+                                   }
+                               ]
+                 },
+    "cta":  {
+                "eyebrow":  "Request Consultation",
+                "title":  "Planifiez une session stratÃ©gique avec notre Ã©quipe",
+                "description":  "DÃ©crivez l\u0027Ã©tat actuel de votre yacht et nous construirons une feuille de route technologique rÃ©aliste, sans exagÃ©ration.",
+                "contact":  {
+                                "emailLabel":  "Email direct",
+                                "email":  "hello@netnautica.es",
+                                "phoneLabel":  "Assistance immÃ©diate",
+                                "phone":  "+34 689 123 456",
+                                "phoneHref":  "+34689123456"
+                            },
+                "form":  {
+                             "title":  "Demandez une consultation personnalisÃ©e",
+                             "subtitle":  "Expliquez-nous vos besoins et nous prÃ©parerons une feuille de route technologique rÃ©aliste.",
+                             "progress":  [
+                                              "Contact",
+                                              "Projet",
+                                              "Agenda"
+                                          ],
+                             "steps":  {
+                                           "contact":  {
+                                                           "title":  "Vos coordonnÃ©es",
+                                                           "description":  "Nous utilisons ces informations pour partager la proposition et planifier la session technique.",
+                                                           "fields":  {
+                                                                          "name":  "Nom complet *",
+                                                                          "email":  "Email professionnel *",
+                                                                          "phone":  "TÃ©lÃ©phone de contact *",
+                                                                          "company":  "Entreprise / Nom du yacht"
+                                                                      }
+                                                       },
+                                           "project":  {
+                                                           "title":  "Configuration actuelle \u0026 objectifs",
+                                                           "description":  "SÃ©lectionnez les services prioritaires et donnez du contexte pour prÃ©parer la rÃ©union.",
+                                                           "fields":  {
+                                                                          "service":  "Services prioritaires",
+                                                                          "needs":  "DÃ©crivez vos besoins, lâ€™installation actuelle et vos attentes...",
+                                                                          "attachment":  "Plan du bateau, rack ou documentation (optionnel)",
+                                                                          "attachmentHint":  "Formats acceptÃ©s : PDF, PNG, JPG. Maximum 10 Mo."
+                                                                      },
+                                                           "services":  [
+                                                                            "Worldwide Connectivity",
+                                                                            "Cybersecurity",
+                                                                            "AV System Integration",
+                                                                            "IoT \u0026 Video Surveillance",
+                                                                            "Autre / Accompagnement complet"
+                                                                        ]
+                                                       },
+                                           "schedule":  {
+                                                            "title":  "Planifiez votre visite technique",
+                                                            "description":  "Proposez une date et une heure prÃ©fÃ©rÃ©es. Confirmation sous une heure ouvrÃ©e.",
+                                                            "fields":  {
+                                                                           "date":  "Date souhaitÃ©e *",
+                                                                           "time":  "Heure souhaitÃ©e *",
+                                                                           "timezone":  "Fuseau horaire"
+                                                                       },
+                                                            "confirmation":  "Un email de confirmation automatique avec les prochaines Ã©tapes vous est envoyÃ© immÃ©diatement."
+                                                        }
+                                       },
+                             "actions":  {
+                                             "back":  "Retour",
+                                             "next":  "Continuer",
+                                             "submit":  "Envoyer la demande de consultation",
+                                             "saving":  "Envoi..."
+                                         },
+                             "validations":  {
+                                                 "required":  "Ce champ est obligatoire.",
+                                                 "email":  "Saisissez un email valide.",
+                                                 "phone":  "Saisissez un numÃ©ro de tÃ©lÃ©phone valide.",
+                                                 "date":  "SÃ©lectionnez une date valide.",
+                                                 "time":  "SÃ©lectionnez une heure valide.",
+                                                 "file":  "Le fichier dÃ©passe la limite de 10 Mo."
+                                             },
+                             "upload":  {
+                                            "button":  "Joindre un fichier",
+                                            "placeholder":  "Aucun fichier sÃ©lectionnÃ©",
+                                            "remove":  "Supprimer le fichier"
+                                        },
+                             "policy":  "Your information is secure and will only be used to contact you about our services.",
+                             "success":  "Merci. Votre demande a Ã©tÃ© reÃ§ue. Nous revenons vers vous sous une heure ouvrÃ©e.",
+                             "autoReply":  "Un email de confirmation automatique avec des liens utiles vient de vous Ãªtre envoyÃ©.",
+                             "subtitleReview":  "VÃ©rifiez les informations avant de soumettre."
+                         }
+            },
+    "footer":  {
+                   "brand":  "Netnautica",
+                   "description":  "IngÃ©nierie tÃ©lÃ©com et informatique pour yachts de luxe. FondÃ©e en 2024 Ã  Palma de Majorque.",
+                   "address":  "BasÃ©s Ã  Palma Â· OpÃ©rations worldwide",
+                   "phone":  "+34 689 123 456",
+                   "email":  "hello@netnautica.es"
+               }
+}

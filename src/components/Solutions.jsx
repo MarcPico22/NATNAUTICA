@@ -1,15 +1,23 @@
-﻿import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const Solutions = () => {
   const { t } = useTranslation();
   const items = t('solutions.items', { returnObjects: true });
+  const highlights = t('solutions.highlights', { returnObjects: true });
 
   return (
     <section className="solutions" id="soluciones">
-      <div className="container section-heading">
+      <div className="container solution-heading">
         <span className="eyebrow">{t('solutions.eyebrow')}</span>
-        <h2>{t('solutions.title')}</h2>
+        <h2 className="section-title">{t('solutions.title')}</h2>
         <p>{t('solutions.description')}</p>
+        <div className="solutions-highlights">
+          {Array.isArray(highlights)
+            ? highlights.map((highlight, index) => (
+                <span key={highlight.title ?? highlight ?? index}>{highlight}</span>
+              ))
+            : null}
+        </div>
       </div>
       <div className="container solution-grid">
         {items.map((solution) => (
@@ -19,9 +27,6 @@ const Solutions = () => {
             </span>
             <h3>{solution.title}</h3>
             <p>{solution.description}</p>
-            <a href="#contacto" className="more-link">
-              {t('solutions.more')}
-            </a>
           </article>
         ))}
       </div>

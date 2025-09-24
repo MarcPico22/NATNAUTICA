@@ -14,47 +14,42 @@ const Hero = () => {
         <div className="hero-blur hero-blur--one" />
         <div className="hero-blur hero-blur--two" />
       </div>
-      <div className="container hero-content">
+      <div className="container hero-content hero-content--compact">
         <div className="hero-text">
           <span className="hero-badge">{t('hero.badge')}</span>
           <span className="eyebrow">{t('hero.eyebrow')}</span>
           <h1>{t('hero.title')}</h1>
           <p>{t('hero.description')}</p>
           <div className="hero-actions">
-            <a className="primary" href="#soluciones">
+            <a className="primary" href="#servicios">
               {t('hero.primary')}
             </a>
             <a className="secondary" href="#contacto">
               {t('hero.secondary')}
             </a>
           </div>
-          <ul className="hero-highlights">
+          <div className="hero-chips">
             {features.map((feature, index) => (
-              <li key={feature.label ?? index}>
-                <span className="hero-dot" aria-hidden="true" />
-                <div>
-                  <strong>{feature.label}</strong>
-                  <p>{feature.detail}</p>
-                </div>
-              </li>
+              <span
+                className="hero-chip"
+                key={feature.label ?? index}
+                title={feature.detail}
+              >
+                {feature.label}
+              </span>
             ))}
-          </ul>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-orb" />
-          <div className="hero-card">
-            <div className="card-header">
-              <h2>{t('hero.plan.title')}</h2>
-              <p>{t('hero.plan.description')}</p>
-            </div>
-            <ul>
-              {stats.map((stat) => (
-                <li key={stat.value}>
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </li>
+          </div>
+          <div className="hero-stats">
+            <h2>{t('hero.plan.title')}</h2>
+            <p>{t('hero.plan.description')}</p>
+            <div className="hero-stats-grid">
+              {stats.map((stat, index) => (
+                <div className="hero-stat" key={stat.id ?? stat.value ?? index}>
+                  <span className="hero-stat-value">{stat.value}</span>
+                  <span className="hero-stat-label">{stat.label}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
