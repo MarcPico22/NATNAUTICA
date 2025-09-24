@@ -1,0 +1,109 @@
+﻿{
+  "language": {
+    "selectLabel": "Idioma",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "announcement": {
+    "items": [
+      "Atención técnica en toda la costa mediterránea",
+      "info@natnautica.es",
+      "+34 689 123 456"
+    ]
+  },
+  "nav": {
+    "brandName": "NatNáutica",
+    "brandTagline": "Electrónica & Sistemas navales",
+    "links": {
+      "solutions": "Soluciones",
+      "services": "Servicios",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "cta": "Solicitar propuesta"
+  },
+  "hero": {
+    "eyebrow": "Tecnología naval de confianza",
+    "title": "Evolucionamos tu embarcación con soluciones electrónicas inteligentes y un equipo técnico cercano.",
+    "description": "Desde el diseño hasta la puesta en marcha, acompañamos a armadores, astilleros y profesionales para garantizar navegación segura, eficiente y conectada durante todo el año.",
+    "primary": "Ver soluciones",
+    "secondary": "Habla con un experto",
+    "plan": {
+      "title": "Plan integral 360°",
+      "description": "Auditoría, instalación, formación y mantenimiento continuo con informes personalizados para cada embarcación.",
+      "stats": [
+        {
+          "value": "150+",
+          "label": "Proyectos náuticos ejecutados con éxito"
+        },
+        {
+          "value": "25",
+          "label": "Años de experiencia acumulada del equipo técnico"
+        },
+        {
+          "value": "48h",
+          "label": "Tiempo medio de respuesta en servicios de emergencia"
+        }
+      ]
+    }
+  },
+  "solutions": {
+    "eyebrow": "Soluciones a medida",
+    "title": "Integramos tecnología líder para cada tipo de embarcación",
+    "description": "Trabajamos con fabricantes líderes para entregar sistemas robustos que mejoran la seguridad, el confort y la eficiencia energética tanto en recreo como en flotas profesionales.",
+    "more": "Saber más →",
+    "items": [
+      {
+        "icon": "🧭",
+        "title": "Sistemas de navegación",
+        "description": "Instalación y mantenimiento de radares, pilotos automáticos, cartas electrónicas y sensores de última generación."
+      },
+      {
+        "icon": "📡",
+        "title": "Comunicaciones marítimas",
+        "description": "Soluciones integrales en radio VHF, satélite, AIS y redes de datos para garantizar una conexión fiable en alta mar."
+      },
+      {
+        "icon": "⚡",
+        "title": "Energía y control",
+        "description": "Cuadros eléctricos, baterías inteligentes y sistemas de monitorización para optimizar el rendimiento energético."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Servicios especializados",
+    "title": "Nos encargamos de todo el ciclo de vida de tus equipos electrónicos",
+    "description": "Coordinamos proyectos llave en mano: diseño, instalación certificada, calibración, formaciones a bordo y soporte preventivo para evitar paradas inesperadas.",
+    "items": [
+      {
+        "title": "Asesoramiento experto",
+        "description": "Ingenieros especializados que diseñan proyectos a medida para cada embarcación."
+      },
+      {
+        "title": "Integraciones completas",
+        "description": "Unificamos equipos de diferentes marcas para ofrecer una experiencia de navegación sin fricciones."
+      },
+      {
+        "title": "Soporte 24/7",
+        "description": "Servicio técnico permanente para resolver incidencias de forma ágil en cualquier puerto."
+      }
+    ]
+  },
+  "partners": {
+    "eyebrow": "Partners certificados",
+    "items": ["Raymarine", "Garmin", "Simrad", "Furuno", "B&G"]
+  },
+  "cta": {
+    "eyebrow": "Contacta con nosotros",
+    "title": "Agenda una visita técnica o solicita una demo a bordo",
+    "description": "Cuéntanos qué necesitas y prepararemos una propuesta personalizada para tu embarcación o flota. Estamos a tu disposición en Valencia, Alicante, Baleares y Barcelona.",
+    "button": "Escribir correo"
+  },
+  "footer": {
+    "brand": "NatNáutica 2.0",
+    "description": "Especialistas en electrónica y telecomunicaciones navales desde 1998.",
+    "address": "Puerto de Valencia · Muelle de Levante",
+    "phone": "+34 689 123 456",
+    "email": "info@natnautica.es"
+  }
+}

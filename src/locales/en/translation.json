@@ -1,0 +1,109 @@
+﻿{
+  "language": {
+    "selectLabel": "Language",
+    "es": "Spanish",
+    "en": "English"
+  },
+  "announcement": {
+    "items": [
+      "Technical support across the Mediterranean coast",
+      "info@natnautica.es",
+      "+34 689 123 456"
+    ]
+  },
+  "nav": {
+    "brandName": "NatNáutica",
+    "brandTagline": "Electronics & Naval Systems",
+    "links": {
+      "solutions": "Solutions",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "cta": "Request a quote"
+  },
+  "hero": {
+    "eyebrow": "Trusted marine technology",
+    "title": "We upgrade your vessel with smart electronic solutions and a dedicated technical crew.",
+    "description": "From design to commissioning, we support shipowners, shipyards and professionals to ensure safe, efficient and connected navigation all year round.",
+    "primary": "View solutions",
+    "secondary": "Talk to a specialist",
+    "plan": {
+      "title": "360° full service plan",
+      "description": "Audit, installation, training and ongoing maintenance with tailored reports for every vessel.",
+      "stats": [
+        {
+          "value": "150+",
+          "label": "Marine projects delivered successfully"
+        },
+        {
+          "value": "25",
+          "label": "Years of combined experience in our technical team"
+        },
+        {
+          "value": "48h",
+          "label": "Average response time for emergency services"
+        }
+      ]
+    }
+  },
+  "solutions": {
+    "eyebrow": "Tailored solutions",
+    "title": "We integrate leading technology for every type of vessel",
+    "description": "We partner with top manufacturers to deploy robust systems that enhance safety, comfort and energy efficiency for leisure and professional fleets alike.",
+    "more": "Learn more →",
+    "items": [
+      {
+        "icon": "🧭",
+        "title": "Navigation systems",
+        "description": "Installation and upkeep of radars, autopilots, electronic charts and next-generation sensors."
+      },
+      {
+        "icon": "📡",
+        "title": "Marine communications",
+        "description": "End-to-end radio, satellite, AIS and data network solutions for reliable offshore connectivity."
+      },
+      {
+        "icon": "⚡",
+        "title": "Power and control",
+        "description": "Electrical panels, smart batteries and monitoring systems that optimise onboard energy performance."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Specialised services",
+    "title": "We manage the full lifecycle of your electronic equipment",
+    "description": "We coordinate turnkey projects: design, certified installation, calibration, onboard training and preventive support to avoid unexpected downtime.",
+    "items": [
+      {
+        "title": "Expert consulting",
+        "description": "Specialised engineers who tailor every project to the needs of each vessel."
+      },
+      {
+        "title": "End-to-end integrations",
+        "description": "We coordinate multi-brand equipment to deliver a seamless navigation experience."
+      },
+      {
+        "title": "24/7 support",
+        "description": "Always-on technical service to solve issues quickly in any harbour."
+      }
+    ]
+  },
+  "partners": {
+    "eyebrow": "Certified partners",
+    "items": ["Raymarine", "Garmin", "Simrad", "Furuno", "B&G"]
+  },
+  "cta": {
+    "eyebrow": "Get in touch",
+    "title": "Schedule a technical visit or request an onboard demo",
+    "description": "Tell us what you need and we will prepare a tailored proposal for your vessel or fleet. We operate from Valencia, Alicante, the Balearic Islands and Barcelona.",
+    "button": "Write an email"
+  },
+  "footer": {
+    "brand": "NatNáutica 2.0",
+    "description": "Specialists in marine electronics and telecommunications since 1998.",
+    "address": "Port of Valencia · Eastern Quay",
+    "phone": "+34 689 123 456",
+    "email": "info@natnautica.es"
+  }
+}
