@@ -36,8 +36,8 @@ const App = () => (
           <Route path="servicios/:serviceSlug" element={<ServiceDetailPage />} />
           <Route path="casos-de-exito" element={<CaseStudiesPage />} />
           <Route path="sobre-nosotros" element={<AboutPage />} />
-          <Route path="blog" element={<BlogListPage />} />
-          <Route path="blog/:slug" element={<BlogPostPage />} />
+          {/* <Route path="blog" element={<BlogListPage />} /> */}
+          {/* <Route path="blog/:slug" element={<BlogPostPage />} /> */}
           <Route path="contacto" element={<ContactPage />} />
           <Route path="legales" element={<LegalIndexPage />} />
           <Route path="legales/aviso-legal" element={<LegalNoticePage />} />
