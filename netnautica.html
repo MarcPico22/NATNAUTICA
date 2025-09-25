@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://netnautica.es/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>Netnautica -Smart Technology for Seamless Yachting.</title>
+    <meta name="description" content="Especialistas en tecnología náutica: conectividad Starlink, ciberseguridad, sistemas AV e IoT para yates de lujo. Instalaciones premium en España y Mediterráneo">
+    <meta name="keywords" content="tecnología yates, yacht technology, conectividad Starlink, Starlink connectivity yachts, ciberseguridad náutica, marine cybersecurity, sistemas AV yates, yacht AV systems, IoT embarcaciones, yacht IoT automation, superyates España, luxury yacht technology Spain, smart yacht systems, yacht connectivity Mediterranean, marine electronics, nautical technology, yacht automation, superyacht installations, yacht internet, marine IT solutions">
+    <meta name="theme-color" content="#4ECDC4">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="author" content="Netnautica">
+    
+    <!-- Critical resource preloads for LCP optimization -->
+    <link rel="preload" href="netnautica.css" as="style">
+    <link rel="preload" href="yate.jpg" as="image" imagesrcset="yate.jpg 1200w" imagesizes="100vw" fetchpriority="high">
+    <link rel="preload" href="logo1.png" as="image" fetchpriority="high">
+    <!-- Defer non-critical preloads -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <script>
+        // Optimized sprite loading for mobile performance
+        function loadSVGSprites() {
+            if (window.svgSpritesLoaded) return;
+            
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = 'icons.svg';
+            link.as = 'fetch';
+            link.crossOrigin = 'anonymous';
+            document.head.appendChild(link);
+            
+            fetch('icons.svg')
+                .then(response => response.text())
+                .then(data => {
+                    const div = document.createElement('div');
+                    div.style.display = 'none';
+                    div.innerHTML = data;
+                    document.body.insertBefore(div, document.body.firstChild);
+                    window.svgSpritesLoaded = true;
+                })
+                .catch(() => {
+                    // Fallback method for older browsers
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'icons.svg', true);
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            const div = document.createElement('div');
+                            div.style.display = 'none';
+                            div.innerHTML = xhr.responseText;
+                            document.body.insertBefore(div, document.body.firstChild);
+                            window.svgSpritesLoaded = true;
+                        }
+                    };
+                    xhr.send();
+                });
+        }
+        
+        // Delay sprite loading to not block LCP
+        function delayedSpriteLoad() {
+            if (window.requestIdleCallback) {
+                requestIdleCallback(loadSVGSprites, { timeout: 2000 });
+            } else {
+                setTimeout(loadSVGSprites, 1000);
+            }
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', delayedSpriteLoad);
+        } else {
+            delayedSpriteLoad();
+        }
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="netnautica.css">
+    <noscript><link rel="stylesheet" href="contact-styles.css"></noscript>
+    <script>
+        // Load non-critical CSS asynchronously
+        function loadCSS(href) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            document.head.appendChild(link);
+        }
+        
+        // Load contact styles when needed or after page load
+        if (window.location.hash === '#contact') {
+            loadCSS('contact-styles.css');
+        } else {
+            window.addEventListener('load', () => {
+                setTimeout(() => loadCSS('contact-styles.css'), 100);
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo1.png" alt="Netnautica Logo" class="logo-img" width="35" height="35">
+                 <img src="logonombre.png" alt="Netnautica Logo" class="logo-img" width="120" height="35">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#blog-carousel">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="yate.jpg" alt="Luxury yacht technology" class="hero-bg-image-element" width="1200" height="800" fetchpriority="high" decoding="sync" loading="eager" sizes="100vw" srcset="yate.jpg 1200w">
+        <div class="hero-bg-image" role="img" aria-label="Luxury yacht technology"></div>
+        <div class="hero-bg">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Solutions</span><br>
+                    for onboard confort
+                </h1>
+                <p class="hero-subtitle">
+                    We design and implement smart technological systems that elevate onboard comfort and optimize the user experience across the ocean.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Explore Services</button>
+                    <button class="btn btn-outline">View Portfolio</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="tech-circle">
+                    <div class="orbit orbit1"></div>
+                    <div class="orbit orbit2"></div>
+                    <div class="orbit orbit3"></div>
+                    <div class="center-node"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>Netnautica M<span class="accent">aritime Solutions</span></h2>
+            <p>Click on any service to explore premium features</p>
+        </div>
+        
+        <div class="services-carousel">
+            <!-- Card 1 - CORREGIDA -->
+            <div class="service-card" onclick="openModal(this)">
+                <div class="service-icon">
+                   <svg>
+                        <use href="#icon-internet"></use>
+                     </svg>
+                </div>
+                <h3>Worldwide Connectivity</h3>
+                <p class="preview-text">Seamless global connectivity with multi-redundant systems for uninterrupted luxury experience</p>
+                
+                <div class="full-content">
+                    <div class="service-hero-image">
+                        <img src="internetyate.jpg" alt="Yacht connectivity systems" loading="lazy" width="600" height="300" decoding="async" />
+                        <div class="image-overlay">
+                            <h4>Global Coverage</h4>
+                            <p>Stay connected anywhere in the world</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="service-features">
+                        <li>Infrastructure to support multiple internet connections with automatic failover</li>
+                        <li>Starlink LEO constellation and 4G/5G cellular communication systems</li>
+                        <li>Optimized WiFi networks for maximum onboard comfort and performance</li>
+                        <li>Advanced QoS management for priority applications</li>
+                    </ul>
+                    
+                    <button class="btn-close" onclick="closeModal(event)">×</button>
+                </div>
+            </div>
+
+            <!-- Card 2 - YA SEPARADA CORRECTAMENTE -->
+            <div class="service-card" onclick="openModal(this)">
+                <div class="service-icon">
+                   <svg>
+                        <use href="#icon-security"></use>
+                     </svg>
+                </div>
+                <h3>Cybersecurity</h3>
+                <p class="preview-text">Security solutions protecting your digital infrastructure from cyber threats</p>
+                
+                <div class="full-content">
+                   <div class="service-hero-image">
+                        <img src="cyber.jpg" alt="Yacht cybersecurity systems" loading="lazy" width="600" height="300" decoding="async" />
+                        <div class="image-overlay">
+                            <h4>Digital Fortress at Sea</h4>
+                            <p>Protection for your connected yacht ecosystem</p>
+                        </div>
+                    </div>
+                    <ul class="service-features">
+                        <li>Next-gen firewalls configuration </li>
+                        <li>Multi-layered network segmentation</li>
+                        <li>Security audits and vulnerability assessments</li>
+                        <li>IoT device security and firmware update management</li>
+                    </ul>
+                    
+                    <button class="btn-close" onclick="closeModal(event)">×</button>
+                </div>
+            </div>
+
+            <!-- Card 3 - EJEMPLO ADICIONAL -->
+            <div class="service-card" onclick="openModal(this)">
+                <div class="service-icon">
+                    <svg>
+                        <use href="#icon-tv"></use>
+                     </svg>
+                </div>
+                <h3>AV System Integration</h3>
+                <p class="preview-text">Cinema-quality entertainment and presentation systems with immersive surround sound technology</p>
+                
+                <div class="full-content">
+                    <div class="service-hero-image">
+                        <img src="tv.jpg" alt="Yacht AV entertainment systems" loading="lazy" width="600" height="300" decoding="async" />
+                        <div class="image-overlay">
+                            <h4>Cinematic Experience at Sea</h4>
+                            <p>AV systems for ultimate luxury entertainment</p>
+                        </div>
+                    </div>
+                    <ul class="service-features">
+                        <li>Multi-room video distribution with 4K matrix switching</li>
+                        <li>Conference and presentation systems for business meetings</li>
+                        <li>Custom soundproofing solutions</li>
+                        <li>Distributed audio system with zone control</li>
+                        <li>IPTV & Plex Server Stream</li>
+                    </ul>
+                    
+                    <button class="btn-close" onclick="closeModal(event)">×</button>
+                </div>
+            </div>
+
+            <!-- IOT CARD-->
+             <div class="service-card" onclick="openModal(this)">
+                <div class="service-icon">
+                    <svg>
+                        <use href="#icon-iot"></use>
+                     </svg>
+                </div>
+                <h3>IoT & Video Surveillance Systems</h3>
+                <p class="preview-text">Intelligent automation and comprehensive security monitoring with advanced camera systems and smart controls</p>
+                
+                <div class="full-content">
+                    <div class="service-hero-image">
+                        <img src="iot.jpg" alt="Yacht IoT automation systems" loading="lazy" width="600" height="300" decoding="async" />
+                        <div class="image-overlay">
+                            <h4>Intelligent Control & Security</h4>
+                            <p>Advanced automation with comprehensive video monitoring</p>
+                        </div>
+                    </div>
+                    <ul class="service-features">
+                        <li>Centralized smart home automation platform</li>
+                        <li>Smart lighting systems</li>
+                        <li>Guest cabin personalization with individual environment controls</li>
+                        <li>Remote surveillance access via mobile applications and web portals</li>
+                        <li>Real-time streaming capabilities for multiple viewing stations</li>
+                    </ul>
+                    
+                    <button class="btn-close" onclick="closeModal(event)">×</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Resto de secciones (se mantienen igual) -->
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <div class="tech-content">
+                <div class="tech-info">
+                    <h2>Cutting-Edge <span class="gradient-text">Technology</span></h2>
+                    <p class="tech-description">
+                        We utilize the most advanced technologies in the market to ensure 
+                        exceptional up to date insfrastructure.
+                    </p>
+                    <div class="partners-grid">
+                        <div class="partner-logo" style="min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                            <img src="starlink-logo.png" alt="Starlink Internet por Satélite" loading="lazy" width="120" height="60" decoding="async" style="max-width: 100%; max-height: 60px; object-fit: contain;">
+                        </div>
+                        <div class="partner-logo" style="min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                            <img src="ubiquiti.png" alt="Ubiquiti Networks" loading="lazy" width="120" height="60" decoding="async" style="max-width: 100%; max-height: 60px; object-fit: contain;">
+                        </div>
+                        <div class="partner-logo" style="min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                            <img src="peplink.png" alt="Peplink Conectividad" loading="lazy" width="120" height="60" decoding="async" style="max-width: 100%; max-height: 60px; object-fit: contain;">
+                        </div>
+                        <div class="partner-logo" style="min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                            <img src="fortinet.png" alt="Fortinet Ciberseguridad" loading="lazy" width="120" height="60" decoding="async" style="max-width: 100%; max-height: 60px; object-fit: contain;">
+                        </div>
+                        <div class="partner-logo" style="min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                            <img src="crestron-logo.png" alt="Crestron Automatización" loading="lazy" width="120" height="60" decoding="async" style="max-width: 100%; max-height: 60px; object-fit: contain;">
+                        </div>
+                        <div class="partner-logo" style="min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                            <img src="NMEA.png" alt="NMEA Marine Electronics" loading="lazy" width="120" height="60" decoding="async" style="max-width: 100%; max-height: 60px; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+<div class="satellite-map-container">
+    <h3>Starlink <span class="gradient-text">Technology</span></h3>
+    <div class="iframe-container" style="position: relative; width: 100%; height: 400px; background: rgba(26, 46, 46, 0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+        <div class="iframe-placeholder" style="color: var(--text-gray); text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">🛰️</div>
+            <p>Starlink Coverage Map</p>
+            <small>Click to load interactive map</small>
+        </div>
+    </div>
+    <script>
+        // Load iframe only on user interaction to prevent layout shift
+        document.querySelector('.iframe-container').addEventListener('click', function() {
+            if (this.querySelector('iframe')) return;
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.starlinkviewer.com/';
+            iframe.width = '100%';
+            iframe.height = '400';
+            iframe.frameBorder = '0';
+            iframe.style.borderRadius = '10px';
+            iframe.title = 'Starlink Satellite Coverage Map';
+            
+            this.innerHTML = '';
+            this.appendChild(iframe);
+        }, { once: true });
+    </script>
+</div>
+                <div class="tech-visual">
+                    <div class="tech-grid">
+                        <div class="tech-node active" data-tech="satellite"></div>
+                        <div class="tech-node" data-tech="security"></div>
+                        <div class="tech-node" data-tech="network"></div>
+                        <div class="tech-node" data-tech="cloud"></div>
+                        <div class="tech-connection"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Carousel Section -->
+    <section id="blog-carousel" class="blog-carousel">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest <span class="accent">Technical Articles</span></h2>
+                <p>Explore our technical insights and expert guidance on yacht technology</p>
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                        <!-- Blog Article 1 -->
+                        <div class="carousel-slide">
+                            <article class="blog-card">
+                                <div class="blog-card-image">
+                                    <img src="internetyate.jpg" alt="Starlink installation on superyacht" loading="lazy" width="400" height="200" decoding="async">
+                                    <div class="blog-category">Conectividad</div>
+                                </div>
+                                <div class="blog-card-content">
+                                    <h3>Instalación Starlink en Superyates: Guía Completa 2025</h3>
+                                    <p>Todo lo que necesitas saber sobre la implementación de conectividad Starlink en yates de lujo, desde la planificación inicial hasta la optimización de rendimiento.</p>
+                                    <div class="blog-meta">
+                                        <span class="blog-date">12 Enero 2025</span>
+                                        <span class="blog-read-time">8 min lectura</span>
+                                    </div>
+                                    <a href="blog/starlink-superyates-2025/" class="btn btn-outline">Leer Artículo</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Blog Article 2 -->
+                        <div class="carousel-slide">
+                            <article class="blog-card">
+                                <div class="blog-card-image">
+                                    <img src="internetyate.jpg" alt="Tecnologías de Bonding" loading="lazy" width="400" height="200" decoding="async">
+                                    <div class="blog-category">Conectividad</div>
+                                </div>
+                                <div class="blog-card-content">
+                                    <h3>Tecnologías de Bonding: Conectividad Redundante para Yates</h3>
+                                    <p>Descubre cómo las tecnologías de bonding permiten combinar múltiples conexiones de internet en una sola interfaz virtual para crear conectividad robusta.</p>
+                                    <div class="blog-meta">
+                                        <span class="blog-date">15 Enero 2025</span>
+                                        <span class="blog-read-time">12 min lectura</span>
+                                    </div>
+                                    <a href="blog/tecnologias-bonding-yates/" class="btn btn-outline">Leer Artículo</a>
+                                </div>
+                            </article>
+                        </div>
+
+
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" id="carouselPrev">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-next" id="carouselNext">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                </div>
+            </div>
+            
+            <!-- View All Blog Link -->
+            <div class="blog-cta">
+                <a href="blog/" class="btn btn-primary">Ver Todos los Artículos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Connect with <span class="gradient-text">Us</span></h2>
+                    <p>Discover how we can transform your yacht's experience</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>client@netnautica.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-header">
+                        <h3>Request Consultation</h3>
+                        <p>Get a personalized quote for your yacht's needs</p>
+                    </div>
+                    
+                    <div id="statusMessage" class="status-message"></div>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Full name *" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Corporate email *" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Contact phone *" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="company" placeholder="Company/Yacht name">
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Describe your needs, current setup, and specific requirements..." rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            Send Consultation Request
+                        </button>
+                    </form>
+                    
+                    <div style="margin-top: 20px; text-align: center; font-size: 0.85rem; color: #a0a0a0;">
+                       Your information is secure and will only be used to contact you about our services
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EmailJS SDK - Load only when needed -->
+    <script>
+        // Load EmailJS only when contact form is needed
+        function loadEmailJS() {
+            if (window.emailJSLoaded) return Promise.resolve();
+            
+            return new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+                script.onload = () => {
+                    window.emailJSLoaded = true;
+                    resolve();
+                };
+                document.head.appendChild(script);
+            });
+        }
+        
+        function loadContactScript() {
+            if (window.contactScriptLoaded) return;
+            
+            const script = document.createElement('script');
+            script.src = 'contact-script.js';
+            script.onload = () => {
+                window.contactScriptLoaded = true;
+            };
+            document.head.appendChild(script);
+        }
+        
+        // Load when contact section is visible or user interacts with contact
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadEmailJS().then(loadContactScript);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        // Observe contact section when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                observer.observe(contactSection);
+            }
+        });
+        
+        // Also load on hash change to contact
+        if (window.location.hash === '#contact') {
+            loadEmailJS().then(loadContactScript);
+        }
+    </script>
+</body>
+</html>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Netnautica" class="footer-logo" width="40" height="40">
+                    <p class="footer-location">Balearic Islands, based in Mallorca</p>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#blog-carousel">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Netnautica. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Overlay -->
+    <!-- <div id="modal-overlay" class="modal-overlay"></div> -->
+
+    <!-- JavaScript -->
+    <script>
+    // Optimized Blog Carousel Functionality for Mobile Performance
+    let currentSlide = 0;
+    const totalSlides = 2;
+    let carouselInitialized = false;
+    let autoPlayInterval;
+    
+    function updateCarousel() {
+        const track = document.getElementById('carouselTrack');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        if (!track) return;
+        
+        const translateX = -currentSlide * 50;
+        
+        // Use transform3d for hardware acceleration
+        track.style.transform = `translate3d(${translateX}%, 0, 0)`;
+        
+        // Update indicators efficiently
+        indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+    
+    function goToSlide(index) {
+        currentSlide = index;
+        updateCarousel();
+    }
+    
+    function initializeCarousel() {
+        if (carouselInitialized) return;
+        
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        // Use passive event listeners for better performance
+        if (prevBtn) {
+            prevBtn.addEventListener('click', prevSlide, { passive: true });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', nextSlide, { passive: true });
+        }
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => goToSlide(index), { passive: true });
+        });
+        
+        // Delay auto-play on mobile for better performance
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+        
+        updateCarousel();
+        carouselInitialized = true;
+    }
+    
+    // Use optimized Intersection Observer for lazy initialization
+    function setupCarouselObserver() {
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (!carouselContainer) return;
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Use requestIdleCallback to avoid blocking main thread
+                    if (window.requestIdleCallback) {
+                        requestIdleCallback(() => {
+                            initializeCarousel();
+                            observer.unobserve(entry.target);
+                        }, { timeout: 2000 });
+                    } else {
+                        setTimeout(() => {
+                            initializeCarousel();
+                            observer.unobserve(entry.target);
+                        }, 16);
+                    }
+                }
+            });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '50px' // Start loading before element is visible
+        });
+        
+        observer.observe(carouselContainer);
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupCarouselObserver);
+    } else {
+        setupCarouselObserver();
+    }
+    
+    // Pause auto-play when page is not visible
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden && autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+        } else if (!document.hidden && !window.innerWidth <= 768) {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+    });
+
+    // Existing modal functionality
+    let currentModal = null;
+
+    function openModal(card) {
+        // Cerrar modal anterior si existe
+        if (currentModal) {
+            closeModal();
+        }
+        
+        // Abrir nuevo modal
+        currentModal = card;
+        //document.getElementById('modal-overlay').classList.add('active');
+        card.classList.add('modal-active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        
+        // Remover todas las clases de modal
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.classList.remove('modal-active');
+        });
+        
+        // Remover overlay
+       // document.getElementById('modal-overlay').classList.remove('active');
+        
+        // Restaurar scroll
+        document.body.style.overflow = 'auto';
+        
+        // Limpiar variable
+        currentModal = null;
+    }
+
+    // Optimized Event listeners with performance improvements
+    function initializeNavigation() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (!navToggle || !navMenu) return;
+        
+        // Use passive listeners where possible
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        }, { passive: true });
+        
+        // Optimize menu closing with event delegation
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }, { passive: true });
+        });
+        
+        // Throttled outside click handler
+        let clickThrottle = false;
+        document.addEventListener('click', function(e) {
+            if (clickThrottle) return;
+            clickThrottle = true;
+            
+            requestAnimationFrame(() => {
+                if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+                clickThrottle = false;
+            });
+        });
+    }
+    
+    // Optimized modal functionality
+    function initializeModals() {
+        // Escape key handler with throttling
+        let escapeThrottle = false;
+        document.addEventListener('keydown', function(e) {
+            if (escapeThrottle) return;
+            if (e.key === 'Escape' && currentModal) {
+                escapeThrottle = true;
+                closeModal();
+                setTimeout(() => { escapeThrottle = false; }, 100);
+            }
+        });
+    }
+    
+    // Break up initialization to avoid blocking main thread
+    function yieldToMain() {
+        return new Promise(resolve => {
+            setTimeout(resolve, 0);
+        });
+    }
+    
+    async function initializeAsync() {
+        // Initialize navigation first (critical)
+        initializeNavigation();
+        await yieldToMain();
+        
+        // Initialize modals (less critical)
+        initializeModals();
+        await yieldToMain();
+    }
+    
+    // Use scheduler API if available, otherwise fallback
+    function scheduleInitialization() {
+        if (window.scheduler && scheduler.postTask) {
+            scheduler.postTask(initializeAsync, { priority: 'user-blocking' });
+        } else if (window.requestIdleCallback) {
+            requestIdleCallback(initializeAsync, { timeout: 1000 });
+        } else {
+            setTimeout(initializeAsync, 0);
+        }
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', scheduleInitialization);
+    } else {
+        scheduleInitialization();
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿import { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
+import { NAVIGATION_ITEMS } from '@/data/navigation';
+import { Logo } from '@/components/common/Logo';
+import { LanguageToggle } from '@/components/common/LanguageToggle';
+import { ThemeToggle } from '@/components/common/ThemeToggle';
+
+export function Header() {
+  const { t } = useTranslation();
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname, location.search]);
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/90 backdrop-blur transition-colors supports-[backdrop-filter]:bg-white/70 dark:border-slate-800/60 dark:bg-slate-950/80">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Logo className="shrink-0" />
+        <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
+          {NAVIGATION_ITEMS.map((item) => (
+            <NavLink
+              key={item.id}
+              to={item.path}
+              className={({ isActive }) =>
+                `relative text-slate-600 transition hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-300 ${
+                  isActive ? 'text-brand-600 dark:text-brand-300' : ''
+                }`
+              }
+            >
+              <span>{t(item.translationKey)}</span>
+            </NavLink>
+          ))}
+        </nav>
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageToggle />
+          <ThemeToggle />
+          <Link
+            to="/contacto"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-600/30 transition hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
+          >
+            <span>{t('actions.requestQuote')}</span>
+          </Link>
+        </div>
+        <button
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:border-brand-400 hover:text-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-brand-500 dark:hover:text-brand-300 md:hidden"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+        >
+          <span className="sr-only">{t('navigation.toggle')}</span>
+          {isMenuOpen ? (
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M18 6 6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M6 6l12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          ) : (
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 6h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M4 12h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M4 18h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          )}
+        </button>
+      </div>
+      {isMenuOpen && (
+        <div className="md:hidden" aria-live="polite">
+          <div className="fixed inset-0 z-40 bg-slate-900/40 backdrop-blur-sm" aria-hidden="true" onClick={() => setMenuOpen(false)} />
+          <div className="fixed inset-x-4 top-20 z-50 origin-top rounded-3xl border border-slate-200/60 bg-white p-6 shadow-2xl shadow-slate-900/20 dark:border-slate-700/60 dark:bg-slate-900">
+            <nav id="primary-navigation" className="flex flex-col gap-4 text-base font-semibold text-slate-700 dark:text-slate-200">
+              {NAVIGATION_ITEMS.map((item) => (
+                <NavLink
+                  key={item.id}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `rounded-xl px-4 py-3 transition hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-slate-800/80 ${
+                      isActive ? 'bg-brand-50 text-brand-600 dark:bg-slate-800/80 dark:text-brand-300' : ''
+                    }`
+                  }
+                >
+                  {t(item.translationKey)}
+                </NavLink>
+              ))}
+            </nav>
+            <div className="mt-6 flex items-center justify-between gap-3">
+              <LanguageToggle className="grow justify-center" />
+              <ThemeToggle />
+            </div>
+            <Link
+              to="/contacto"
+              className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-brand-600/30 transition hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
+            >
+              {t('actions.requestQuote')}
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}

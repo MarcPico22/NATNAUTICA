@@ -1,0 +1,131 @@
+﻿import { useMemo } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
+import { Seo } from '@/components/seo/Seo';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { SectionHeader } from '@/components/common/SectionHeader';
+import { caseStudies } from '@/data/cases';
+import { getLocaleContent, getLocaleString } from '@/utils/i18n';
+import { SITE_URL } from '@/config/site';
+
+// NETNAUTICA-EDIT: Pagina de proyectos alineada con casos reales de conectividad y ciberseguridad.
+const CaseStudiesPage = () => {
+  const { i18n, t } = useTranslation();
+  const language = i18n.language;
+  const [searchParams] = useSearchParams();
+  const highlight = searchParams.get('highlight');
+
+  const orderedCases = useMemo(() => {
+    if (!highlight) return caseStudies;
+    const index = caseStudies.findIndex((item) => item.slug === highlight);
+    if (index === -1) return caseStudies;
+    const clone = [...caseStudies];
+    const [selected] = clone.splice(index, 1);
+    return [selected, ...clone];
+  }, [highlight]);
+
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: orderedCases.map((study, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: getLocaleContent(study.locales, language).title,
+        url: `${SITE_URL}/casos-de-exito?highlight=${study.slug}`
+      }))
+    }
+  ];
+
+  return (
+    <>
+      <Seo
+        title="Proyectos Netnautica"
+        description="Implementaciones reales de multi-WAN, ciberseguridad y AV para yates de lujo."
+        structuredData={structuredData}
+      />
+      <section className="relative overflow-hidden pb-20 pt-24">
+        <div
+          className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 via-transparent to-transparent dark:from-brand-500/10"
+          aria-hidden="true"
+        />
+        <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8">
+          <Badge>Proyectos Netnautica</Badge>
+          <h1 className="text-[clamp(2.2rem,4.5vw,3.6rem)] font-semibold leading-tight text-slate-900 dark:text-white">
+            Implementaciones recientes a bordo de nuestros clientes
+          </h1>
+          <p className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">
+            Arquitecturas multi-WAN, refuerzos de ciberseguridad y experiencias AV disenadas junto a capitanes y astilleros.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="grid gap-10">
+          {orderedCases.map((study) => {
+            const locale = getLocaleContent(study.locales, language);
+            return (
+              <article
+                key={study.id}
+                className="grid gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-[1.1fr_0.9fr]"
+              >
+                <div className="flex flex-col gap-4">
+                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-500">
+                    {getLocaleString(study.industry, language)}
+                  </span>
+                  <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{locale.title}</h2>
+                  <div className="flex flex-wrap gap-3">
+                    {study.metrics.map((metric) => (
+                      <span
+                        key={metric.value.es ?? metric.value}
+                        className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-600 dark:bg-brand-500/10 dark:text-brand-200"
+                      >
+                        {getLocaleString(metric.value, language)} - {getLocaleString(metric.label, language)}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                    <p>
+                      <strong className="block text-slate-800 dark:text-slate-100">Reto</strong>
+                      {locale.challenge}
+                    </p>
+                    <p>
+                      <strong className="block text-slate-800 dark:text-slate-100">Solucion</strong>
+                      {locale.solution}
+                    </p>
+                    <p>
+                      <strong className="block text-slate-800 dark:text-slate-100">Resultado</strong>
+                      {locale.result}
+                    </p>
+                  </div>
+                  <blockquote className="mt-4 rounded-3xl bg-slate-50 p-4 text-sm italic text-slate-600 dark:bg-slate-800/70 dark:text-slate-200">
+                    {locale.result}
+                  </blockquote>
+                </div>
+                <div className="flex flex-col gap-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-inner dark:border-slate-800 dark:bg-slate-950">
+                  <SectionHeader
+                    eyebrow="Toolkit"
+                    title="Pilares del proyecto"
+                    description="Ingenieria multi-WAN, politicas Zero Trust y automatizacion AV/IoT."
+                  />
+                  <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                    <li>Planificacion con capitanes y ETO para dimensionar redes y racks.</li>
+                    <li>Integracion de Starlink, Peplink, Fortinet y Crestron segun cada uso a bordo.</li>
+                    <li>Monitorizacion remota 24/7 y soporte inmediato durante temporada.</li>
+                  </ul>
+                  <Button as={Link} to="/contacto" variant="secondary">
+                    {t('actions.requestQuote')}
+                  </Button>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default CaseStudiesPage;

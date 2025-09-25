@@ -1,314 +1,111 @@
 {
-  "language": {
-    "label": "Langue",
-    "selectLabel": "Choisir la langue",
-    "es": "Espagnol",
-    "en": "Anglais",
-    "fr": "Français"
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "cases": "Projets",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact",
+    "toggle": "Ouvrir ou fermer le menu",
+    "language": "Choisir la langue"
   },
-  "announcement": {
-    "items": [
-      "Ingénieurs télécoms et informatiques pour yachts de luxe",
-      "Basés à Palma de Majorque",
-      "hello@netnautica.es"
-    ]
+  "actions": {
+    "requestQuote": "Contacter Netnautica",
+    "toggleTheme": "Changer de mode",
+    "viewAll": "Tout voir",
+    "readMore": "En savoir plus",
+    "learnMore": "Détails",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Envoyer",
+    "start": "Commencer"
   },
-  "nav": {
-    "brandName": "Netnautica",
-    "links": {
-      "solutions": "À propos",
-      "services": "Services",
-      "technology": "Technologies",
-      "contact": "Contact"
+  "footer": {
+    "about": "Ingénierie boutique pour yachts de luxe. Connectivité, cybersécurité, AV et IoT depuis Palma de Majorque.",
+    "company": "Entreprise",
+    "services": "Services",
+    "newsletterTitle": "Newsletter",
+    "newsletterCopy": "Recevez nos conseils sur la connectivité, la cybersécurité et l’AV à bord.",
+    "newsletterLabel": "Entrez votre email",
+    "newsletterButton": "S’abonner",
+    "rights": "Tous droits réservés.",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "schedule": "Horaires"
+  },
+  "services": {
+    "customDevelopment": "Worldwide Connectivity",
+    "growthMarketing": "Cybersecurity",
+    "marketingAutomation": "AV System Integration",
+    "uxUi": "IoT & Video Surveillance"
+  },
+  "legal": {
+    "notice": "Mentions légales",
+    "privacy": "Confidentialité",
+    "cookies": "Cookies"
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "twitter": "X/Twitter",
+    "youtube": "YouTube",
+    "github": "GitHub"
+  },
+  "forms": {
+    "step": "Étape {{current}} sur {{total}}",
+    "required": "Champ requis",
+    "invalidEmail": "Email invalide",
+    "invalidPhone": "Téléphone invalide",
+    "consent": "J’accepte la politique de confidentialité"
+  },
+  "contact": {
+    "title": "Parlez-nous de votre projet à bord",
+    "subtitle": "Nous concevons des systèmes de connectivité, de sécurité et de divertissement adaptés à chaque route et équipage.",
+    "success": "Merci. Nous répondrons sous 24 heures ouvrées.",
+    "errors": {
+      "generic": "Une erreur est survenue. Réessayez."
     },
-    "cta": "Demander une consultation",
-    "menuToggle": "Ouvrir ou fermer le menu"
-  },
-  "hero": {
-    "badge": "Ingénierie boutique pour yachts",
-    "eyebrow": "Connectivité, cybersécurité et AV premium",
-    "title": "Nous créons des écosystèmes technologiques fiables pour des yachts qui priorisent la sécurité et le confort à bord.",
-    "description": "Nous sommes ingénieurs télécoms et informatiques. Fondés en 2024, nous avons déjà livré un premier projet intégral avec connectivité Starlink, réseaux sécurisés et automatisation audiovisuelle. Nous concevons, intégrons et suivons chaque détail comme si nous embarquions avec vous.",
-    "primary": "Découvrir les services",
-    "secondary": "Parler à un ingénieur",
-    "features": [
-      {
-        "label": "Équipe certifiée",
-        "detail": "Spécialistes en communications satellitaires, réseaux sécurisés et automatisation à bord."
-      },
-      {
-        "label": "Relation directe",
-        "detail": "Fondateurs en charge de la planification, de l’installation et du support continu."
-      },
-      {
-        "label": "Architectures résilientes",
-        "detail": "Réseaux avec bascule automatique, cybersécurité proactive et supervision à distance."
-      }
-    ],
-    "plan": {
-      "title": "Notre engagement",
-      "description": "Accompagnement complet avec audit, exécution et support à distance pour que votre embarcation reste connectée.",
-      "stats": [
-        {
-          "id": "projects",
-          "value": "01",
-          "label": "Projet intégral livré sur superyacht"
-        },
-        {
-          "id": "year",
-          "value": "2024",
-          "label": "Année de création de Netnautica"
-        },
-        {
-          "id": "team",
-          "value": "Ingénierie",
-          "label": "Télécoms + informatique à vision navale"
-        }
+    "labels": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "company": "Yacht / entreprise",
+      "role": "Poste",
+      "website": "Site web",
+      "service": "Service prioritaire",
+      "budget": "Budget estimé",
+      "timeline": "Échéance",
+      "message": "Décrivez les besoins techniques",
+      "consent": "J’ai lu et j’accepte la politique de confidentialité"
+    },
+    "placeholders": {
+      "name": "Nom et prénom",
+      "email": "nom@netnautica.es",
+      "phone": "+34 600 000 000",
+      "company": "Nom du yacht",
+      "role": "Capitaine / ETO",
+      "website": "https://",
+      "message": "Nous voulons déployer Starlink avec redondance 4G/5G..."
+    },
+    "options": {
+      "budget": [
+        "< 10 000 €",
+        "10 000 - 30 000 €",
+        "30 000 - 60 000 €",
+        "> 60 000 €"
+      ],
+      "timeline": [
+        "Immédiat",
+        "Dans 3 mois",
+        "Prochaine saison",
+        "Flexible"
       ]
     }
   },
-  "solutions": {
-    "eyebrow": "Qui sommes-nous",
-    "title": "Ingénierie marine nouvelle génération pour des projets qui démarrent fort",
-    "description": "Netnautica élève la technologie des yachts de luxe avec une approche boutique. Nous construisons des relations de confiance avec capitaines, chantiers navals et propriétaires, depuis Palma de Majorque vers tous les ports du monde.",
-    "highlights": [
-      "Expertise en réseaux critiques et cybersécurité",
-      "Installations supervisées directement par les fondateurs",
-      "Planification, exécution et support post-projet"
-    ],
-    "items": [
-      {
-        "icon": "⚓️",
-        "title": "Ingénieurs spécialisés",
-        "description": "Formation en ingénierie télécoms et informatique, certifiés en réseaux, satellite et électronique navale."
-      },
-      {
-        "icon": "🛰️",
-        "title": "Intégration poussée",
-        "description": "Nous unifions connectivité, cybersécurité, AV, IoT et supervision NMEA 2000 dans un même écosystème."
-      },
-      {
-        "icon": "🤝",
-        "title": "Partenaires long terme",
-        "description": "Suivi à distance, audits périodiques et support préventif pour naviguer sereinement."
-      }
-    ]
-  },
-  "services": {
-    "eyebrow": "Services phares",
-    "title": "Des systèmes alliant confort, sécurité et connectivité mondiale",
-    "description": "Cliquez pour découvrir comment chaque solution se déploie sur votre embarcation.",
-    "items": [
-      {
-        "id": "connectivity",
-        "title": "Connectivité mondiale",
-        "subtitle": "Systèmes de connectivité pour yachts",
-        "summary": "Architecture multi-WAN avec Starlink, 4G/5G et réseaux WiFi 6 optimisés pour les grandes unités.",
-        "headline": "Couverture globale",
-        "subheadline": "Restez connectés partout dans le monde",
-        "features": [
-          "Infrastructure multi-liens internet avec bascule automatique.",
-          "Constellation Starlink LEO et communications cellulaires 4G/5G.",
-          "Réseaux WiFi 6 optimisés pour un confort et des performances maximales à bord.",
-          "Gestion QoS avancée pour les applications prioritaires."
-        ]
-      },
-      {
-        "id": "cyber",
-        "title": "Cybersécurité",
-        "subtitle": "Systèmes de cybersécurité pour yachts",
-        "summary": "Nous concevons des périmètres numériques robustes : firewalls nouvelle génération, segmentation et supervision continue.",
-        "headline": "Forteresse numérique en mer",
-        "subheadline": "Protégez l’écosystème connecté de votre yacht",
-        "features": [
-          "Configuration de firewalls nouvelle génération.",
-          "Segmentation réseau multicouche.",
-          "Audits de sécurité et analyses de vulnérabilités.",
-          "Sécurisation des appareils IoT et gestion des firmwares."
-        ]
-      },
-      {
-        "id": "av",
-        "title": "Intégration de systèmes AV",
-        "subtitle": "Divertissement audiovisuel pour yachts",
-        "summary": "Expériences audiovisuelles sur mesure avec contrôle centralisé et acoustique adaptée à chaque zone.",
-        "headline": "Expérience cinématographique en mer",
-        "subheadline": "Des systèmes AV pour un divertissement haut de gamme",
-        "features": [
-          "Distribution vidéo multi-zone avec matrices 4K.",
-          "Systèmes de conférence et de présentation pour réunions à bord.",
-          "Solutions acoustiques personnalisées.",
-          "Audio distribué avec contrôle par zone.",
-          "Streaming IPTV et serveur Plex sur mesure."
-        ]
-      },
-      {
-        "id": "iot",
-        "title": "Systèmes IoT et vidéosurveillance",
-        "subtitle": "Automatisation IoT pour yachts",
-        "summary": "Automatisation, éclairage intelligent et vidéosurveillance centralisée avec accès distant sécurisé.",
-        "headline": "Contrôle intelligent et sécurité",
-        "subheadline": "Automatisation avancée avec vidéosurveillance intégrée",
-        "features": [
-          "Plateforme centralisée d’automatisation à bord.",
-          "Systèmes d’éclairage intelligent.",
-          "Personnalisation des cabines avec contrôle individuel de l’ambiance.",
-          "Accès distant sécurisé via applications mobiles et portails web.",
-          "Streaming en temps réel vers plusieurs postes de visualisation."
-        ]
-      }
-    ]
-  },
-  "technologies": {
-    "eyebrow": "Technologies clés",
-    "title": "Intégrations validées par des fabricants leaders",
-    "description": "Nous sélectionnons matériel et logiciel certifiés pour garantir performance, sécurité et support international.",
-    "items": [
-      {
-        "slug": "starlink",
-        "name": "Starlink",
-        "tagline": "Connectivité satellitaire LEO",
-        "description": "Internet global à faible latence pour une expérience haut débit optimale à bord."
-      },
-      {
-        "slug": "unifi",
-        "name": "Ubiquiti UniFi",
-        "tagline": "Réseaux WiFi 6 managés",
-        "description": "Backbone WiFi évolutif avec contrôleurs Cloud et roaming assisté pour tout l’équipage."
-      },
-      {
-        "slug": "peplink",
-        "name": "Peplink",
-        "tagline": "Routage SD-WAN",
-        "description": "Équilibrage dynamique, SD-WAN et supervision Cloud pour scénarios hybrides satellite + 4G/5G."
-      },
-      {
-        "slug": "fortinet",
-        "name": "Fortinet",
-        "tagline": "Cybersécurité et SASE",
-        "description": "Firewalls nouvelle génération, politiques Zero Trust et services managés pour sécuriser chaque dispositif à bord."
-      },
-      {
-        "slug": "crestron",
-        "name": "Crestron",
-        "tagline": "Contrôle et automatisation AV",
-        "description": "Interfaces personnalisées, scènes intelligentes et synchronisation domotique/entertainment."
-      },
-      {
-        "slug": "nmea2000",
-        "name": "NMEA 2000",
-        "tagline": "Intégration avec systèmes navals",
-        "description": "Supervision des données critiques et télémesure en temps réel pour une passerelle connectée."
-      }
-    ]
-  },
-  "partners": {
-    "eyebrow": "Couverture mondiale",
-    "title": "Basés à Palma · Intervention worldwide",
-    "description": "Depuis Palma de Majorque nous organisons des déplacements vers les Baléares, Barcelone, la Côte d’Azur et tout port international selon la route de votre yacht.",
-    "items": [
-      {
-        "title": "Support à distance 24/7",
-        "description": "Supervision proactive, résolution guidée et coordination avec l’équipage pour réduire les arrêts."
-      },
-      {
-        "title": "Visites techniques sur mesure",
-        "description": "Interventions planifiées et audits complets avant traversées ou changement d’équipage."
-      },
-      {
-        "title": "Réseau de spécialistes",
-        "description": "Collaboration avec chantiers, installateurs électriques et experts domotiques nautiques certifiés."
-      }
-    ]
-  },
-  "cta": {
-    "eyebrow": "Demander une consultation",
-    "title": "Planifiez une session stratégique avec notre équipe",
-    "description": "Partagez l’état actuel de votre yacht et nous élaborerons une feuille de route technologique réaliste, sans promesses exagérées.",
-    "contact": {
-      "emailLabel": "Email direct",
-      "email": "hello@netnautica.es",
-      "phoneLabel": "Assistance immédiate",
-      "phone": "+34 689 123 456",
-      "phoneHref": "+34689123456"
-    },
-    "form": {
-      "title": "Demande de consultation personnalisée",
-      "subtitle": "Dites-nous ce dont vous avez besoin et nous préparerons un plan technologique adapté à votre embarcation.",
-      "progress": [
-        "Contact",
-        "Projet",
-        "Agenda"
-      ],
-      "steps": {
-        "contact": {
-          "title": "Vos coordonnées",
-          "description": "Nous avons besoin d’un point de contact pour vous envoyer la proposition et confirmer la session technique.",
-          "fields": {
-            "name": "Nom complet *",
-            "email": "Email professionnel *",
-            "phone": "Téléphone de contact *",
-            "company": "Entreprise / Nom du yacht"
-          }
-        },
-        "project": {
-          "title": "Configuration actuelle et objectifs",
-          "description": "Sélectionnez les services prioritaires et partagez le contexte pour préparer la réunion.",
-          "fields": {
-            "service": "Services prioritaires",
-            "needs": "Décrivez vos besoins, l’installation actuelle et vos attentes...",
-            "attachment": "Plan du bateau, rack ou documentation (optionnel)",
-            "attachmentHint": "Formats acceptés : PDF, PNG, JPG. Maximum 10 Mo."
-          },
-          "services": [
-            "Worldwide Connectivity",
-            "Cybersecurity",
-            "AV System Integration",
-            "IoT & Video Surveillance",
-            "Autre / Conseil global"
-          ]
-        },
-        "schedule": {
-          "title": "Planifiez votre visite technique",
-          "description": "Proposez une date et un créneau préférentiel. Confirmation sous une heure ouvrée.",
-          "fields": {
-            "date": "Date souhaitée *",
-            "time": "Horaire préféré *",
-            "timezone": "Fuseau horaire"
-          },
-          "confirmation": "Vous recevrez un email de confirmation automatique avec le récapitulatif et les prochaines étapes."
-        }
-      },
-      "actions": {
-        "back": "Retour",
-        "next": "Continuer",
-        "submit": "Envoyer la demande",
-        "saving": "Envoi en cours..."
-      },
-      "validations": {
-        "required": "Ce champ est obligatoire.",
-        "email": "Veuillez saisir un email valide.",
-        "phone": "Veuillez saisir un numéro valide.",
-        "date": "Choisissez une date disponible.",
-        "time": "Choisissez un horaire disponible.",
-        "file": "Le fichier dépasse la limite de 10 Mo."
-      },
-      "upload": {
-        "button": "Joindre un fichier",
-        "placeholder": "Aucun fichier sélectionné",
-        "remove": "Supprimer le fichier"
-      },
-      "policy": "Vos informations sont sécurisées et uniquement utilisées pour vous contacter au sujet de nos services.",
-      "success": "Merci. Nous avons bien reçu votre demande. Nous vous contacterons sous une heure ouvrée.",
-      "autoReply": "Un email automatique avec le récapitulatif et des liens utiles vient d’être envoyé.",
-      "subtitleReview": "Relisez les informations avant envoi."
-    }
-  },
-  "footer": {
-    "brand": "Netnautica",
-    "description": "Ingénierie télécoms et informatique pour yachts de luxe. Fondée en 2024 à Palma de Majorque.",
-    "address": "Basés à Palma · Interventions worldwide",
-    "phone": "+34 689 123 456",
-    "email": "hello@netnautica.es"
+  "cookieBanner": {
+    "title": "Votre confidentialité compte",
+    "description": "Nous utilisons des cookies techniques et analytiques pour offrir un support et améliorer l’expérience. Ajustez vos préférences à tout moment.",
+    "accept": "Tout accepter",
+    "decline": "Essentiels uniquement",
+    "manage": "Gérer les cookies"
   }
 }
