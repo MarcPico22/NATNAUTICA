@@ -13,10 +13,8 @@ const pickHomeContent = (resource) => {
     highlights = [],
     servicesSection = {},
     technologySection = {},
-    techStack = {},
     casesSection = {},
     cases = [],
-    faqSection = {},
     contactCta = {}
   } = resource.home;
 
@@ -26,10 +24,8 @@ const pickHomeContent = (resource) => {
     highlights,
     servicesSection,
     technologySection,
-    techStack,
     casesSection,
     cases,
-    faqSection,
     contactCta
   };
 };

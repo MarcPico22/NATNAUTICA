@@ -14,9 +14,21 @@ const ctaLabel = {
 };
 
 const seeMoreLabel = {
-  es: 'Ver mas servicios',
+  es: 'Ver más servicios',
   en: 'See more services',
   fr: 'Voir plus de services'
+};
+
+const contactPath = {
+  es: '/contacto',
+  en: '/contact',
+  fr: '/contact'
+};
+
+const servicesPath = {
+  es: '/servicios',
+  en: '/services',
+  fr: '/services'
 };
 
 export const services = [
@@ -45,30 +57,67 @@ export const services = [
       }
     ],
     locales: createLocales((lang) => {
-      const suffix = lang === 'es' ? '' : `?lang=${lang}`;
       return {
-        name: 'Worldwide Connectivity',
-        shortDescription:
-          'Multi-WAN resiliente que combina Starlink, 4G/5G y WiFi 6 para mantener el yate siempre en linea.',
+        name: {
+          es: 'Conectividad Global',
+          en: 'Worldwide Connectivity',
+          fr: 'Connectivité Mondiale'
+        }[lang],
+        shortDescription: {
+          es: 'Multi-WAN resiliente que combina Starlink, 4G/5G y WiFi 6 para mantener el yate siempre en línea.',
+          en: 'Resilient Multi-WAN combining Starlink, 4G/5G and WiFi 6 to keep the yacht always online.',
+          fr: 'Multi-WAN résilient combinant Starlink, 4G/5G et WiFi 6 pour une connexion permanente du yacht.'
+        }[lang],
         hero: {
-          tagline: 'Cobertura global sin interrupciones',
-          description:
-            'Disenamos sistemas de conectividad con failover automatico, balanceo de carga y monitorizacion proactiva para travesias por el Mediterraneo y mas alla.',
-          primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` },
-          secondaryCta: { label: seeMoreLabel[lang], href: `/servicios${suffix}` }
+          tagline: {
+            es: 'Cobertura global sin interrupciones',
+            en: 'Uninterrupted worldwide coverage',
+            fr: 'Couverture mondiale ininterrompue'
+          }[lang],
+          description: {
+            es: 'Diseñamos sistemas de conectividad con failover automático, balanceo de carga y monitorización proactiva para travesías por el Mediterráneo y más allá.',
+            en: 'We design connectivity systems with automatic failover, load balancing and proactive monitoring for Mediterranean journeys and beyond.',
+            fr: 'Nous concevons des systèmes de connectivité avec failover automatique, équilibrage de charge et surveillance proactive pour les traversées en Méditerranée et au-delà.'
+          }[lang],
+          primaryCta: { label: ctaLabel[lang], href: contactPath[lang] },
+          secondaryCta: { label: seeMoreLabel[lang], href: servicesPath[lang] }
         },
         benefits: [
           {
-            title: 'Multi-WAN inteligente',
-            description: 'Starlink LEO, enlaces 4G/5G y VSAT combinados con conmutacion automatica.'
+            title: {
+              es: 'Multi-WAN inteligente',
+              en: 'Smart Multi-WAN',
+              fr: 'Multi-WAN intelligent'
+            }[lang],
+            description: {
+              es: 'Starlink LEO, enlaces 4G/5G y VSAT combinados con conmutación automática.',
+              en: 'Starlink LEO, 4G/5G links and VSAT combined with automatic switching.',
+              fr: 'Starlink LEO, liens 4G/5G et VSAT combinés avec commutation automatique.'
+            }[lang]
           },
           {
-            title: 'WiFi 6 premium',
-            description: 'Cobertura total a bordo con QoS y segmentacion para tripulacion e invitados.'
+            title: {
+              es: 'WiFi 6 premium',
+              en: 'Premium WiFi 6',
+              fr: 'WiFi 6 premium'
+            }[lang],
+            description: {
+              es: 'Cobertura total a bordo con QoS y segmentación para tripulación e invitados.',
+              en: 'Complete onboard coverage with QoS and segmentation for crew and guests.',
+              fr: 'Couverture totale à bord avec QoS et segmentation pour équipage et invités.'
+            }[lang]
           },
           {
-            title: 'Gestion remota 24/7',
-            description: 'Supervision continua y ajustes inmediatos para cada ruta y atraque.'
+            title: {
+              es: 'Gestión remota 24/7',
+              en: '24/7 Remote management',
+              fr: 'Gestion à distance 24/7'
+            }[lang],
+            description: {
+              es: 'Supervisión continua y ajustes inmediatos para cada ruta y atraque.',
+              en: 'Continuous monitoring and immediate adjustments for each route and dock.',
+              fr: 'Surveillance continue et ajustements immédiats pour chaque route et amarrage.'
+            }[lang]
           }
         ],
         process: [

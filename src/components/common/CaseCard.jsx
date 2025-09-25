@@ -1,10 +1,19 @@
 ﻿import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { cn } from '@/utils/cn';
 import { getLocaleContent, getLocaleString } from '@/utils/i18n';
 import { Icon } from '@/components/ui/Icon';
 
-export function CaseCard({ caseStudy, language, ctaLabel, className = '' }) {
+const casesPath = {
+  es: '/casos-de-exito',
+  en: '/case-studies',
+  fr: '/projets'
+};
+
+export function CaseCard({ caseStudy, ctaLabel, className = '' }) {
+  const { i18n } = useTranslation();
+  const language = i18n.language;
   const locale = getLocaleContent(caseStudy.locales, language);
 
   return (
@@ -47,7 +56,7 @@ export function CaseCard({ caseStudy, language, ctaLabel, className = '' }) {
       )}
       <div className="mt-auto pt-6">
         <Link
-          to={`/casos-de-exito?highlight=${caseStudy.slug}`}
+          to={`${casesPath[language]}?highlight=${getLocaleString(caseStudy.slug, language)}`}
           className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 transition hover:translate-x-1"
         >
           {ctaLabel}

@@ -8,7 +8,8 @@ import { Logo } from '@/components/common/Logo';
 const currentYear = new Date().getFullYear();
 
 export function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = i18n.language;
 
   return (
     <footer className="border-t border-slate-200/60 bg-white/90 text-sm text-slate-600 transition-colors dark:border-slate-800/60 dark:bg-slate-950/80 dark:text-slate-300">
@@ -28,23 +29,23 @@ export function Footer() {
               </div>
               <div>
                 <span className="font-semibold text-slate-700 dark:text-slate-200">{t('footer.phone')}:</span>{' '}
-                <a href={`tel:${CONTACT_DETAILS.phone.replace(/\s+/g, '')}`} className="hover:text-brand-600 dark:hover:text-brand-300">
-                  {CONTACT_DETAILS.phone}
+                <a href={`tel:${CONTACT_DETAILS.phone[language].replace(/\s+/g, '')}`} className="hover:text-brand-600 dark:hover:text-brand-300">
+                  {CONTACT_DETAILS.phone[language]}
                 </a>
               </div>
               <div>
                 <span className="font-semibold text-slate-700 dark:text-slate-200">WhatsApp:</span>{' '}
-                <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/[^0-9]/g, '')}`} className="hover:text-brand-600 dark:hover:text-brand-300">
-                  {CONTACT_DETAILS.whatsapp}
+                <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp[language].replace(/[^0-9]/g, '')}`} className="hover:text-brand-600 dark:hover:text-brand-300">
+                  {CONTACT_DETAILS.whatsapp[language]}
                 </a>
               </div>
               <div>
                 <span className="font-semibold text-slate-700 dark:text-slate-200">{t('footer.address')}:</span>{' '}
-                <span>{CONTACT_DETAILS.address}</span>
+                <span>{CONTACT_DETAILS.address[language]}</span>
               </div>
               <div>
                 <span className="font-semibold text-slate-700 dark:text-slate-200">{t('footer.schedule')}:</span>{' '}
-                <span>{CONTACT_DETAILS.schedule}</span>
+                <span>{CONTACT_DETAILS.schedule[language]}</span>
               </div>
             </div>
             <div className="flex gap-3 pt-2">
@@ -71,7 +72,7 @@ export function Footer() {
                 {group.links.map((link) => (
                   <li key={link.id}>
                     <Link
-                      to={link.path}
+                      to={link.path.replace(':lang', i18n.language)}
                       className="inline-flex items-center gap-2 text-slate-600 transition hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-300"
                     >
                       <span>{t(link.translationKey)}</span>
@@ -111,7 +112,7 @@ export function Footer() {
           <div>&copy; {currentYear} Netnautica. {t('footer.rights')}</div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             {LEGAL_LINKS.map((link) => (
-              <Link key={link.id} to={link.path} className="hover:text-brand-600 dark:hover:text-brand-300">
+              <Link key={link.id} to={link.path.replace(':lang', i18n.language)} className="hover:text-brand-600 dark:hover:text-brand-300">
                 {t(link.translationKey)}
               </Link>
             ))}

@@ -3,7 +3,7 @@
     "home": "Accueil",
     "services": "Services",
     "cases": "Projets",
-    "about": "A propos",
+    "about": "À propos",
     "blog": "Blog",
     "contact": "Contact",
     "toggle": "Ouvrir ou fermer le menu",
@@ -14,22 +14,22 @@
     "toggleTheme": "Changer de mode",
     "viewAll": "Tout voir",
     "readMore": "En savoir plus",
-    "learnMore": "Details",
+    "learnMore": "Détails",
     "next": "Suivant",
-    "previous": "Precedent",
+    "previous": "Précédent",
     "submit": "Envoyer",
     "start": "Commencer"
   },
   "footer": {
-    "about": "Ingenierie boutique pour yachts de luxe. Connectivite, cybersecurite, AV et IoT depuis Palma de Majorque.",
+    "about": "Ingénierie boutique pour yachts de luxe. Connectivité, cybersécurité, AV et IoT depuis Palma de Majorque.",
     "company": "Entreprise",
     "services": "Services",
     "newsletterTitle": "Newsletter",
-    "newsletterCopy": "Recevez nos conseils sur la connectivite, la cybersurveillance et le divertissement a bord.",
+    "newsletterCopy": "Recevez nos conseils sur la connectivité, la cybersurveillance et le divertissement à bord.",
     "newsletterLabel": "Entrez votre email",
-    "newsletterButton": "S abonner",
-    "rights": "Tous droits reserves.",
-    "phone": "Telephone",
+    "newsletterButton": "S'abonner",
+    "rights": "Tous droits réservés.",
+    "phone": "Téléphone",
     "address": "Adresse",
     "schedule": "Horaires"
   },
@@ -40,8 +40,8 @@
     "uxUi": "IoT & Video Surveillance"
   },
   "legal": {
-    "notice": "Mentions legales",
-    "privacy": "Confidentialite",
+    "notice": "Mentions légales",
+    "privacy": "Confidentialité",
     "cookies": "Cookies"
   },
   "social": {
@@ -50,41 +50,53 @@
     "youtube": "YouTube",
     "github": "GitHub"
   },
+  "about": {
+    "headings": {
+      "pillars": "Notre ADN",
+      "timeline": "Notre évolution",
+      "culture": "Notre manière de travailler"
+    },
+    "cta": {
+      "primary": "Réserver un appel",
+      "secondary": "Voir les services"
+    }
+  },
   "forms": {
-    "step": "Etape {{current}} sur {{total}}",
-    "required": "Champ requis",
-    "invalidEmail": "Email invalide",
-    "invalidPhone": "Telephone invalide",
-    "consent": "J accepte la politique de confidentialite"
+    "step": "Étape {{current}} sur {{total}}",
+    "required": "Champ obligatoire",
+    "invalidEmail": "Saisissez un email valide",
+    "invalidPhone": "Saisissez un téléphone valide",
+    "consent": "J'accepte la politique de confidentialité",
+    "selectPlaceholder": "Sélectionnez une option"
   },
   "contact": {
-    "title": "Parlez-nous de votre projet a bord",
-    "subtitle": "Nous concevons des systemes de connectivite, de securite et de divertissement adaptes a chaque route et equipage.",
-    "success": "Merci de votre message. Nous repondrons sous 24 heures ouvre es.",
+    "title": "Parlez-nous de votre projet à bord",
+    "subtitle": "Nous concevons des systèmes de connectivité, de sécurité et de divertissement adaptés à chaque route et équipage.",
+    "success": "Merci de votre message. Nous répondrons sous 24 heures ouvrées.",
     "errors": {
-      "generic": "Une erreur est survenue. Merci de reessayer."
+      "generic": "Une erreur est survenue. Merci de réessayer."
     },
     "labels": {
       "name": "Nom",
       "email": "Email",
-      "phone": "Telephone",
+      "phone": "Téléphone",
       "company": "Yacht ou entreprise",
       "role": "Poste",
       "website": "Site web",
       "service": "Service prioritaire",
-      "budget": "Budget estime",
-      "timeline": "Echeance",
-      "message": "Decrivez les besoins techniques",
-      "consent": "J ai lu et j accepte la politique de confidentialite"
+      "budget": "Budget estimé",
+      "timeline": "Échéance",
+      "message": "Décrivez les besoins techniques",
+      "consent": "J'ai lu et j'accepte la politique de confidentialité"
     },
     "placeholders": {
-      "name": "Nom et prenom",
+      "name": "Nom et prénom",
       "email": "nom@netnautica.com",
       "phone": "+34 600 000 000",
       "company": "Nom du yacht",
       "role": "Capitaine / ETO",
       "website": "https://",
-      "message": "Nous souhaitons deployer Starlink avec redondance 4G/5G..."
+      "message": "Nous souhaitons déployer Starlink avec redondance 4G/5G..."
     },
     "options": {
       "budget": [
@@ -94,7 +106,7 @@
         "> 60 000 EUR"
       ],
       "timeline": [
-        "Immediat",
+        "Immédiat",
         "Dans 3 mois",
         "Saison prochaine",
         "Flexible"
@@ -102,24 +114,24 @@
     }
   },
   "cookieBanner": {
-    "title": "Votre confidentialite compte",
-    "description": "Nous utilisons des cookies techniques et analytiques pour offrir du support et ameliorer l experience. Vous pouvez ajuster vos preferences a tout moment.",
+    "title": "Votre confidentialité compte",
+    "description": "Nous utilisons des cookies techniques et analytiques pour offrir du support et améliorer l'expérience. Vous pouvez ajuster vos préférences à tout moment.",
     "accept": "Tout accepter",
     "decline": "Essentiels uniquement",
-    "manage": "Gerer les cookies"
+    "manage": "Gérer les cookies"
   },
   "home": {
     "hero": {
       "eyebrow": "Technologie intelligente pour la navigation",
-      "title": "Confort et controle a bord",
-      "subtitle": "Nous integrons des systemes technologiques intelligents qui elevent le confort a bord et optimisent l experience a chaque traversee.",
+      "title": "Confort et contrôle à bord",
+      "subtitle": "Nous intégrons des systèmes technologiques intelligents qui élèvent le confort à bord et optimisent l'expérience à chaque traversée.",
       "primaryCta": {
         "label": "Explorer les services",
-        "href": "/servicios"
+        "href": "/services"
       },
       "secondaryCta": {
         "label": "Voir le portfolio",
-        "href": "/casos-de-exito"
+        "href": "/projets"
       }
     },
     "stats": [

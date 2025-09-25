@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { SUPPORTED_LANGUAGES } from '@/config/site';
+import { getLanguageSwitchPath } from '@/utils/routes';
 
 export function LanguageToggle({ className = '' }) {
   const location = useLocation();
@@ -9,10 +10,11 @@ export function LanguageToggle({ className = '' }) {
   const { i18n, t } = useTranslation();
 
   const handleChange = (code) => {
-    const params = new URLSearchParams(location.search);
-    params.set('lang', code);
+    const currentPath = location.pathname;
+    const currentLang = i18n.language;
+    const newPath = currentPath.replace(`/${currentLang}`, `/${code}`);
     void i18n.changeLanguage(code);
-    navigate({ pathname: location.pathname, search: params.toString() }, { replace: true });
+    navigate(newPath, { replace: true });
   };
 
   return (

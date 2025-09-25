@@ -7,25 +7,11 @@ import { Button } from '@/components/ui/Button';
 import { aboutContent } from '@/data/about';
 import { getLocaleContent } from '@/utils/i18n';
 
-const sectionHeadings = {
-  es: { pillars: 'Lo que nos define', timeline: 'Nuestra evolucion', culture: 'Como trabajamos' },
-  en: { pillars: 'What defines us', timeline: 'Our evolution', culture: 'How we work' },
-  fr: { pillars: 'Notre ADN', timeline: 'Notre evolution', culture: 'Notre maniere de travailler' }
-};
-
-const ctaLabels = {
-  es: { primary: 'Agenda una llamada', secondary: 'Ver servicios' },
-  en: { primary: 'Book a call', secondary: 'View services' },
-  fr: { primary: 'Reserver un appel', secondary: 'Voir les services' }
-};
-
 // NETNAUTICA-EDIT: Pagina corporativa ajustada al posicionamiento de Netnautica.es
 const AboutPage = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const language = i18n.language;
   const content = getLocaleContent(aboutContent, language);
-  const labels = ctaLabels[language] ?? ctaLabels.es;
-  const headings = sectionHeadings[language] ?? sectionHeadings.es;
 
   return (
     <>
@@ -44,10 +30,10 @@ const AboutPage = () => {
             <p className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">{content.hero.description}</p>
             <div className="flex flex-wrap gap-3">
               <Button as="a" href="/contacto" size="lg">
-                {labels.primary}
+                {t('about.cta.primary')}
               </Button>
               <Button as="a" href="/servicios" variant="secondary" size="lg">
-                {labels.secondary}
+                {t('about.cta.secondary')}
               </Button>
             </div>
           </div>
@@ -66,7 +52,7 @@ const AboutPage = () => {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
-        <SectionHeader eyebrow="Pilares" title={headings.pillars} alignment="center" className="mx-auto max-w-3xl" />
+        <SectionHeader eyebrow="Pilares" title={t('about.headings.pillars')} alignment="center" className="mx-auto max-w-3xl" />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {content.pillars.map((pillar) => (
             <div
@@ -98,7 +84,7 @@ const AboutPage = () => {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
-        <SectionHeader eyebrow="Timeline" title={headings.timeline} alignment="center" className="mx-auto max-w-3xl" />
+        <SectionHeader eyebrow="Timeline" title={t('about.headings.timeline')} alignment="center" className="mx-auto max-w-3xl" />
         <div className="relative mt-10">
           <span className="absolute left-4 top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-800" aria-hidden="true" />
           <ol className="space-y-6 pl-10">
@@ -116,7 +102,7 @@ const AboutPage = () => {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8">
-        <SectionHeader eyebrow="Cultura" title={content.culture.title} alignment="center" className="mx-auto max-w-3xl" />
+        <SectionHeader eyebrow="Cultura" title={t('about.headings.culture')} alignment="center" className="mx-auto max-w-3xl" />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {content.culture.items.map((item) => (
             <div

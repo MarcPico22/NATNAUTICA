@@ -42,7 +42,7 @@ const ServiceDetailPage = () => {
         url: SITE_URL,
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: CONTACT_DETAILS.phone,
+          telephone: CONTACT_DETAILS.phone[language],
           contactType: 'sales'
         }
       },

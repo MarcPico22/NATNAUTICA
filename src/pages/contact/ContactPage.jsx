@@ -2,7 +2,11 @@
 import { useTranslation } from 'react-i18next';
 
 import { Seo } from '@/components/seo/Seo';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/                {CONTACT_DETAILS.address[language]}
+              </div>
+              <div>
+                <dt className="font-semibold text-slate-900 dark:text-white">{t('footer.schedule')}</dt>
+                {CONTACT_DETAILS.schedule[language]}tton';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { services } from '@/data/services';
 import { CONTACT_DETAILS, FORM_STEPS, SOCIAL_LINKS } from '@/config/site';
@@ -37,9 +41,7 @@ const ContactPage = () => {
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
 
-  const selectPlaceholder =
-    ({ es: 'Selecciona una opcion', en: 'Select an option', fr: 'Selectionnez une option' }[language]) ??
-    'Select an option';
+  const selectPlaceholder = t('forms.selectPlaceholder');
 
   const serviceOptions = useMemo(
     () =>
@@ -165,19 +167,19 @@ const ContactPage = () => {
             <div className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
               <div>
                 <span className="font-semibold text-slate-900 dark:text-white">{t('footer.phone')}:</span>{' '}
-                <a href={`tel:${CONTACT_DETAILS.phone.replace(/\s+/g, '')}`}>{CONTACT_DETAILS.phone}</a>
+                                <a href={`tel:${CONTACT_DETAILS.phone[language].replace(/\s+/g, '')}`}>{CONTACT_DETAILS.phone[language]}</a>
               </div>
               <div>
                 <span className="font-semibold text-slate-900 dark:text-white">WhatsApp:</span>{' '}
-                <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/[^0-9]/g, '')}`}>{CONTACT_DETAILS.whatsapp}</a>
+                <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp[language].replace(/[^0-9]/g, '')}`}>{CONTACT_DETAILS.whatsapp[language]}</a>
               </div>
               <div>
                 <span className="font-semibold text-slate-900 dark:text-white">{t('footer.address')}:</span>{' '}
-                {CONTACT_DETAILS.address}
+                {CONTACT_DETAILS.address[language]}
               </div>
               <div>
                 <span className="font-semibold text-slate-900 dark:text-white">{t('footer.schedule')}:</span>{' '}
-                {CONTACT_DETAILS.schedule}
+                {CONTACT_DETAILS.schedule[language]}
               </div>
             </div>
             <div className="mt-6 flex gap-3">

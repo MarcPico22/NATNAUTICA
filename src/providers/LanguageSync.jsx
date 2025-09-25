@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/config/site';
+import { getLocalizedPath } from '@/components/common/LocalizedRoute';
 
 const STORAGE_KEY = 'netnautica-lang';
 const SUPPORTED_CODES = new Set(SUPPORTED_LANGUAGES.map((lang) => lang.code));
@@ -26,11 +27,15 @@ export function LanguageSync() {
 
     if (resolvedLang !== i18n.language) {
       void i18n.changeLanguage(resolvedLang);
-    }
-
-    if (paramLang !== resolvedLang) {
-      params.set('lang', resolvedLang);
-      navigate({ pathname: location.pathname, search: params.toString() }, { replace: true, state: location.state });
+      
+      // Redirigir a la ruta localizada correspondiente
+      const currentPath = location.pathname.split('/').filter(Boolean);
+      const pathKey = currentPath[currentPath.length - 1];
+      const localizedPath = getLocalizedPath(pathKey, resolvedLang);
+      
+      if (localizedPath && localizedPath !== currentPath) {
+        navigate(`/${localizedPath}`, { replace: true });
+      }
     }
 
     localStorage.setItem(STORAGE_KEY, resolvedLang);
