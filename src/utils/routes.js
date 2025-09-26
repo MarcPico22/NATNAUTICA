@@ -55,6 +55,25 @@ export const getLanguageSwitchPath = (newLanguage, currentPath) => {
   return currentPath.replace(`/${currentLanguage}`, `/${newLanguage}`);
 };
 
+// Rutas universales - mismo path para todos los idiomas
+export const universalRoutes = {
+  home: '/',
+  about: '/aboutus',
+  services: '/services',
+  cases: '/cases',
+  contact: '/contact',
+  legal: '/legal'
+};
+
+/**
+ * Obtiene la ruta universal para cualquier idioma
+ * @param {string} pathKey - La clave de la ruta
+ * @returns {string} La ruta universal
+ */
+export const getLocalizedPath = (pathKey) => {
+  return universalRoutes[pathKey] || '/';
+};
+
 // Hook personalizado para obtener la ruta localizada
 export const useLocalizedPath = (pathKey, params) => {
   return getLocalizedPath(pathKey, params);

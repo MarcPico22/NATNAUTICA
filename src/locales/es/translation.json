@@ -296,5 +296,24 @@
       "website": "https://",
       "message": "Queremos implementar Starlink con backup 4G/5G..."
     }
+  },
+  "accessibility": {
+    "skipToContent": "Ir al contenido principal",
+    "openMenu": "Abrir menú de navegación",
+    "closeMenu": "Cerrar menú de navegación",
+    "mainNavigation": "Navegación principal"
+  },
+  "cases": {
+    "toolkit": "Herramientas",
+    "projectPillars": "Pilares del proyecto",
+    "description": "Ingeniería multi-WAN, políticas Zero Trust y automatización AV/IoT.",
+    "planning": "Planificación con capitanes y ETO para dimensionar redes y racks.",
+    "integration": "Integración de Starlink, Peplink, Fortinet y Crestron según cada uso a bordo.",
+    "monitoring": "Monitorización remota 24/7 y soporte inmediato durante temporada."
+  },
+  "errors": {
+    "pageNotFound": "Página no encontrada",
+    "pageNotFoundDescription": "Lo sentimos, no hemos encontrado la página solicitada. Comprueba la URL o regresa a inicio.",
+    "backToHome": "Volver al inicio"
   }
 }

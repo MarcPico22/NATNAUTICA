@@ -105,15 +105,16 @@ const CaseStudiesPage = () => {
                   </blockquote>
                 </div>
                 <div className="flex flex-col gap-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-inner dark:border-slate-800 dark:bg-slate-950">
+                  {/* SECCIÓN TOOLKIT: Información técnica del proyecto - INTERNACIONALIZADA */}
                   <SectionHeader
-                    eyebrow="Toolkit"
-                    title="Pilares del proyecto"
-                    description="Ingenieria multi-WAN, politicas Zero Trust y automatizacion AV/IoT."
+                    eyebrow={t('cases.toolkit')}
+                    title={t('cases.projectPillars')}
+                    description={t('cases.description')}
                   />
                   <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
-                    <li>Planificacion con capitanes y ETO para dimensionar redes y racks.</li>
-                    <li>Integracion de Starlink, Peplink, Fortinet y Crestron segun cada uso a bordo.</li>
-                    <li>Monitorizacion remota 24/7 y soporte inmediato durante temporada.</li>
+                    <li>{t('cases.planning')}</li>
+                    <li>{t('cases.integration')}</li>
+                    <li>{t('cases.monitoring')}</li>
                   </ul>
                   <Button as={Link} to="/contacto" variant="secondary">
                     {t('actions.requestQuote')}

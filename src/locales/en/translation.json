@@ -522,5 +522,24 @@
         "href": "/services"
       }
     }
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu", 
+    "mainNavigation": "Main navigation"
+  },
+  "cases": {
+    "toolkit": "Toolkit",
+    "projectPillars": "Project pillars",
+    "description": "Multi-WAN engineering, Zero Trust policies and AV/IoT automation.",
+    "planning": "Planning with captains and ETOs to size networks and racks.",
+    "integration": "Integration of Starlink, Peplink, Fortinet and Crestron according to each onboard use.",
+    "monitoring": "24/7 remote monitoring and immediate support during season."
+  },
+  "errors": {
+    "pageNotFound": "Page not found",
+    "pageNotFoundDescription": "Sorry, we couldn't find the page you're looking for. Please check the URL or return to home.",
+    "backToHome": "Back to home"
   }
 }

@@ -1,4 +1,11 @@
-﻿export const NAVIGATION_ITEMS = [
+﻿/**
+ * CONFIGURACIÓN DE NAVEGACIÓN
+ * Define los elementos de navegación principal y footer
+ * CORREGIDO: Rutas actualizadas para coincidir con App.jsx
+ */
+
+// Elementos de navegación principal
+export const NAVIGATION_ITEMS = [
   { id: 'home', translationKey: 'navigation.home' },
   { id: 'services', translationKey: 'navigation.services' },
   { id: 'cases', translationKey: 'navigation.cases' },
@@ -6,24 +13,27 @@
   { id: 'contact', translationKey: 'navigation.contact' }
 ];
 
+// Grupos de enlaces del footer
 export const FOOTER_LINK_GROUPS = [
   {
     id: 'company',
     translationKey: 'footer.company',
     links: [
-      { id: 'about', path: ':lang/about', translationKey: 'navigation.about' },
-      { id: 'cases', path: ':lang/cases', translationKey: 'navigation.cases' },
-      { id: 'contact', path: ':lang/contact', translationKey: 'navigation.contact' }
+      // CORREGIDO: aboutus en lugar de about para coincidir con App.jsx
+      { id: 'about', path: '/aboutus', translationKey: 'navigation.about' },
+      { id: 'cases', path: '/cases', translationKey: 'navigation.cases' },
+      { id: 'contact', path: '/contact', translationKey: 'navigation.contact' }
     ]
   },
   {
     id: 'services',
     translationKey: 'footer.services',
     links: [
-      { id: 'service-web', path: ':lang/services/development', translationKey: 'services.customDevelopment' },
-      { id: 'service-growth', path: ':lang/services/growth', translationKey: 'services.growthMarketing' },
-      { id: 'service-automation', path: ':lang/services/automation', translationKey: 'services.marketingAutomation' },
-      { id: 'service-ux', path: ':lang/services/ux', translationKey: 'services.uxUi' }
+      // CORREGIDO: Rutas simplificadas para coincidir con la estructura real
+      { id: 'service-connectivity', path: '/services', translationKey: 'services.customDevelopment' },
+      { id: 'service-cybersecurity', path: '/services', translationKey: 'services.growthMarketing' },
+      { id: 'service-av', path: '/services', translationKey: 'services.marketingAutomation' },
+      { id: 'service-iot', path: '/services', translationKey: 'services.uxUi' }
     ]
   }
 ];
