@@ -8,34 +8,56 @@ import en from './locales/en/translation.json';
 import fr from './locales/fr/translation.json';
 import { DEFAULT_LANGUAGE, FALLBACK_LANGUAGE, SUPPORTED_LANGUAGES } from './config/site.js';
 
-// CORRIGIDO: Eliminada configuración duplicada de 'detection'
-// Configuración única y optimizada para detección de idioma
-void i18n
-  .use(initReactI18next) // Integración con React
-  .use(LanguageDetector) // Detector automático de idioma
-  .init({
-    // Configuración de detección de idioma (UNIFICADA)
-    detection: {
-      order: ['localStorage', 'navigator'], // Prioridad: LocalStorage > Navegador (sin path para evitar conflictos)
-      caches: ['localStorage'], // Guardar preferencia en localStorage
-      lookupLocalStorage: 'netnautica-lang', // Usar la misma clave que LanguageSync
-      checkWhitelist: true // Solo permitir idiomas soportados
-    },
-    // Recursos de traducción por idioma
-    resources: {
-      es: { translation: es },
-      en: { translation: en },
-      fr: { translation: fr }
-    },
-    // Configuración de idiomas
-    lng: DEFAULT_LANGUAGE, // Idioma por defecto: español
-    fallbackLng: FALLBACK_LANGUAGE, // Idioma de respaldo: español
-    supportedLngs: SUPPORTED_LANGUAGES.map((lang) => lang.code), // ['es', 'en', 'fr']
-    // Configuración de interpolación
-    interpolation: {
-      escapeValue: false // React ya escapa por defecto
-    },
-    returnEmptyString: false // Devolver clave si no existe traducción
-  });
+// CONFIGURACIÓN COMPLETA DESDE CERO PARA ARREGLAR PROBLEMA DE CARGA
+const initI18n = async () => {
+  await i18n
+    .use(initReactI18next)
+    .use(LanguageDetector)
+    .init({
+      // Configuración de debugging
+      debug: true, // Activar logs para diagnosticar
+      
+      // Configuración de detección de idioma
+      detection: {
+        order: ['localStorage', 'navigator'],
+        caches: ['localStorage'],
+        lookupLocalStorage: 'netnautica-lang',
+        checkWhitelist: true
+      },
+      
+      // Recursos de traducción
+      resources: {
+        es: { translation: es },
+        en: { translation: en },
+        fr: { translation: fr }
+      },
+      
+      // Configuración de idiomas
+      lng: DEFAULT_LANGUAGE,
+      fallbackLng: FALLBACK_LANGUAGE,
+      supportedLngs: SUPPORTED_LANGUAGES.map((lang) => lang.code),
+      
+      // Configuración crítica para forzar carga
+      load: 'all', // Cargar todos los idiomas
+      preload: ['es', 'en', 'fr'], // Precargar todos los idiomas
+      
+      // Configuración de interpolación
+      interpolation: {
+        escapeValue: false
+      },
+      
+      // Configuración de retorno
+      returnEmptyString: false,
+      returnNull: false,
+      returnObjects: false
+    });
+    
+  console.log('🚀 i18next initialized with language:', i18n.language);
+  console.log('🔧 Available resources:', Object.keys(i18n.services.resourceStore.data));
+  console.log('🌊 Current translations loaded:', !!i18n.services.resourceStore.data[i18n.language]);
+};
+
+// Inicializar inmediatamente
+initI18n();
 
 export default i18n;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🧹 Limpiar Cache i18next</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 40px; background: #1e293b; color: white; }
+        .container { max-width: 600px; margin: 0 auto; text-align: center; }
+        .button { background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; margin: 10px; }
+        .button:hover { background: #2563eb; }
+        .status { margin: 20px 0; padding: 15px; border-radius: 8px; }
+        .success { background: #065f46; border: 1px solid #10b981; }
+        .info { background: #1e3a8a; border: 1px solid #3b82f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧹 Limpiar Cache i18next</h1>
+        <p>Esta página limpiará completamente el cache de i18next y localStorage.</p>
+        
+        <div id="current-status" class="status info">
+            <strong>Estado actual:</strong>
+            <div>localStorage 'netnautica-lang': <span id="current-lang">...</span></div>
+            <div>Todas las claves localStorage: <span id="all-keys">...</span></div>
+        </div>
+        
+        <button class="button" onclick="clearEverything()">🗑️ LIMPIAR TODO</button>
+        <button class="button" onclick="setEnglishAndReload()">🇬🇧 FORZAR INGLÉS Y RECARGAR</button>
+        <button class="button" onclick="checkStatus()">🔍 VERIFICAR ESTADO</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkStatus() {
+            const lang = localStorage.getItem('netnautica-lang');
+            const allKeys = Object.keys(localStorage).join(', ');
+            
+            document.getElementById('current-lang').textContent = lang || 'null';
+            document.getElementById('all-keys').textContent = allKeys || 'ninguna';
+        }
+        
+        function clearEverything() {
+            // Limpiar todo localStorage
+            localStorage.clear();
+            
+            // Limpiar sessionStorage también
+            sessionStorage.clear();
+            
+            // Mostrar resultado
+            document.getElementById('result').innerHTML = 
+                '<div class="status success"><strong>✅ LIMPIADO!</strong><br>Todo el localStorage y sessionStorage han sido eliminados.</div>';
+            
+            checkStatus();
+        }
+        
+        function setEnglishAndReload() {
+            // Limpiar todo primero
+            localStorage.clear();
+            sessionStorage.clear();
+            
+            // Establecer inglés específicamente
+            localStorage.setItem('netnautica-lang', 'en');
+            
+            // Mostrar resultado y recargar después de 2 segundos
+            document.getElementById('result').innerHTML = 
+                '<div class="status success"><strong>🇬🇧 INGLÉS FORZADO!</strong><br>Recargando página en 3 segundos...</div>';
+            
+            setTimeout(() => {
+                window.location.href = 'http://localhost:5174/services';
+            }, 3000);
+        }
+        
+        // Verificar estado al cargar
+        window.onload = checkStatus;
+    </script>
+</body>
+</html>

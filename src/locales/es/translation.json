@@ -80,6 +80,26 @@
         "description": "Agenda una consultoría sin compromiso y recibe un plan técnico detallado en menos de 48 horas."
       }
     },
+    "services": {
+      "sectionHeaders": {
+        "methodology": "Metodología",
+        "capabilities": "Capacidades",
+        "specializedServices": "Servicios especializados",
+        "servicesDescription": "Soluciones integrales de conectividad, ciberseguridad, AV e IoT diseñadas específicamente para el entorno náutico y adaptadas a las necesidades de cada embarcación."
+      },
+      "support": {
+        "title": "Soporte 24/7",
+        "description": "Monitorización continua de sistemas y asistencia técnica remota disponible en cualquier momento durante la navegación."
+      },
+      "integration": {
+        "title": "Integración completa",
+        "description": "Todos los sistemas trabajan como un ecosistema unificado, optimizando el rendimiento y simplificando la gestión."
+      },
+      "documentation": {
+        "title": "Documentación técnica",
+        "description": "Manuales detallados, diagramas de red y protocolos de mantenimiento entregados con cada instalación."
+      }
+    },
     "technologySection": {
       "eyebrow": "Tecnología",
       "title": "Tecnología de vanguardia",

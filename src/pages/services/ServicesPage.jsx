@@ -23,7 +23,7 @@ const ServicesPage = () => {
       itemListElement: services.map((service, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        url: `${SITE_URL}/servicios/${service.slug}`,
+        url: `${SITE_URL}/services/${service.slug}`, // Ruta universal corregida
         name: getLocaleContent(service.locales, language).name
       }))
     }
@@ -112,7 +112,7 @@ const ServicesPage = () => {
                     ))}
                   </dl>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <Button as={Link} to={`/servicios/${service.slug}`} size="md">
+                    <Button as={Link} to={`/services/${service.slug}`} size="md">
                       {t('actions.learnMore')}
                     </Button>
                     <Button as={Link} to={locale.hero.primaryCta.href} variant="secondary" size="md">

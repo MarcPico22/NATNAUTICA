@@ -201,6 +201,26 @@
         "description": "Planifiez une consultation sans engagement et recevez un plan technique detaille en moins de 48 heures."
       }
     },
+    "services": {
+      "sectionHeaders": {
+        "methodology": "Methodologie",
+        "capabilities": "Capacites",
+        "specializedServices": "Services specialises", 
+        "servicesDescription": "Solutions completes de connectivite, cybersecurite, AV et IoT concues specifiquement pour l'environnement nautique et adaptees aux besoins de chaque navire."
+      },
+      "support": {
+        "title": "Support 24/7",
+        "description": "Surveillance continue des systemes et assistance technique a distance disponible a tout moment pendant la navigation."
+      },
+      "integration": {
+        "title": "Integration complete",
+        "description": "Tous les systemes fonctionnent comme un ecosysteme unifie, optimisant les performances et simplifiant la gestion."
+      },
+      "documentation": {
+        "title": "Documentation technique",
+        "description": "Manuels detailles, diagrammes de reseau et protocoles de maintenance livres avec chaque installation."
+      }
+    },
     "technologySection": {
       "eyebrow": "Technologie",
       "title": "Technologie de pointe",

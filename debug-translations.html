@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debug Traducciones</title>
+</head>
+<body>
+  <h1>Debug Sistema de Traducciones</h1>
+  <div id="debug-info"></div>
+  
+  <script>
+    // Verificar localStorage
+    const storedLang = localStorage.getItem('netnautica-lang');
+    console.log('Idioma en localStorage:', storedLang);
+    
+    // Verificar i18next
+    fetch('/src/locales/en/translation.json')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Traducciones inglés cargadas:', data);
+        console.log('services.sectionHeaders:', data.services?.sectionHeaders);
+        
+        const debugDiv = document.getElementById('debug-info');
+        debugDiv.innerHTML = `
+          <h2>Estado del Sistema:</h2>
+          <p><strong>Idioma localStorage:</strong> ${storedLang}</p>
+          <p><strong>Capabilities en inglés:</strong> ${data.services?.sectionHeaders?.capabilities || 'NO ENCONTRADO'}</p>
+          <p><strong>Specialized services en inglés:</strong> ${data.services?.sectionHeaders?.specializedServices || 'NO ENCONTRADO'}</p>
+          <p><strong>Services description en inglés:</strong> ${data.services?.sectionHeaders?.servicesDescription || 'NO ENCONTRADO'}</p>
+          <hr>
+          <h3>Instrucciones:</h3>
+          <p>1. Abre la consola del navegador (F12)</p>
+          <p>2. Ve a http://localhost:5174/services</p>
+          <p>3. Cambia el idioma a inglés</p>
+          <p>4. Fuerza un hard refresh (Ctrl+F5)</p>
+          <p>5. Verifica que localStorage['netnautica-lang'] = 'en'</p>
+        `;
+      })
+      .catch(error => {
+        console.error('Error cargando traducciones:', error);
+      });
+  </script>
+</body>
+</html>

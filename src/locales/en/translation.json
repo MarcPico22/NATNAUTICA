@@ -425,6 +425,26 @@
         "description": "Schedule a no-commitment consultation and receive a detailed technical plan in less than 48 hours."
       }
     },
+    "services": {
+      "sectionHeaders": {
+        "methodology": "Methodology",
+        "capabilities": "🚀 CAPABILITIES TEST",
+        "specializedServices": "🔧 SPECIALIZED SERVICES TEST",
+        "servicesDescription": "🌊 TEST: Comprehensive connectivity, cybersecurity, AV and IoT solutions designed specifically for the nautical environment and adapted to each vessel's needs."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Continuous system monitoring and remote technical assistance available at any time during navigation."
+      },
+      "integration": {
+        "title": "Complete integration",
+        "description": "All systems work as a unified ecosystem, optimizing performance and simplifying management."
+      },
+      "documentation": {
+        "title": "Technical documentation", 
+        "description": "Detailed manuals, network diagrams and maintenance protocols delivered with each installation."
+      }
+    },
     "technologySection": {
       "eyebrow": "Technology",
       "title": "Cutting-edge technology",
