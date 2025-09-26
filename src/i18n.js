@@ -16,9 +16,9 @@ void i18n
   .init({
     // Configuración de detección de idioma (UNIFICADA)
     detection: {
-      order: ['path', 'localStorage', 'navigator'], // Prioridad: URL > LocalStorage > Navegador
-      lookupFromPathIndex: 0, // Buscar idioma en el primer segmento de la URL
+      order: ['localStorage', 'navigator'], // Prioridad: LocalStorage > Navegador (sin path para evitar conflictos)
       caches: ['localStorage'], // Guardar preferencia en localStorage
+      lookupLocalStorage: 'netnautica-lang', // Usar la misma clave que LanguageSync
       checkWhitelist: true // Solo permitir idiomas soportados
     },
     // Recursos de traducción por idioma
