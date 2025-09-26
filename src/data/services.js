@@ -782,6 +782,12 @@ export const servicesPageContent = createLocales((lang) => {
       }
     },
     intro: {
+      eyebrow: {
+        es: 'Metodología',
+        en: 'Methodology',
+        fr: 'Méthodologie',
+        de: 'Methodik'
+      }[lang],
       title: {
         es: 'Metodología a bordo',
         en: 'Onboard methodology',
@@ -793,6 +799,26 @@ export const servicesPageContent = createLocales((lang) => {
         en: 'Technical audit, personalized design, careful integration and 24/7 remote support for every journey.',
         fr: 'Audit technique, conception personnalisée, intégration soignée et support à distance 24/7 pour chaque traversée.',
         de: 'Technische Prüfung, individuelles Design, sorgfältige Integration und 24/7-Remote-Support für jede Reise.'
+      }[lang]
+    },
+    capabilities: {
+      eyebrow: {
+        es: 'Capacidades',
+        en: 'Capabilities',
+        fr: 'Capacités',
+        de: 'Fähigkeiten'
+      }[lang],
+      title: {
+        es: 'Servicios especializados',
+        en: 'Specialized Services',
+        fr: 'Services spécialisés',
+        de: 'Spezialisierte Services'
+      }[lang],
+      description: {
+        es: 'Conectividad, ciberseguridad, AV e IoT integrados como un único ecosistema para la tripulación y los invitados.',
+        en: 'Comprehensive connectivity, cybersecurity, AV and IoT solutions designed specifically for the nautical environment and adapted to each vessel\'s needs.',
+        fr: 'Solutions complètes de connectivité, cybersécurité, AV et IoT conçues spécifiquement pour l\'environnement nautique et adaptées aux besoins de chaque navire.',
+        de: 'Komplette Lösungen für Konnektivität, Cybersicherheit, AV und IoT, speziell für die nautische Umgebung entwickelt und an die Bedürfnisse jedes Schiffes angepasst.'
       }[lang]
     },
     steps: [
@@ -854,6 +880,12 @@ export const servicesPageContent = createLocales((lang) => {
       }
     ],
     cta: {
+      eyebrow: {
+        es: 'Siguiente paso',
+        en: 'Next step',
+        fr: 'Prochaine étape',
+        de: 'Nächster Schritt'
+      }[lang],
       title: {
         es: 'Prepara tu próxima travesía con Netnautica',
         en: 'Prepare your next journey with Netnautica',

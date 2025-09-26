@@ -428,9 +428,10 @@
     "services": {
       "sectionHeaders": {
         "methodology": "Methodology",
-        "capabilities": "?? CAPABILITIES TEST",
-        "specializedServices": "?? SPECIALIZED SERVICES TEST",
-        "servicesDescription": "?? TEST: Comprehensive connectivity, cybersecurity, AV and IoT solutions designed specifically for the nautical environment and adapted to each vessel's needs."
+        "capabilities": "Capabilities",
+        "specializedServices": "Specialized Services",
+        "servicesDescription": "Comprehensive connectivity, cybersecurity, AV and IoT solutions designed specifically for the nautical environment and adapted to each vessel's needs.",
+        "nextStep": "Next step"
       },
       "support": {
         "title": "24/7 Support",

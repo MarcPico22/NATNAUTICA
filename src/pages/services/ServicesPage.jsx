@@ -58,7 +58,7 @@ const ServicesPage = () => {
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow={t('services.sectionHeaders.methodology')}
+          eyebrow={pageContent.intro.eyebrow}
           title={pageContent.intro.title}
           description={pageContent.intro.description}
           alignment="center"
@@ -80,9 +80,9 @@ const ServicesPage = () => {
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow={t('services.sectionHeaders.capabilities')}
-          title={t('services.sectionHeaders.specializedServices')}
-          description={t('services.sectionHeaders.servicesDescription')}
+          eyebrow={pageContent.capabilities.eyebrow}
+          title={pageContent.capabilities.title}
+          description={pageContent.capabilities.description}
           alignment="center"
           className="mx-auto max-w-3xl"
         />
@@ -145,7 +145,7 @@ const ServicesPage = () => {
           <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
             <div>
               <SectionHeader
-                eyebrow="Siguiente paso"
+                eyebrow={pageContent.cta.eyebrow}
                 title={pageContent.cta.title}
                 description={pageContent.cta.description}
               />

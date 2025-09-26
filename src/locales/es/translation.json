@@ -284,7 +284,8 @@
       "methodology": "Metodología",
       "capabilities": "Capacidades",
       "specializedServices": "Servicios especializados",
-      "servicesDescription": "Conectividad, ciberseguridad, AV e IoT integrados como un único ecosistema para la tripulación y los invitados."
+      "servicesDescription": "Conectividad, ciberseguridad, AV e IoT integrados como un único ecosistema para la tripulación y los invitados.",
+      "nextStep": "Siguiente paso"
     },
     "support": {
       "title": "Soporte 24/7",

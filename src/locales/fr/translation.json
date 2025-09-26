@@ -207,7 +207,8 @@
         "methodology": "Methodologie",
         "capabilities": "Capacites",
         "specializedServices": "Services specialises", 
-        "servicesDescription": "Solutions completes de connectivite, cybersecurite, AV et IoT concues specifiquement pour l'environnement nautique et adaptees aux besoins de chaque navire."
+        "servicesDescription": "Solutions completes de connectivite, cybersecurite, AV et IoT concues specifiquement pour l'environnement nautique et adaptees aux besoins de chaque navire.",
+        "nextStep": "Prochaine etape"
       },
       "support": {
         "title": "Support 24/7",
