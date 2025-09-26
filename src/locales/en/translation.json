@@ -391,6 +391,40 @@
       "title": "Four pillars for a seamless onboard experience",
       "description": "Worldwide connectivity, cybersecurity, AV integration and IoT & surveillance are deployed as a single ecosystem, designed for crew and guests."
     },
+    "servicesPageContent": {
+      "hero": {
+        "eyebrow": "Services",
+        "title": "Smart technology for seamless yachting",
+        "description": "We integrate connectivity, cybersecurity, AV and IoT with a boutique telematics engineering team.",
+        "viewPortfolio": "View portfolio"
+      },
+      "intro": {
+        "title": "Onboard methodology",
+        "description": "Technical audit, personalized design, careful integration and 24/7 remote support for every journey."
+      },
+      "steps": [
+        {
+          "title": "Technical audit",
+          "description": "We inspect racks, wiring, satellite coverage and crew needs."
+        },
+        {
+          "title": "Personalized design",
+          "description": "Modular architecture with the best manufacturers in the nautical market."
+        },
+        {
+          "title": "Precise integration",
+          "description": "We coordinate with shipyards and interior designers respecting finishes and timelines."
+        },
+        {
+          "title": "Continuous support",
+          "description": "24/7 monitoring, scheduled visits and immediate remote assistance."
+        }
+      ],
+      "cta": {
+        "title": "Prepare your next journey with Netnautica",
+        "description": "Schedule a no-commitment consultation and receive a detailed technical plan in less than 48 hours."
+      }
+    },
     "technologySection": {
       "eyebrow": "Technology",
       "title": "Cutting-edge technology",

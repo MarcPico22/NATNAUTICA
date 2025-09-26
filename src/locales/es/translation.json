@@ -46,6 +46,40 @@
       "title": "Cuatro pilares para una experiencia perfecta a bordo",
       "description": "Conectividad global, ciberseguridad, integración AV y IoT & videovigilancia desplegados como un único ecosistema, diseñado para tripulación e invitados."
     },
+    "servicesPageContent": {
+      "hero": {
+        "eyebrow": "Servicios",
+        "title": "Tecnología inteligente para navegación perfecta",
+        "description": "Integramos conectividad, ciberseguridad, AV e IoT con un equipo boutique de ingeniería telemática.",
+        "viewPortfolio": "Ver portfolio"
+      },
+      "intro": {
+        "title": "Metodología a bordo",
+        "description": "Auditoría técnica, diseño personalizado, integración cuidadosa y soporte remoto 24/7 para cada travesía."
+      },
+      "steps": [
+        {
+          "title": "Auditoría técnica",
+          "description": "Inspeccionamos racks, cableado, cobertura satelital y necesidades de tripulación."
+        },
+        {
+          "title": "Diseño personalizado",
+          "description": "Arquitectura modular con los mejores fabricantes del mercado náutico."
+        },
+        {
+          "title": "Integración precisa",
+          "description": "Coordinamos con astilleros e interioristas respetando acabados y tiempos."
+        },
+        {
+          "title": "Soporte continuo",
+          "description": "Monitorización 24/7, visitas planificadas y asistencia remota inmediata."
+        }
+      ],
+      "cta": {
+        "title": "Prepara tu próxima travesía con Netnautica",
+        "description": "Agenda una consultoría sin compromiso y recibe un plan técnico detallado en menos de 48 horas."
+      }
+    },
     "technologySection": {
       "eyebrow": "Tecnología",
       "title": "Tecnología de vanguardia",

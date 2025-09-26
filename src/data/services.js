@@ -19,17 +19,10 @@ const seeMoreLabel = {
   fr: 'Voir plus de services'
 };
 
-const contactPath = {
-  es: '/contacto',
-  en: '/contact',
-  fr: '/contact'
-};
-
-const servicesPath = {
-  es: '/servicios',
-  en: '/services',
-  fr: '/services'
-};
+// NETNAUTICA-EDIT: Simplificado a rutas universales - mismo path para todos los idiomas
+// Cambio: Eliminadas las rutas localizadas, ahora todas usan el mismo path
+const contactPath = '/contact'; // Ruta universal para contacto
+const servicesPath = '/services'; // Ruta universal para servicios
 
 export const services = [
   {
@@ -79,8 +72,8 @@ export const services = [
             en: 'We design connectivity systems with automatic failover, load balancing and proactive monitoring for Mediterranean journeys and beyond.',
             fr: 'Nous concevons des systèmes de connectivité avec failover automatique, équilibrage de charge et surveillance proactive pour les traversées en Méditerranée et au-delà.'
           }[lang],
-          primaryCta: { label: ctaLabel[lang], href: contactPath[lang] },
-          secondaryCta: { label: seeMoreLabel[lang], href: servicesPath[lang] }
+          primaryCta: { label: ctaLabel[lang], href: contactPath }, // Ruta universal /contact
+          secondaryCta: { label: seeMoreLabel[lang], href: servicesPath } // Ruta universal /services
         },
         benefits: [
           {
@@ -253,8 +246,8 @@ export const services = [
             en: 'We protect networks, IoT devices and sensitive data with policies adapted to crew, guests and navigation systems.',
             fr: 'Nous protégeons les réseaux, les appareils IoT et les données sensibles avec des politiques adaptées à l\'équipage, aux invités et aux systèmes de navigation.'
           }[lang],
-          primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` },
-          secondaryCta: { label: seeMoreLabel[lang], href: `/servicios${suffix}` }
+          primaryCta: { label: ctaLabel[lang], href: contactPath }, // Ruta universal /contact
+          secondaryCta: { label: seeMoreLabel[lang], href: servicesPath } // Ruta universal /services
         },
         benefits: [
           {
@@ -427,8 +420,8 @@ export const services = [
             en: 'We transform salons and sky lounges into cinema spaces, meetings or private entertainment managed from Crestron interfaces.',
             fr: 'Nous transformons les salons et sky lounges en espaces cinéma, réunions ou divertissement privé gérés depuis des interfaces Crestron.'
           }[lang],
-          primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` },
-          secondaryCta: { label: seeMoreLabel[lang], href: `/servicios${suffix}` }
+          primaryCta: { label: ctaLabel[lang], href: contactPath }, // Ruta universal /contact
+          secondaryCta: { label: seeMoreLabel[lang], href: servicesPath } // Ruta universal /services
         },
         benefits: [
           {
@@ -601,8 +594,8 @@ export const services = [
             en: 'We integrate lighting, climate, NMEA 2000 monitoring and CCTV in a single platform accessible from anywhere.',
             fr: 'Nous intégrons l\'éclairage, le climat, la surveillance NMEA 2000 et la vidéosurveillance dans une seule plateforme accessible de partout.'
           }[lang],
-          primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` },
-          secondaryCta: { label: seeMoreLabel[lang], href: `/servicios${suffix}` }
+          primaryCta: { label: ctaLabel[lang], href: contactPath }, // Ruta universal /contact
+          secondaryCta: { label: seeMoreLabel[lang], href: servicesPath } // Ruta universal /services
         },
         benefits: [
           {
@@ -669,45 +662,110 @@ export const services = [
   }
 ];
 
+// NETNAUTICA-EDIT: Usando rutas universales pero manteniendo estructura original para compatibilidad
+// Cambio: Solo corregidas las rutas /contacto -> /contact y /casos-de-exito -> /cases
 export const servicesPageContent = createLocales((lang) => {
-  const suffix = lang === 'es' ? '' : `?lang=${lang}`;
   return {
     hero: {
-      eyebrow: 'Services',
-      title: 'Smart technology for seamless yachting',
-      description: 'Integramos conectividad, ciberseguridad, AV e IoT con un equipo boutique de ingenieria telematica.',
-      primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` },
+      eyebrow: {
+        es: 'Servicios',
+        en: 'Services', 
+        fr: 'Services'
+      }[lang],
+      title: {
+        es: 'Tecnología inteligente para navegación perfecta',
+        en: 'Smart technology for seamless yachting',
+        fr: 'Technologie intelligente pour navigation fluide'
+      }[lang],
+      description: {
+        es: 'Integramos conectividad, ciberseguridad, AV e IoT con un equipo boutique de ingeniería telemática.',
+        en: 'We integrate connectivity, cybersecurity, AV and IoT with a boutique telematics engineering team.',
+        fr: 'Nous intégrons connectivité, cybersécurité, AV et IoT avec une équipe boutique d\'ingénierie télématique.'
+      }[lang],
+      primaryCta: { label: ctaLabel[lang], href: '/contact' }, // Ruta universal /contact
       secondaryCta: {
-        label: lang === 'en' ? 'View portfolio' : lang === 'fr' ? 'Voir le portfolio' : 'Ver portfolio',
-        href: `/casos-de-exito${suffix}`
+        label: {
+          es: 'Ver portfolio',
+          en: 'View portfolio',
+          fr: 'Voir le portfolio'
+        }[lang],
+        href: '/cases' // Ruta universal /cases
       }
     },
     intro: {
-      title: 'Metodologia a bordo',
-      description: 'Auditoria tecnica, diseno personalizado, integracion cuidadosa y soporte remoto 24/7 para cada travesia.'
+      title: {
+        es: 'Metodología a bordo',
+        en: 'Onboard methodology',
+        fr: 'Méthodologie à bord'
+      }[lang],
+      description: {
+        es: 'Auditoría técnica, diseño personalizado, integración cuidadosa y soporte remoto 24/7 para cada travesía.',
+        en: 'Technical audit, personalized design, careful integration and 24/7 remote support for every journey.',
+        fr: 'Audit technique, conception personnalisée, intégration soignée et support à distance 24/7 pour chaque traversée.'
+      }[lang]
     },
     steps: [
       {
-        title: 'Auditoria tecnica',
-        description: 'Inspeccionamos racks, cableado, cobertura satelital y necesidades de tripulacion.'
+        title: {
+          es: 'Auditoría técnica',
+          en: 'Technical audit',
+          fr: 'Audit technique'
+        }[lang],
+        description: {
+          es: 'Inspeccionamos racks, cableado, cobertura satelital y necesidades de tripulación.',
+          en: 'We inspect racks, wiring, satellite coverage and crew needs.',
+          fr: 'Nous inspectons les racks, câblage, couverture satellite et besoins de l\'équipage.'
+        }[lang]
       },
       {
-        title: 'Diseno personalizado',
-        description: 'Arquitectura modular con los mejores fabricantes del mercado nautico.'
+        title: {
+          es: 'Diseño personalizado',
+          en: 'Personalized design',
+          fr: 'Conception personnalisée'
+        }[lang],
+        description: {
+          es: 'Arquitectura modular con los mejores fabricantes del mercado náutico.',
+          en: 'Modular architecture with the best manufacturers in the nautical market.',
+          fr: 'Architecture modulaire avec les meilleurs fabricants du marché nautique.'
+        }[lang]
       },
       {
-        title: 'Integracion precisa',
-        description: 'Coordinamos con astilleros e interioristas respetando acabados y tiempos.'
+        title: {
+          es: 'Integración precisa',
+          en: 'Precise integration',
+          fr: 'Intégration précise'
+        }[lang],
+        description: {
+          es: 'Coordinamos con astilleros e interioristas respetando acabados y tiempos.',
+          en: 'We coordinate with shipyards and interior designers respecting finishes and timelines.',
+          fr: 'Nous coordonnons avec chantiers navals et décorateurs en respectant finitions et délais.'
+        }[lang]
       },
       {
-        title: 'Soporte continuo',
-        description: 'Monitorizacion 24/7, visitas planificadas y asistencia remota inmediata.'
+        title: {
+          es: 'Soporte continuo',
+          en: 'Continuous support',
+          fr: 'Support continu'
+        }[lang],
+        description: {
+          es: 'Monitorización 24/7, visitas planificadas y asistencia remota inmediata.',
+          en: '24/7 monitoring, scheduled visits and immediate remote assistance.',
+          fr: 'Surveillance 24/7, visites planifiées et assistance à distance immédiate.'
+        }[lang]
       }
     ],
     cta: {
-      title: 'Prepara tu proxima travesia con Netnautica',
-      description: 'Agenda una consultoria sin compromiso y recibe un plan tecnico detallado en menos de 48 horas.',
-      primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` }
+      title: {
+        es: 'Prepara tu próxima travesía con Netnautica',
+        en: 'Prepare your next journey with Netnautica',
+        fr: 'Préparez votre prochaine traversée avec Netnautica'
+      }[lang],
+      description: {
+        es: 'Agenda una consultoría sin compromiso y recibe un plan técnico detallado en menos de 48 horas.',
+        en: 'Schedule a no-commitment consultation and receive a detailed technical plan in less than 48 hours.',
+        fr: 'Planifiez une consultation sans engagement et recevez un plan technique détaillé en moins de 48 heures.'
+      }[lang],
+      primaryCta: { label: ctaLabel[lang], href: '/contact' } // Ruta universal /contact
     }
   };
 });

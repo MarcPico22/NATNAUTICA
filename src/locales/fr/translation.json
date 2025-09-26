@@ -167,6 +167,40 @@
       "title": "Quatre piliers pour une experience fluide",
       "description": "Connectivite mondiale, cybersurveillance, integration AV et IoT deployes comme un ecosysteme unique pour equipage et invites."
     },
+    "servicesPageContent": {
+      "hero": {
+        "eyebrow": "Services",
+        "title": "Technologie intelligente pour navigation fluide",
+        "description": "Nous integrons connectivite, cybersecurite, AV et IoT avec une equipe boutique d'ingenierie telematique.",
+        "viewPortfolio": "Voir le portfolio"
+      },
+      "intro": {
+        "title": "Methodologie a bord",
+        "description": "Audit technique, conception personnalisee, integration soignee et support a distance 24/7 pour chaque traversee."
+      },
+      "steps": [
+        {
+          "title": "Audit technique",
+          "description": "Nous inspectons les racks, cablage, couverture satellite et besoins de l'equipage."
+        },
+        {
+          "title": "Conception personnalisee",
+          "description": "Architecture modulaire avec les meilleurs fabricants du marche nautique."
+        },
+        {
+          "title": "Integration precise",
+          "description": "Nous coordonnons avec chantiers navals et decorateurs en respectant finitions et delais."
+        },
+        {
+          "title": "Support continu",
+          "description": "Surveillance 24/7, visites planifiees et assistance a distance immediate."
+        }
+      ],
+      "cta": {
+        "title": "Preparez votre prochaine traversee avec Netnautica",
+        "description": "Planifiez une consultation sans engagement et recevez un plan technique detaille en moins de 48 heures."
+      }
+    },
     "technologySection": {
       "eyebrow": "Technologie",
       "title": "Technologie de pointe",
