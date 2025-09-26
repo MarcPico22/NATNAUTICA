@@ -88,7 +88,7 @@ const HomePage = () => {
         <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:px-8">
           <div className="flex flex-col gap-6">
             <img
-              src="/src/assets/netnautica-wordmark.png"
+              src="/src/assets/logo.png"
               alt={SITE_NAME}
               className="mb-6 h-16 w-auto"
             />
