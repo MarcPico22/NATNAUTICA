@@ -1,9 +1,9 @@
 ﻿export const NAVIGATION_ITEMS = [
-  { id: 'home', path: ':lang', translationKey: 'navigation.home' },
-  { id: 'services', path: ':lang/services', translationKey: 'navigation.services' },
-  { id: 'cases', path: ':lang/cases', translationKey: 'navigation.cases' },
-  { id: 'about', path: ':lang/about', translationKey: 'navigation.about' },
-  { id: 'contact', path: ':lang/contact', translationKey: 'navigation.contact' }
+  { id: 'home', translationKey: 'navigation.home' },
+  { id: 'services', translationKey: 'navigation.services' },
+  { id: 'cases', translationKey: 'navigation.cases' },
+  { id: 'about', translationKey: 'navigation.about' },
+  { id: 'contact', translationKey: 'navigation.contact' }
 ];
 
 export const FOOTER_LINK_GROUPS = [

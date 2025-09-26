@@ -121,10 +121,54 @@ export const services = [
           }
         ],
         process: [
-          { title: 'Auditoria de senal', description: 'Estudio de rutas, puertos y racks existentes.' },
-          { title: 'Arquitectura redundante', description: 'Diseno multi-enlace con balanceo y failover automatico.' },
-          { title: 'Optimizacion QoS', description: 'Priorizacion de aplicaciones criticas y perfiles de invitados.' },
-          { title: 'Monitorizacion continua', description: 'Panel en la nube con alertas y soporte proactivo.' }
+          { 
+            title: {
+              es: 'Auditoría de señal',
+              en: 'Signal audit',
+              fr: 'Audit du signal'
+            }[lang],
+            description: {
+              es: 'Estudio de rutas, puertos y racks existentes.',
+              en: 'Study of existing routes, ports and racks.',
+              fr: 'Étude des routes, ports et racks existants.'
+            }[lang]
+          },
+          { 
+            title: {
+              es: 'Arquitectura redundante',
+              en: 'Redundant architecture',
+              fr: 'Architecture redondante'
+            }[lang],
+            description: {
+              es: 'Diseño multi-enlace con balanceo y failover automático.',
+              en: 'Multi-link design with load balancing and automatic failover.',
+              fr: 'Conception multi-liens avec équilibrage de charge et basculement automatique.'
+            }[lang]
+          },
+          { 
+            title: {
+              es: 'Optimización QoS',
+              en: 'QoS optimization',
+              fr: 'Optimisation QoS'
+            }[lang],
+            description: {
+              es: 'Priorización de aplicaciones críticas y perfiles de invitados.',
+              en: 'Prioritization of critical applications and guest profiles.',
+              fr: 'Priorisation des applications critiques et des profils invités.'
+            }[lang]
+          },
+          { 
+            title: {
+              es: 'Monitorización continua',
+              en: 'Continuous monitoring',
+              fr: 'Surveillance continue'
+            }[lang],
+            description: {
+              es: 'Panel en la nube con alertas y soporte proactivo.',
+              en: 'Cloud dashboard with proactive alerts and support.',
+              fr: 'Tableau de bord cloud avec alertes et support proactif.'
+            }[lang]
+          }
         ],
         caseStudy: {
           company: 'Charter 45 m',
@@ -134,13 +178,28 @@ export const services = [
         },
         faq: [
           {
-            question: 'Necesito contratar Starlink?',
-            answer:
-              'Integramos Starlink cuando aporta valor, pero siempre combinamos varios proveedores para mantener redundancia.'
+            question: {
+              es: '¿Necesito contratar Starlink?',
+              en: 'Do I need to contract Starlink?',
+              fr: 'Dois-je souscrire à Starlink ?'
+            }[lang],
+            answer: {
+              es: 'Integramos Starlink cuando aporta valor, pero siempre combinamos varios proveedores para mantener redundancia.',
+              en: 'We integrate Starlink when it adds value, but we always combine multiple providers to maintain redundancy.',
+              fr: 'Nous intégrons Starlink quand cela apporte de la valeur, mais nous combinons toujours plusieurs fournisseurs pour maintenir la redondance.'
+            }[lang]
           },
           {
-            question: 'Incluye soporte remoto?',
-            answer: 'Si, monitorizamos los enlaces 24/7 y coordinamos ajustes con la tripulacion.'
+            question: {
+              es: '¿Incluye soporte remoto?',
+              en: 'Does it include remote support?',
+              fr: 'Le support à distance est-il inclus ?'
+            }[lang],
+            answer: {
+              es: 'Sí, monitorizamos los enlaces 24/7 y coordinamos ajustes con la tripulación.',
+              en: 'Yes, we monitor the links 24/7 and coordinate adjustments with the crew.',
+              fr: 'Oui, nous surveillons les liens 24/7 et coordonnons les ajustements avec l\'équipage.'
+            }[lang]
           }
         ]
       };
@@ -173,35 +232,117 @@ export const services = [
     locales: createLocales((lang) => {
       const suffix = lang === 'es' ? '' : `?lang=${lang}`;
       return {
-        name: 'Cybersecurity',
-        shortDescription:
-          'Perimetros digitales robustos con firewalls de nueva generacion, segmentacion y auditorias periodicas.',
+        name: {
+          es: 'Ciberseguridad',
+          en: 'Cybersecurity',
+          fr: 'Cybersécurité'
+        }[lang],
+        shortDescription: {
+          es: 'Perímetros digitales robustos con firewalls de nueva generación, segmentación y auditorías periódicas.',
+          en: 'Robust digital perimeters with next-generation firewalls, segmentation and periodic audits.',
+          fr: 'Périmètres numériques robustes avec pare-feu nouvelle génération, segmentation et audits périodiques.'
+        }[lang],
         hero: {
-          tagline: 'Fortaleza digital a bordo',
-          description:
-            'Protegemos redes, dispositivos IoT y datos sensibles con politicas adaptadas a tripulacion, invitados y sistemas de navegacion.',
+          tagline: {
+            es: 'Fortaleza digital a bordo',
+            en: 'Digital fortress onboard',
+            fr: 'Forteresse numérique à bord'
+          }[lang],
+          description: {
+            es: 'Protegemos redes, dispositivos IoT y datos sensibles con políticas adaptadas a tripulación, invitados y sistemas de navegación.',
+            en: 'We protect networks, IoT devices and sensitive data with policies adapted to crew, guests and navigation systems.',
+            fr: 'Nous protégeons les réseaux, les appareils IoT et les données sensibles avec des politiques adaptées à l\'équipage, aux invités et aux systèmes de navigation.'
+          }[lang],
           primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` },
           secondaryCta: { label: seeMoreLabel[lang], href: `/servicios${suffix}` }
         },
         benefits: [
           {
-            title: 'Firewalls NGFW',
-            description: 'Gestion de Fortinet y Peplink con reglas personalizadas y actualizaciones continuas.'
+            title: {
+              es: 'Firewalls NGFW',
+              en: 'NGFW Firewalls',
+              fr: 'Pare-feu NGFW'
+            }[lang],
+            description: {
+              es: 'Gestión de Fortinet y Peplink con reglas personalizadas y actualizaciones continuas.',
+              en: 'Management of Fortinet and Peplink with custom rules and continuous updates.',
+              fr: 'Gestion de Fortinet et Peplink avec règles personnalisées et mises à jour continues.'
+            }[lang]
           },
           {
-            title: 'Segmentacion avanzada',
-            description: 'Separacion de redes para tripulacion, invitados, domotica e instrumentacion.'
+            title: {
+              es: 'Segmentación avanzada',
+              en: 'Advanced segmentation',
+              fr: 'Segmentation avancée'
+            }[lang],
+            description: {
+              es: 'Separación de redes para tripulación, invitados, domótica e instrumentación.',
+              en: 'Network separation for crew, guests, home automation and instrumentation.',
+              fr: 'Séparation des réseaux pour l\'équipage, les invités, la domotique et l\'instrumentation.'
+            }[lang]
           },
           {
-            title: 'Hardening IoT',
-            description: 'Firmware controlado, acceso seguro y politicas Zero Trust para cada dispositivo.'
+            title: {
+              es: 'Hardening IoT',
+              en: 'IoT Hardening',
+              fr: 'Durcissement IoT'
+            }[lang],
+            description: {
+              es: 'Firmware controlado, acceso seguro y políticas Zero Trust para cada dispositivo.',
+              en: 'Controlled firmware, secure access and Zero Trust policies for each device.',
+              fr: 'Firmware contrôlé, accès sécurisé et politiques Zero Trust pour chaque appareil.'
+            }[lang]
           }
         ],
         process: [
-          { title: 'Auditoria inicial', description: 'Inventario de activos y analisis de vulnerabilidades.' },
-          { title: 'Diseno de politicas', description: 'Definicion de VLAN, autenticacion y registros.' },
-          { title: 'Monitorizacion SIEM', description: 'Alertas proactivas y respuesta a incidentes.' },
-          { title: 'Revision recurrente', description: 'Tests de intrusion y planes de mejora trimestrales.' }
+          { 
+            title: {
+              es: 'Auditoría inicial',
+              en: 'Initial audit',
+              fr: 'Audit initial'
+            }[lang],
+            description: {
+              es: 'Inventario de activos y análisis de vulnerabilidades.',
+              en: 'Asset inventory and vulnerability analysis.',
+              fr: 'Inventaire des actifs et analyse des vulnérabilités.'
+            }[lang]
+          },
+          { 
+            title: {
+              es: 'Diseño de políticas',
+              en: 'Policy design',
+              fr: 'Conception des politiques'
+            }[lang],
+            description: {
+              es: 'Definición de VLAN, autenticación y registros.',
+              en: 'Definition of VLANs, authentication and logs.',
+              fr: 'Définition des VLAN, authentification et journaux.'
+            }[lang]
+          },
+          { 
+            title: {
+              es: 'Monitorización SIEM',
+              en: 'SIEM monitoring',
+              fr: 'Surveillance SIEM'
+            }[lang],
+            description: {
+              es: 'Alertas proactivas y respuesta a incidentes.',
+              en: 'Proactive alerts and incident response.',
+              fr: 'Alertes proactives et réponse aux incidents.'
+            }[lang]
+          },
+          { 
+            title: {
+              es: 'Revisión recurrente',
+              en: 'Recurring review',
+              fr: 'Révision récurrente'
+            }[lang],
+            description: {
+              es: 'Tests de intrusión y planes de mejora trimestrales.',
+              en: 'Penetration tests and quarterly improvement plans.',
+              fr: 'Tests de pénétration et plans d\'amélioration trimestriels.'
+            }[lang]
+          }
         ],
         caseStudy: {
           company: 'Superyate 50 m',
@@ -211,12 +352,28 @@ export const services = [
         },
         faq: [
           {
-            question: 'Formais a la tripulacion?',
-            answer: 'Si, impartimos sesiones de concienciacion y entregamos guias con buenas practicas.'
+            question: {
+              es: '¿Formáis a la tripulación?',
+              en: 'Do you train the crew?',
+              fr: 'Formez-vous l\'équipage ?'
+            }[lang],
+            answer: {
+              es: 'Sí, impartimos sesiones de concienciación y entregamos guías con buenas prácticas.',
+              en: 'Yes, we provide awareness sessions and deliver guides with best practices.',
+              fr: 'Oui, nous dispensons des sessions de sensibilisation et fournissons des guides de bonnes pratiques.'
+            }[lang]
           },
           {
-            question: 'Que ocurre tras la auditoria?',
-            answer: 'Recibes un informe con riesgos priorizados y acompanamiento en la implementacion.'
+            question: {
+              es: '¿Qué ocurre tras la auditoría?',
+              en: 'What happens after the audit?',
+              fr: 'Que se passe-t-il après l\'audit ?'
+            }[lang],
+            answer: {
+              es: 'Recibes un informe con riesgos priorizados y acompañamiento en la implementación.',
+              en: 'You receive a report with prioritized risks and implementation support.',
+              fr: 'Vous recevez un rapport avec les risques priorisés et un accompagnement dans la mise en œuvre.'
+            }[lang]
           }
         ]
       };
@@ -249,35 +406,117 @@ export const services = [
     locales: createLocales((lang) => {
       const suffix = lang === 'es' ? '' : `?lang=${lang}`;
       return {
-        name: 'AV System Integration',
-        shortDescription:
-          'Entretenimiento inmersivo con distribucion 4K, audio zonificado y control domotico personalizado.',
+        name: {
+          es: 'Integración AV',
+          en: 'AV System Integration',
+          fr: 'Intégration AV'
+        }[lang],
+        shortDescription: {
+          es: 'Entretenimiento inmersivo con distribución 4K, audio zonificado y control domótico personalizado.',
+          en: 'Immersive entertainment with 4K distribution, zoned audio and custom home automation control.',
+          fr: 'Divertissement immersif avec distribution 4K, audio par zones et contrôle domotique personnalisé.'
+        }[lang],
         hero: {
-          tagline: 'Cinematic experience at sea',
-          description:
-            'Convertimos salones y sky lounges en espacios de cine, reuniones o entretenimiento privado gestionados desde interfaces Crestron.',
+          tagline: {
+            es: 'Experiencia cinematográfica en el mar',
+            en: 'Cinematic experience at sea',
+            fr: 'Expérience cinématographique en mer'
+          }[lang],
+          description: {
+            es: 'Convertimos salones y sky lounges en espacios de cine, reuniones o entretenimiento privado gestionados desde interfaces Crestron.',
+            en: 'We transform salons and sky lounges into cinema spaces, meetings or private entertainment managed from Crestron interfaces.',
+            fr: 'Nous transformons les salons et sky lounges en espaces cinéma, réunions ou divertissement privé gérés depuis des interfaces Crestron.'
+          }[lang],
           primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` },
           secondaryCta: { label: seeMoreLabel[lang], href: `/servicios${suffix}` }
         },
         benefits: [
           {
-            title: 'Distribucion 4K',
-            description: 'Matrices UHD para enviar contenido a cualquier estancia sin latencia perceptible.'
+            title: {
+              es: 'Distribución 4K',
+              en: '4K Distribution',
+              fr: 'Distribution 4K'
+            }[lang],
+            description: {
+              es: 'Matrices UHD para enviar contenido a cualquier estancia sin latencia perceptible.',
+              en: 'UHD matrices to send content to any room without noticeable latency.',
+              fr: 'Matrices UHD pour envoyer du contenu dans n\'importe quelle pièce sans latence perceptible.'
+            }[lang]
           },
           {
-            title: 'Audio por zonas',
-            description: 'Control independiente por cabina con escenas adaptadas a cada invitado.'
+            title: {
+              es: 'Audio por zonas',
+              en: 'Zoned audio',
+              fr: 'Audio par zones'
+            }[lang],
+            description: {
+              es: 'Control independiente por cabina con escenas adaptadas a cada invitado.',
+              en: 'Independent control per cabin with scenes adapted to each guest.',
+              fr: 'Contrôle indépendant par cabine avec scènes adaptées à chaque invité.'
+            }[lang]
           },
           {
-            title: 'Espacios polivalentes',
-            description: 'Salas preparadas para briefings corporativos o sesiones de ocio.'
+            title: {
+              es: 'Espacios polivalentes',
+              en: 'Multipurpose spaces',
+              fr: 'Espaces polyvalents'
+            }[lang],
+            description: {
+              es: 'Salas preparadas para briefings corporativos o sesiones de ocio.',
+              en: 'Rooms prepared for corporate briefings or leisure sessions.',
+              fr: 'Salles préparées pour les réunions d\'entreprise ou les sessions de loisirs.'
+            }[lang]
           }
         ],
         process: [
-          { title: 'Discovery de usos', description: 'Definimos escenarios con propietarios y tripulacion.' },
-          { title: 'Diseno tecnico', description: 'Seleccion de equipos Crestron, Sonos, IPTV y servidores Plex.' },
-          { title: 'Integracion domotica', description: 'Interfaces tactiles y control desde dispositivos personales.' },
-          { title: 'Calibracion continua', description: 'Soporte remoto y ajustes durante la navegacion.' }
+          {
+            title: {
+              es: 'Discovery de usos',
+              en: 'Usage discovery',
+              fr: 'Découverte des usages'
+            }[lang],
+            description: {
+              es: 'Definimos escenarios con propietarios y tripulación.',
+              en: 'We define scenarios with owners and crew.',
+              fr: 'Nous définissons les scénarios avec les propriétaires et l\'équipage.'
+            }[lang]
+          },
+          {
+            title: {
+              es: 'Diseño técnico',
+              en: 'Technical design',
+              fr: 'Conception technique'
+            }[lang],
+            description: {
+              es: 'Selección de equipos Crestron, Sonos, IPTV y servidores Plex.',
+              en: 'Selection of Crestron, Sonos, IPTV and Plex server equipment.',
+              fr: 'Sélection des équipements Crestron, Sonos, IPTV et serveurs Plex.'
+            }[lang]
+          },
+          {
+            title: {
+              es: 'Integración domótica',
+              en: 'Home automation',
+              fr: 'Domotique'
+            }[lang],
+            description: {
+              es: 'Interfaces táctiles y control desde dispositivos personales.',
+              en: 'Touch interfaces and control from personal devices.',
+              fr: 'Interfaces tactiles et contrôle depuis les appareils personnels.'
+            }[lang]
+          },
+          {
+            title: {
+              es: 'Calibración continua',
+              en: 'Continuous calibration',
+              fr: 'Calibration continue'
+            }[lang],
+            description: {
+              es: 'Soporte remoto y ajustes durante la navegación.',
+              en: 'Remote support and adjustments during navigation.',
+              fr: 'Support à distance et ajustements pendant la navigation.'
+            }[lang]
+          }
         ],
         caseStudy: {
           company: 'Yate 38 m',
@@ -287,12 +526,28 @@ export const services = [
         },
         faq: [
           {
-            question: 'Podemos reutilizar equipos actuales?',
-            answer: 'Si, integramos hardware existente y lo combinamos con nuevas soluciones cuando es necesario.'
+            question: {
+              es: '¿Podemos reutilizar equipos actuales?',
+              en: 'Can we reuse existing equipment?',
+              fr: 'Pouvons-nous réutiliser l\'équipement existant ?'
+            }[lang],
+            answer: {
+              es: 'Sí, integramos hardware existente y lo combinamos con nuevas soluciones cuando es necesario.',
+              en: 'Yes, we integrate existing hardware and combine it with new solutions when necessary.',
+              fr: 'Oui, nous intégrons le matériel existant et le combinons avec de nouvelles solutions si nécessaire.'
+            }[lang]
           },
           {
-            question: 'Ofreceis ajustes remotos?',
-            answer: 'Monitorizamos el sistema y aplicamos actualizaciones o afinaciones bajo demanda.'
+            question: {
+              es: '¿Ofrecéis ajustes remotos?',
+              en: 'Do you offer remote adjustments?',
+              fr: 'Proposez-vous des ajustements à distance ?'
+            }[lang],
+            answer: {
+              es: 'Monitorizamos el sistema y aplicamos actualizaciones o afinaciones bajo demanda.',
+              en: 'We monitor the system and apply updates or fine-tuning on demand.',
+              fr: 'Nous surveillons le système et appliquons des mises à jour ou des ajustements sur demande.'
+            }[lang]
           }
         ]
       };
@@ -325,28 +580,66 @@ export const services = [
     locales: createLocales((lang) => {
       const suffix = lang === 'es' ? '' : `?lang=${lang}`;
       return {
-        name: 'IoT & Video Surveillance Systems',
-        shortDescription:
-          'Automatizacion integral con control inteligente de cabinas, iluminacion y camaras con acceso seguro.',
+        name: {
+          es: 'IoT y Sistemas de Videovigilancia',
+          en: 'IoT & Video Surveillance Systems',
+          fr: 'IoT et Systèmes de Vidéosurveillance'
+        }[lang],
+        shortDescription: {
+          es: 'Automatización integral con control inteligente de cabinas, iluminación y cámaras con acceso seguro.',
+          en: 'Comprehensive automation with intelligent control of cabins, lighting and cameras with secure access.',
+          fr: 'Automatisation complète avec contrôle intelligent des cabines, de l\'éclairage et des caméras avec accès sécurisé.'
+        }[lang],
         hero: {
-          tagline: 'Control total y seguridad',
-          description:
-            'Integramos iluminacion, clima, monitorizacion NMEA 2000 y CCTV en una sola plataforma accesible desde cualquier lugar.',
+          tagline: {
+            es: 'Control total y seguridad',
+            en: 'Total control and security',
+            fr: 'Contrôle total et sécurité'
+          }[lang],
+          description: {
+            es: 'Integramos iluminación, clima, monitorización NMEA 2000 y CCTV en una sola plataforma accesible desde cualquier lugar.',
+            en: 'We integrate lighting, climate, NMEA 2000 monitoring and CCTV in a single platform accessible from anywhere.',
+            fr: 'Nous intégrons l\'éclairage, le climat, la surveillance NMEA 2000 et la vidéosurveillance dans une seule plateforme accessible de partout.'
+          }[lang],
           primaryCta: { label: ctaLabel[lang], href: `/contacto${suffix}` },
           secondaryCta: { label: seeMoreLabel[lang], href: `/servicios${suffix}` }
         },
         benefits: [
           {
-            title: 'Plataforma centralizada',
-            description: 'Escenas, alertas y estados en tiempo real para tripulacion y propietarios.'
+            title: {
+              es: 'Plataforma centralizada',
+              en: 'Centralized platform',
+              fr: 'Plateforme centralisée'
+            }[lang],
+            description: {
+              es: 'Escenas, alertas y estados en tiempo real para tripulación y propietarios.',
+              en: 'Scenes, alerts and real-time status for crew and owners.',
+              fr: 'Scènes, alertes et états en temps réel pour l\'équipage et les propriétaires.'
+            }[lang]
           },
           {
-            title: 'Cabinas personalizadas',
-            description: 'Cada invitado ajusta ambiente y entretenimiento desde su dispositivo.'
+            title: {
+              es: 'Cabinas personalizadas',
+              en: 'Custom cabins',
+              fr: 'Cabines personnalisées'
+            }[lang],
+            description: {
+              es: 'Cada invitado ajusta ambiente y entretenimiento desde su dispositivo.',
+              en: 'Each guest adjusts ambiance and entertainment from their device.',
+              fr: 'Chaque invité ajuste l\'ambiance et le divertissement depuis son appareil.'
+            }[lang]
           },
           {
-            title: 'Vigilancia avanzada',
-            description: 'Streaming multiestancia, grabacion redundante y accesos cifrados.'
+            title: {
+              es: 'Vigilancia avanzada',
+              en: 'Advanced surveillance',
+              fr: 'Surveillance avancée'
+            }[lang],
+            description: {
+              es: 'Streaming multiestancia, grabación redundante y accesos cifrados.',
+              en: 'Multi-room streaming, redundant recording and encrypted access.',
+              fr: 'Streaming multi-pièces, enregistrement redondant et accès cryptés.'
+            }[lang]
           }
         ],
         process: [

@@ -10,11 +10,7 @@ export function LanguageToggle({ className = '' }) {
   const { i18n, t } = useTranslation();
 
   const handleChange = (code) => {
-    const currentPath = location.pathname;
-    const currentLang = i18n.language;
-    const newPath = currentPath.replace(`/${currentLang}`, `/${code}`);
     void i18n.changeLanguage(code);
-    navigate(newPath, { replace: true });
   };
 
   return (

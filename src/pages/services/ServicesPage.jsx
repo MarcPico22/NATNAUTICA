@@ -58,7 +58,7 @@ const ServicesPage = () => {
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Metodologia"
+          eyebrow={t('services.sectionHeaders.methodology')}
           title={pageContent.intro.title}
           description={pageContent.intro.description}
           alignment="center"
@@ -80,9 +80,9 @@ const ServicesPage = () => {
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Capacidades"
-          title="Servicios especializados"
-          description="Conectividad, ciberseguridad, AV e IoT integrados como un unico ecosistema para la tripulacion y los invitados."
+          eyebrow={t('services.sectionHeaders.capabilities')}
+          title={t('services.sectionHeaders.specializedServices')}
+          description={t('services.sectionHeaders.servicesDescription')}
           alignment="center"
           className="mx-auto max-w-3xl"
         />
@@ -160,16 +160,16 @@ const ServicesPage = () => {
             </div>
             <div className="grid gap-4 text-sm text-slate-600 dark:text-slate-300">
               <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-                <p className="font-semibold text-slate-900 dark:text-white">Soporte 24/7</p>
-                <p className="mt-2">Monitorizacion remota, alertas y coordinacion con tripulacion en minutos.</p>
+                <p className="font-semibold text-slate-900 dark:text-white">{t('services.support.title')}</p>
+                <p className="mt-2">{t('services.support.description')}</p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-                <p className="font-semibold text-slate-900 dark:text-white">Integracion boutique</p>
-                <p className="mt-2">Trabajamos con instaladores homologados respetando cada detalle del interior.</p>
+                <p className="font-semibold text-slate-900 dark:text-white">{t('services.integration.title')}</p>
+                <p className="mt-2">{t('services.integration.description')}</p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-                <p className="font-semibold text-slate-900 dark:text-white">Documentacion clara</p>
-                <p className="mt-2">Entregamos manuales digitales y guias rapidas para tripulacion y propietarios.</p>
+                <p className="font-semibold text-slate-900 dark:text-white">{t('services.documentation.title')}</p>
+                <p className="mt-2">{t('services.documentation.description')}</p>
               </div>
             </div>
           </div>

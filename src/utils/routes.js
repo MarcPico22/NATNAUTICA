@@ -1,79 +1,38 @@
-import i18next from 'i18next';
-
-// Definición de rutas base para React Router
-export const urlPaths = {
-  home: ':lang?',
-  about: ':lang/:aboutPath',
-  services: ':lang/:servicesPath',
-  serviceDetail: ':lang/:servicesPath/:serviceSlug',
-  cases: ':lang/:casesPath',
-  contact: ':lang/:contactPath',
-  legal: ':lang/:legalPath',
-  notice: ':lang/:legalPath/notice',
-  privacy: ':lang/:legalPath/privacy',
-  cookies: ':lang/:legalPath/cookies'
-};
-
-// Definición de segmentos de ruta localizados
-export const localizedSegments = {
-  aboutPath: {
-    es: 'sobre-nosotros',
-    en: 'about-us',
-    fr: 'a-propos'
-  },
-  servicesPath: {
-    es: 'servicios',
-    en: 'services',
-    fr: 'services'
-  },
-  casesPath: {
-    es: 'casos-de-exito',
-    en: 'case-studies',
-    fr: 'projets'
-  },
-  contactPath: {
-    es: 'contacto',
-    en: 'contact',
-    fr: 'contact'
-  },
-  legalPath: {
-    es: 'legales',
-    en: 'legal',
-    fr: 'mentions-legales'
-  }
+// Definición simple de rutas para React Router
+export const routes = {
+  home: '/',
+  about: '/aboutus',
+  services: '/services',
+  serviceDetail: '/services/:serviceSlug',
+  cases: '/cases',
+  contact: '/contact',
+  legal: '/legal',
+  notice: '/legal/notice',
+  privacy: '/legal/privacy',
+  cookies: '/legal/cookies'
 };
 
 /**
- * Genera una URL localizada para una ruta específica
- * @param {string} key - La clave de la ruta
- * @returns {string} URL localizada
+ * Obtiene la ruta para una clave específica
+ * @param {string} pathKey - La clave de la ruta
+ * @param {Object} [params] - Parámetros opcionales para reemplazar en la ruta
+ * @returns {string} La ruta
  */
-export function getLocalizedPath(key) {
-  const currentLanguage = i18next.language || 'es';
-  return `/${currentLanguage}/${key}`;
-  
+export function getPath(pathKey, params = {}) {
+  const path = routes[pathKey];
   if (!path) {
     console.warn(`No se encontró la ruta para la clave: ${pathKey}`);
     return '/';
   }
 
-  // Reemplazar el parámetro de idioma
-  path = path.replace(':lang?', currentLanguage);
-  path = path.replace(':lang', currentLanguage);
-
-  // Reemplazar segmentos localizados
-  Object.entries(localizedSegments).forEach(([key, translations]) => {
-    const localizedSegment = translations[currentLanguage] || translations.en;
-    path = path.replace(`:${key}`, localizedSegment);
-  });
-
-  // Reemplazar otros parámetros de ruta
+  // Reemplazar parámetros dinámicos si existen
+  let finalPath = path;
   Object.entries(params).forEach(([key, value]) => {
-    path = path.replace(`:${key}`, value);
+    finalPath = finalPath.replace(`:${key}`, value);
   });
 
-  return '/' + path.replace(/^\/+/, '');
-};
+  return finalPath;
+}
 
 /**
  * Extrae el idioma de una URL

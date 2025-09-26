@@ -35,20 +35,17 @@ function App() {
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
           <Route element={<PublicLayout />}>
-            <Route index element={<LanguageRedirect />} />
-            <Route path=":lang">
-              <Route index element={<HomePage />} />
-              <Route path="about" element={<AboutPage />} />
-              <Route path="services" element={<ServicesPage />} />
-              <Route path="services/:serviceSlug" element={<ServiceDetailPage />} />
-              <Route path="cases" element={<CaseStudiesPage />} />
-              <Route path="contact" element={<ContactPage />} />
-              <Route path="legal" element={<LegalIndexPage />} />
-              <Route path="legal/notice" element={<LegalNoticePage />} />
-              <Route path="legal/privacy" element={<PrivacyPolicyPage />} />
-              <Route path="legal/cookies" element={<CookiePolicyPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Route>
+            <Route index element={<HomePage />} />
+            <Route path="aboutus" element={<AboutPage />} />
+            <Route path="services" element={<ServicesPage />} />
+            <Route path="services/:serviceSlug" element={<ServiceDetailPage />} />
+            <Route path="cases" element={<CaseStudiesPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="legal" element={<LegalIndexPage />} />
+            <Route path="legal/notice" element={<LegalNoticePage />} />
+            <Route path="legal/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="legal/cookies" element={<CookiePolicyPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </Suspense>

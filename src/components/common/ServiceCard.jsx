@@ -8,7 +8,8 @@ export function ServiceCard({ service, language, ctaLabel, className = '' }) {
   const locale = getLocaleContent(service.locales, language);
 
   return (
-    <article
+    <Link
+      to={`/servicios/${service.slug}`}
       className={cn(
         'group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900',
         className
@@ -31,18 +32,6 @@ export function ServiceCard({ service, language, ctaLabel, className = '' }) {
           </li>
         ))}
       </ul>
-      <div className="mt-auto pt-6">
-        <Link
-          to={`/servicios/${service.slug}`}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 transition group-hover:translate-x-1"
-        >
-          <span>{ctaLabel}</span>
-          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M5 12h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="m13 6 6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </Link>
-      </div>
-    </article>
+    </Link>
   );
 }

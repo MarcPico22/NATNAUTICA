@@ -1,6 +1,7 @@
 ﻿import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { routes, getPath } from '@/utils/routes';
 
 import { NAVIGATION_ITEMS } from '@/data/navigation';
 import { Logo } from '@/components/common/Logo';
@@ -24,7 +25,7 @@ export function Header() {
           {NAVIGATION_ITEMS.map((item) => (
             <NavLink
               key={item.id}
-              to={item.path.replace(':lang', i18n.language)}
+              to={getPath(item.id)}
               className={({ isActive }) =>
                 `relative text-slate-600 transition hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-300 ${
                   isActive ? 'text-brand-600 dark:text-brand-300' : ''
@@ -39,7 +40,7 @@ export function Header() {
           <LanguageToggle />
           <ThemeToggle />
           <Link
-            to={`/${i18n.language}/contact`}
+            to={getPath('contact')}
             className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-600/30 transition hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
           >
             <span>{t('actions.requestQuote')}</span>
@@ -75,7 +76,7 @@ export function Header() {
               {NAVIGATION_ITEMS.map((item) => (
                 <NavLink
                   key={item.id}
-                  to={item.path.replace(':lang', i18n.language)}
+                  to={getLocalizedPath(item.id)}
                   className={({ isActive }) =>
                     `rounded-xl px-4 py-3 transition hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-slate-800/80 ${
                       isActive ? 'bg-brand-50 text-brand-600 dark:bg-slate-800/80 dark:text-brand-300' : ''
@@ -91,7 +92,7 @@ export function Header() {
               <ThemeToggle />
             </div>
             <Link
-              to={`/${i18n.language}/contact`}
+              to={getLocalizedPath('contact')}
               className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-brand-600/30 transition hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
             >
               {t('actions.requestQuote')}

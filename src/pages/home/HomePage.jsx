@@ -99,6 +99,21 @@ const HomePage = () => {
             {hero.subtitle && (
               <p className="max-w-xl text-base text-slate-600 dark:text-slate-200 sm:text-lg">{hero.subtitle}</p>
             )}
+            {content.features && (
+              <div className="mt-8 space-y-6">
+                {content.features.map((feature, index) => (
+                  <div key={feature.title} className="flex items-start gap-4">
+                    <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-500/10 dark:text-brand-200">
+                      <Icon name="star" className="h-4 w-4" />
+                    </span>
+                    <div>
+                      <h3 className="text-base font-semibold text-slate-900 dark:text-white">{feature.title}</h3>
+                      <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="flex flex-col gap-3 sm:flex-row">
               {hero.primaryCta?.href && (
                 <Button as={Link} to={`/${language}${hero.primaryCta.href}`} size="lg">
@@ -158,7 +173,7 @@ const HomePage = () => {
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {featuredServices.map((service) => (
-            <ServiceCard key={service.id} service={service} language={language} ctaLabel={t('actions.learnMore')} />
+            <ServiceCard key={service.id} service={service} language={language} />
           ))}
         </div>
       </section>
@@ -178,7 +193,14 @@ const HomePage = () => {
                     key={partner.name}
                     className="rounded-3xl border border-slate-200/70 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
                   >
-                    <p className="text-sm font-semibold text-slate-900 dark:text-white">{partner.name}</p>
+                    <div className="flex items-center gap-3 mb-2">
+                      <img
+                        src={`/src/assets/tech/${partner.name.toLowerCase() === 'ubiquiti' ? 'unifi' : partner.name.toLowerCase()}.${partner.name.toLowerCase() === 'peplink' ? 'png' : 'svg'}`}
+                        alt={partner.name}
+                        className="h-8 w-8 object-contain dark:brightness-0 dark:invert"
+                      />
+                      <p className="text-sm font-semibold text-slate-900 dark:text-white">{partner.name}</p>
+                    </div>
                     <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{partner.copy}</p>
                   </div>
                 ))}
