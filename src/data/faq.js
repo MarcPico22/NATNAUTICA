@@ -50,5 +50,22 @@ export const homeFaq = {
       answer:
         'Notre programme comprend pare-feux, segmentation, mises a jour IoT et assistance distante pour resoudre les incidents en quelques minutes.'
     }
+  ],
+  de: [
+    {
+      question: 'Wie gewährleistet ihr stabile Konnektivität während der Navigation?',
+      answer:
+        'Wir prüfen Routen und Häfen, kombinieren Starlink, 4G/5G und VSAT mit Multi-WAN-Routern und überwachen das System 24/7.'
+    },
+    {
+      question: 'Könnt ihr mit unserer Besatzung und unseren Auftragnehmern zusammenarbeiten?',
+      answer:
+        'Ja, wir arbeiten mit Kapitänen, Werften und Innenarchitekten zusammen, um Verkabelung, Racks und Automation zu integrieren, ohne die Oberflächen zu beeinträchtigen.'
+    },
+    {
+      question: 'Umfasst der Support Cybersicherheit und IoT?',
+      answer:
+        'Unser Programm umfasst Firewalls, Segmentierung, IoT-Updates und Remote-Unterstützung zur Lösung von Vorfällen in Minuten.'
+    }
   ]
 };

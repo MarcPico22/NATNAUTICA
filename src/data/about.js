@@ -1,5 +1,5 @@
 ﻿// NETNAUTICA-EDIT: Informacion corporativa basada en Netnautica.es
-const createLocales = (value) => ({ es: value, en: value, fr: value });
+const createLocales = (value) => ({ es: value, en: value, fr: value, de: value });
 
 export const aboutContent = {
   es: {
@@ -167,6 +167,62 @@ export const aboutContent = {
         'Audit technique initial et documentation claire pour l equipage.',
         'Communication directe avec capitaines et chantiers durant l integration.',
         'Monitoring distant, visites programmees et support immediat en saison.'
+      ]
+    }
+  },
+  de: {
+    hero: {
+      eyebrow: 'Über Netnautica',
+      title: 'Boutique-Engineering für Luxusyachten',
+      description:
+        'Netnautica wurde in Palma de Mallorca gegründet und integriert Konnektivität, Cybersicherheit, AV und IoT mit einem kompakten, spezialisierten Team.'
+    },
+    stats: [
+      { label: 'Gründung', value: '2024' },
+      { label: 'Kernexpertise', value: 'Telematik & IT-Engineering' },
+      { label: 'Abdeckung', value: 'Mittelmeer - weltweite Einsätze' }
+    ],
+    pillars: [
+      {
+        title: 'Strategie & Umsetzung',
+        description: 'Wir planen, integrieren und überwachen jedes System als Ihr einziger Technologiepartner.'
+      },
+      {
+        title: 'Direkte Betreuung',
+        description: 'Die Gründer koordinieren direkt mit Kapitänen, Werften und Innenarchitekten.'
+      },
+      {
+        title: 'Fortschrittliche Technologie',
+        description: 'Starlink, Peplink, Ubiquiti, Fortinet und Crestron gewährleisten Leistung und Zuverlässigkeit.'
+      }
+    ],
+    team: {
+      title: 'Kernteam',
+      members: [
+        {
+          name: 'Netnautica-Team',
+          role: 'Telematik & IT-Engineering',
+          bio: 'Spezialisten für Konnektivität, Cybersicherheit, AV und IoT, die die Besatzung von Anfang bis Ende unterstützen.'
+        }
+      ]
+    },
+    timeline: [
+      { year: '2024', milestone: 'Netnautica startet von Palma de Mallorca aus.' },
+      {
+        year: '2024',
+        milestone: 'Erstes Vollprojekt: Starlink-Konnektivität, Cybersicherheit und Multi-Room-AV.'
+      },
+      {
+        year: '2025',
+        milestone: '24/7-Remote-Support und Abdeckung erweitert auf Balearen, Barcelona und Côte d\'Azur.'
+      }
+    ],
+    culture: {
+      title: 'Wie wir arbeiten',
+      items: [
+        'Technisches Audit und klare Dokumentation für die Besatzung.',
+        'Direkte Kommunikation mit Kapitänen und Werften während der Integration.',
+        'Remote-Überwachung, geplante Besuche und sofortiger Support in der Saison.'
       ]
     }
   }

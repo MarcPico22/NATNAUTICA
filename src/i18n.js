@@ -2,10 +2,11 @@
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Importar traducciones para cada idioma soportado
+// Importaciones de traducciones
 import es from './locales/es/translation.json';
 import en from './locales/en/translation.json';
 import fr from './locales/fr/translation.json';
+import de from './locales/de/translation.json';
 import { DEFAULT_LANGUAGE, FALLBACK_LANGUAGE, SUPPORTED_LANGUAGES } from './config/site.js';
 
 // CONFIGURACIÓN COMPLETA DESDE CERO PARA ARREGLAR PROBLEMA DE CARGA
@@ -29,7 +30,8 @@ const initI18n = async () => {
       resources: {
         es: { translation: es },
         en: { translation: en },
-        fr: { translation: fr }
+        fr: { translation: fr },
+        de: { translation: de }
       },
       
       // Configuración de idiomas
@@ -39,7 +41,7 @@ const initI18n = async () => {
       
       // Configuración crítica para forzar carga
       load: 'all', // Cargar todos los idiomas
-      preload: ['es', 'en', 'fr'], // Precargar todos los idiomas
+      preload: ['es', 'en', 'fr', 'de'], // Precargar todos los idiomas
       
       // Configuración de interpolación
       interpolation: {

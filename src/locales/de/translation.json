@@ -1,0 +1,832 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "cases": "Projekte",
+    "about": "Über uns",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "toggle": "Menü öffnen oder schließen",
+    "language": "Sprache auswählen"
+  },
+  "actions": {
+    "requestQuote": "Netnautica kontaktieren",
+    "toggleTheme": "Modus wechseln",
+    "viewAll": "Alle anzeigen",
+    "readMore": "Mehr erfahren",
+    "learnMore": "Details",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "submit": "Senden",
+    "start": "Beginnen"
+  },
+  "footer": {
+    "about": "Boutique-Engineering für Luxusyachten. Konnektivität, Cybersicherheit, AV und IoT von Palma de Mallorca.",
+    "company": "Unternehmen",
+    "services": "Dienstleistungen",
+    "newsletterTitle": "Newsletter",
+    "newsletterCopy": "Erhalten Sie unsere Tipps zur Konnektivität, Cyberüberwachung und Bordunterhaltung.",
+    "newsletterLabel": "E-Mail eingeben",
+    "newsletterButton": "Abonnieren",
+    "rights": "Alle Rechte vorbehalten.",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "schedule": "Öffnungszeiten"
+  },
+  "services": {
+    "customDevelopment": "Worldwide Connectivity",
+    "growthMarketing": "Cybersecurity",
+    "marketingAutomation": "AV System Integration",
+    "uxUi": "IoT & Video Surveillance"
+  },
+  "legal": {
+    "notice": "Impressum",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies"
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "twitter": "X/Twitter",
+    "youtube": "YouTube",
+    "github": "GitHub"
+  },
+  "about": {
+    "headings": {
+      "pillars": "Unsere DNA",
+      "timeline": "Unsere Entwicklung",
+      "culture": "Unsere Arbeitsweise"
+    },
+    "cta": {
+      "primary": "Anruf buchen",
+      "secondary": "Services ansehen"
+    }
+  },
+  "forms": {
+    "step": "Schritt {{current}} von {{total}}",
+    "required": "Pflichtfeld",
+    "invalidEmail": "Gültige E-Mail eingeben",
+    "invalidPhone": "Gültige Telefonnummer eingeben",
+    "consent": "Ich akzeptiere die Datenschutzrichtlinie",
+    "selectPlaceholder": "Option auswählen"
+  },
+  "contact": {
+    "title": "Erzählen Sie uns von Ihrem Bordprojekt",
+    "subtitle": "Wir entwickeln Konnektivitäts-, Sicherheits- und Unterhaltungssysteme, die auf jede Route und Besatzung zugeschnitten sind.",
+    "success": "Vielen Dank für Ihre Nachricht. Wir antworten innerhalb von 24 Arbeitsstunden.",
+    "errors": {
+      "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "labels": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "company": "Yacht oder Unternehmen",
+      "role": "Position",
+      "website": "Website",
+      "service": "Prioritärer Service",
+      "budget": "Geschätztes Budget",
+      "timeline": "Zeitrahmen",
+      "message": "Technische Anforderungen beschreiben",
+      "consent": "Ich habe die Datenschutzrichtlinie gelesen und akzeptiere sie"
+    },
+    "placeholders": {
+      "name": "Vor- und Nachname",
+      "email": "name@netnautica.com",
+      "phone": "+49 170 000 0000",
+      "company": "Name der Yacht",
+      "role": "Kapitän / ETO",
+      "website": "https://",
+      "message": "Wir möchten Starlink mit 4G/5G-Redundanz implementieren..."
+    },
+    "options": {
+      "budget": [
+        "< 10.000 EUR",
+        "10.000 - 30.000 EUR",
+        "30.000 - 60.000 EUR",
+        "> 60.000 EUR"
+      ],
+      "timeline": [
+        "Sofort",
+        "In 3 Monaten",
+        "Nächste Saison",
+        "Flexibel"
+      ]
+    }
+  },
+  "cookieBanner": {
+    "title": "Ihre Privatsphäre zählt",
+    "description": "Wir verwenden technische und analytische Cookies, um Support zu bieten und das Erlebnis zu verbessern. Sie können Ihre Einstellungen jederzeit anpassen.",
+    "accept": "Alle akzeptieren",
+    "decline": "Nur wesentliche",
+    "manage": "Cookies verwalten"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Intelligente Technologie für die Navigation",
+      "title": "Komfort und Kontrolle an Bord",
+      "subtitle": "Wir integrieren intelligente Technologiesysteme, die den Bordkomfort erhöhen und das Erlebnis bei jeder Überfahrt optimieren.",
+      "primaryCta": {
+        "label": "Services erkunden",
+        "href": "/services"
+      },
+      "secondaryCta": {
+        "label": "Portfolio ansehen",
+        "href": "/cases"
+      }
+    },
+    "stats": [
+      {
+        "label": "Konnektivitätsprojekte geliefert",
+        "value": "12"
+      },
+      {
+        "label": "Starlink-, AV- und IoT-Spezialisten",
+        "value": "Boutique-Team"
+      },
+      {
+        "label": "Basis Palma - Weltweite Operationen",
+        "value": "Mittelmeer"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Zertifizierte Ingenieurstechnik",
+        "description": "Telematik- und IT-Spezialisten, die Konnektivität, Cyberüberwachung und AV für Luxusyachten integrieren."
+      },
+      {
+        "title": "Engagierte Gründer",
+        "description": "Planung, Installation und Support direkt vom Kernteam durchgeführt."
+      },
+      {
+        "title": "Resiliente Architekturen",
+        "description": "Multi-WAN, proaktive Cyberüberwachung und Monitoring für permanente Konnektivität."
+      }
+    ],
+    "servicesSection": {
+      "eyebrow": "Services",
+      "title": "Vier Säulen für ein reibungsloses Erlebnis",
+      "description": "Globale Konnektivität, Cyberüberwachung, AV-Integration und IoT als einheitliches Ökosystem für Besatzung und Gäste."
+    },
+    "servicesPageContent": {
+      "hero": {
+        "eyebrow": "Services",
+        "title": "Intelligente Technologie für reibungslose Navigation",
+        "description": "Wir integrieren Konnektivität, Cybersicherheit, AV und IoT mit einem Boutique-Team für Telematik-Engineering.",
+        "viewPortfolio": "Portfolio ansehen"
+      },
+      "intro": {
+        "title": "Bordmethodik",
+        "description": "Technisches Audit, maßgeschneiderte Konzeption, sorgfältige Integration und 24/7-Fernsupport für jede Überfahrt."
+      },
+      "steps": [
+        {
+          "title": "Technisches Audit",
+          "description": "Inspektion von Racks, Verkabelung, Satellitenabdeckung und Besatzungsanforderungen."
+        },
+        {
+          "title": "Maßgeschneiderte Konzeption",
+          "description": "Modulare Architektur mit den besten Herstellern des nautischen Marktes."
+        },
+        {
+          "title": "Präzise Integration",
+          "description": "Koordination mit Werften und Designern unter Einhaltung von Ausführung und Terminen."
+        },
+        {
+          "title": "Kontinuierlicher Support",
+          "description": "24/7-Überwachung, geplante Besuche und sofortige Fernunterstützung."
+        }
+      ],
+      "cta": {
+        "title": "Bereiten Sie Ihre nächste Überfahrt mit Netnautica vor",
+        "description": "Planen Sie eine unverbindliche Beratung und erhalten Sie einen detaillierten technischen Plan in weniger als 48 Stunden."
+      }
+    },
+    "services": {
+      "sectionHeaders": {
+        "methodology": "Methodik",
+        "capabilities": "Fähigkeiten",
+        "specializedServices": "Spezialisierte Services",
+        "servicesDescription": "Komplette Lösungen für Konnektivität, Cybersicherheit, AV und IoT, speziell für die nautische Umgebung entwickelt und an die Bedürfnisse jedes Schiffes angepasst."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Kontinuierliche Systemüberwachung und technische Fernunterstützung jederzeit während der Navigation verfügbar."
+      },
+      "integration": {
+        "title": "Vollständige Integration",
+        "description": "Alle Systeme funktionieren als einheitliches Ökosystem, optimieren die Leistung und vereinfachen das Management."
+      },
+      "documentation": {
+        "title": "Technische Dokumentation",
+        "description": "Detaillierte Handbücher, Netzwerkdiagramme und Wartungsprotokolle mit jeder Installation geliefert."
+      }
+    },
+    "technologySection": {
+      "eyebrow": "Technologie",
+      "title": "Spitzentechnologie",
+      "description": "Wir arbeiten mit Starlink, Ubiquiti, Peplink, Fortinet und Crestron, um eine aktuelle Infrastruktur und weltweiten Support zu gewährleisten.",
+      "partners": [
+        {
+          "name": "Starlink",
+          "copy": "LEO-Satellitenkonnektivität und maritime Hardware."
+        },
+        {
+          "name": "Ubiquiti",
+          "copy": "Hochleistungs-WiFi-6-Mesh-Netzwerke mit zentralisiertem Management."
+        },
+        {
+          "name": "Peplink",
+          "copy": "Multi-WAN-Router mit Bonding und automatischem Failover."
+        },
+        {
+          "name": "Fortinet",
+          "copy": "Next-Generation-Cyberüberwachung mit Zero-Trust-Richtlinien."
+        },
+        {
+          "name": "Crestron",
+          "copy": "AV-Steuerung und Automatisierung über maßgeschneiderte Schnittstellen."
+        }
+      ]
+    },
+    "techStack": {
+      "eyebrow": "Tech Stack",
+      "title": "Eingesetzte Technologien",
+      "items": [
+        "Starlink",
+        "Peplink",
+        "Unifi"
+      ]
+    },
+    "casesSection": {
+      "heading": "Aktuelle Implementierungen",
+      "description": "Multi-WAN-Engineering, Zero-Trust-Richtlinien und AV-Automatisierung mit Kapitänen und Werften realisiert."
+    },
+    "cases": [
+      {
+        "id": "mediterranean-connectivity",
+        "slug": "flota-charter-conectividad",
+        "industry": "Mittelmeer-Charter",
+        "metrics": [
+          {
+            "label": "Netzwerkverfügbarkeit",
+            "value": ">99%"
+          },
+          {
+            "label": "Failover-Zeit",
+            "value": "<10s"
+          }
+        ],
+        "challenge": "Eine Charterflotte erlitt Ausfälle zwischen begrenzten Häfen und offener See.",
+        "solution": "Wir entwickelten eine Multi-WAN-Architektur mit Peplink-Routern, maritimem Starlink und verwaltetem VSAT-Backup.",
+        "result": "Kontinuierliche Konnektivität die ganze Saison und 24/7-Monitoring."
+      },
+      {
+        "id": "digital-fortress",
+        "slug": "refuerzo-ciberseguridad-superyate",
+        "industry": "50m Superyacht",
+        "metrics": [
+          {
+            "label": "Netzwerksegmente",
+            "value": "4 Schichten"
+          },
+          {
+            "label": "Kritische Vorfälle",
+            "value": "0"
+          }
+        ],
+        "challenge": "Gastzugänge gefährdeten Navigation und Unterhaltung.",
+        "solution": "Fortinet NGFW, dedizierte VLANs und Multi-Faktor-Authentifizierung mit SIEM-Monitoring.",
+        "result": "Null Vorfälle in der letzten Saison und bestandenes externes Audit."
+      },
+      {
+        "id": "immersive-av",
+        "slug": "integracion-av-38m",
+        "industry": "Entertainment-Upgrade",
+        "metrics": [
+          {
+            "label": "AV-Zonen",
+            "value": "8+"
+          },
+          {
+            "label": "Auflösung",
+            "value": "4K HDR"
+          }
+        ],
+        "challenge": "Eine 38m-Yacht wollte Kino, Meetings und Musik mit einfacher Steuerung vereinen.",
+        "solution": "UHD-Matrix, verstecktes Audio und maßgeschneiderte Crestron-Szenen.",
+        "result": "Reibungsloses Multi-Room-Erlebnis, von Besatzung und Gästen angenommen."
+      }
+    ],
+    "faqSection": {
+      "title": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "question": "Wie gewährleisten Sie stabile Konnektivität während der Navigation?",
+          "answer": "Wir auditieren Routen und Häfen, kombinieren Starlink, 4G/5G und VSAT mit Multi-WAN-Routern und 24/7-Monitoring."
+        },
+        {
+          "question": "Können Sie mit unserer Besatzung und Dienstleistern zusammenarbeiten?",
+          "answer": "Ja, wir arbeiten mit Kapitänen, Werften und Designern zusammen, um Verkabelung, Racks und Hausautomation zu integrieren, ohne die Ausführung zu beeinträchtigen."
+        },
+        {
+          "question": "Umfasst der Support Cyberüberwachung und IoT?",
+          "answer": "Unser Programm umfasst Firewalls, Segmentierung, IoT-Updates und Fernunterstützung in wenigen Minuten."
+        }
+      ]
+    },
+    "contactCta": {
+      "title": "Bereit für Ihre nächste Überfahrt",
+      "description": "Teilen Sie den aktuellen Zustand Ihrer Yacht mit und wir liefern eine technologische Roadmap in weniger als 48 Stunden.",
+      "primary": {
+        "label": "Netnautica kontaktieren",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Services ansehen",
+        "href": "/services"
+      }
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "Intelligente Technologie für reibungslose Navigation",
+      "description": "Wir integrieren Konnektivität, Cyberüberwachung, AV und IoT mit einem Boutique-Team für Telematik-Engineering.",
+      "primaryCta": {
+        "label": "Netnautica kontaktieren",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "Portfolio ansehen",
+        "href": "/cases"
+      }
+    },
+    "intro": {
+      "title": "Bordmethodik",
+      "description": "Technisches Audit, maßgeschneiderte Konzeption, präzise Integration und 24/7-Fernsupport für jede Überfahrt."
+    },
+    "steps": [
+      {
+        "title": "Technisches Audit",
+        "description": "Inspektion von Racks, Verkabelung, Satellitenabdeckung und Besatzungsanforderungen."
+      },
+      {
+        "title": "Maßgeschneiderte Konzeption",
+        "description": "Modulare Architektur mit den besten maritimen Herstellern."
+      },
+      {
+        "title": "Präzise Integration",
+        "description": "Koordination mit Werften und Designern unter Einhaltung von Ausführung und Terminen."
+      },
+      {
+        "title": "Kontinuierlicher Support",
+        "description": "24/7-Monitoring, geplante Besuche und sofortige Unterstützung."
+      }
+    ],
+    "cta": {
+      "title": "Bereiten Sie Ihre nächste Überfahrt mit Netnautica vor",
+      "description": "Detaillierter technischer Plan in weniger als 48 Stunden geliefert.",
+      "primaryCta": {
+        "label": "Netnautica kontaktieren",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "Portfolio ansehen",
+        "href": "/cases"
+      }
+    },
+    "framework": {
+      "title": "Projektsäulen",
+      "lines": [
+        "Planung mit Kapitänen und ETOs zur Dimensionierung von Netzwerken und Racks.",
+        "Integration von Starlink, Peplink, Fortinet und Crestron je nach Anwendung.",
+        "24/7-Fernmonitoring und schneller Support in der Saison."
+      ]
+    },
+    "pillars": [
+      {
+        "title": "24/7 Support",
+        "description": "Fernmonitoring, Alerts und Koordination mit der Besatzung in wenigen Minuten."
+      },
+      {
+        "title": "Boutique-Integration",
+        "description": "Arbeit mit zertifizierten Installateuren unter Bewahrung jedes Innendetails."
+      },
+      {
+        "title": "Klare Dokumentation",
+        "description": "Digitale Handbücher und Schnellanleitungen für Besatzung und Eigentümer."
+      }
+    ]
+  },
+  "servicesData": {
+    "connectivity": {
+      "id": "connectivity",
+      "slug": "conectividad-global-yates",
+      "icon": "globe",
+      "name": "Worldwide Connectivity",
+      "shortDescription": "Resilientes Multi-WAN kombiniert Starlink, 4G/5G und WiFi 6 für permanente Verbindung.",
+      "metrics": [
+        {
+          "id": "redundancy",
+          "value": "Multi-WAN",
+          "label": "Aktive Redundanz"
+        },
+        {
+          "id": "starlink",
+          "value": "Starlink+",
+          "label": "Satellitenabdeckung"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Intelligentes Multi-WAN",
+          "description": "Starlink LEO, 4G/5G und VSAT mit automatischem Failover."
+        },
+        {
+          "title": "Premium WiFi 6",
+          "description": "Vollständige Abdeckung mit QoS und Segmentierung für Besatzung und Gäste."
+        },
+        {
+          "title": "24/7 Fernverwaltung",
+          "description": "Kontinuierliche Überwachung und sofortige Anpassungen für jede Route."
+        }
+      ],
+      "process": [
+        {
+          "title": "Signalaudit",
+          "description": "Untersuchung von Routen, Häfen und bestehenden Racks."
+        },
+        {
+          "title": "Redundante Architektur",
+          "description": "Multi-Link-Design mit Load Balancing und automatischem Failover."
+        },
+        {
+          "title": "QoS-Optimierung",
+          "description": "Priorisierung kritischer Anwendungen und Gastprofile."
+        },
+        {
+          "title": "Kontinuierliches Monitoring",
+          "description": "Cloud-Dashboard mit Alerts und proaktivem Support."
+        }
+      ],
+      "hero": {
+        "tagline": "Ununterbrochene weltweite Abdeckung",
+        "description": "Konnektivitätssysteme mit automatischem Failover, Load Balancing und proaktivem Monitoring für das Mittelmeer und darüber hinaus.",
+        "primaryCta": {
+          "label": "Netnautica kontaktieren",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Weitere Services ansehen",
+          "href": "/services"
+        }
+      },
+      "caseStudy": {
+        "company": "45m Charter",
+        "challenge": "Ausfälle zwischen Starlink und 4G/5G während langer Routen.",
+        "solution": "Verwaltetes Multi-WAN mit Priorisierungsrichtlinien und VSAT-Backup.",
+        "result": "Verfügbarkeit >99% und Wiederherstellung in weniger als zehn Sekunden."
+      },
+      "faq": [
+        {
+          "question": "Muss ich Starlink abonnieren?",
+          "answer": "Wir integrieren Starlink, wenn es relevant ist, kombinieren aber immer mehrere Anbieter, um Redundanz zu gewährleisten."
+        },
+        {
+          "question": "Ist Fernsupport inbegriffen?",
+          "answer": "Ja, wir überwachen Links 24/7 und passen mit der Besatzung an."
+        }
+      ]
+    },
+    "cybersecurity": {
+      "id": "cybersecurity",
+      "slug": "ciberseguridad-yates",
+      "icon": "shield",
+      "name": "Cybersecurity",
+      "shortDescription": "Robuste digitale Perimeter mit Next-Generation-Firewalls, Segmentierung und wiederkehrenden Audits.",
+      "metrics": [
+        {
+          "id": "monitoring",
+          "value": "24/7",
+          "label": "Monitoring"
+        },
+        {
+          "id": "segments",
+          "value": "4 Schichten",
+          "label": "Segmentierung"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "NGFW Firewalls",
+          "description": "Fortinet- und Peplink-Management mit benutzerdefinierten Regeln und kontinuierlichen Updates."
+        },
+        {
+          "title": "Erweiterte Segmentierung",
+          "description": "Getrennte Netzwerke für Besatzung, Gäste, Hausautomation und Instrumentierung."
+        },
+        {
+          "title": "IoT-Härtung",
+          "description": "Kontrollierte Firmware, sicherer Zugang und Zero-Trust-Richtlinie für jedes Gerät."
+        }
+      ],
+      "process": [
+        {
+          "title": "Erstaudit",
+          "description": "Asset-Inventar und Schwachstellenanalyse."
+        },
+        {
+          "title": "Richtliniendesign",
+          "description": "VLAN-Definition, Authentifizierung und Logs."
+        },
+        {
+          "title": "SIEM-Monitoring",
+          "description": "Proaktive Alerts und Incident Response."
+        },
+        {
+          "title": "Regelmäßige Überprüfung",
+          "description": "Penetrationstests und vierteljährlicher Verbesserungsplan."
+        }
+      ],
+      "hero": {
+        "tagline": "Digitale Festung an Bord",
+        "description": "Schutz von Netzwerken, IoT-Geräten und sensiblen Daten mit an Besatzung und Navigationssysteme angepassten Richtlinien.",
+        "primaryCta": {
+          "label": "Netnautica kontaktieren",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Weitere Services ansehen",
+          "href": "/services"
+        }
+      },
+      "caseStudy": {
+        "company": "50m Superyacht",
+        "challenge": "Gastzugänge gefährdeten Navigation und Unterhaltung.",
+        "solution": "Vierschichtige Segmentierung mit Multi-Faktor-Authentifizierung und Zero-Trust-Richtlinien.",
+        "result": "Null Vorfälle in der letzten Saison und bestandenes externes Audit."
+      },
+      "faq": [
+        {
+          "question": "Schulen Sie die Besatzung?",
+          "answer": "Ja, Sensibilisierungssitzungen und Best-Practice-Leitfäden."
+        },
+        {
+          "question": "Was passiert nach dem Audit?",
+          "answer": "Priorisierter Risikobericht und Begleitung bei der Umsetzung."
+        }
+      ]
+    },
+    "av-integration": {
+      "id": "av-integration",
+      "slug": "integracion-av-yates",
+      "icon": "spark",
+      "name": "AV System Integration",
+      "shortDescription": "Immersive Unterhaltung mit 4K-Verteilung, Zonen-Audio und maßgeschneiderter Automatisierung.",
+      "metrics": [
+        {
+          "id": "zones",
+          "value": "8+",
+          "label": "Audio-Zonen"
+        },
+        {
+          "id": "cinema",
+          "value": "4K HDR",
+          "label": "AV-Qualität"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "4K-Verteilung",
+          "description": "UHD-Matrizen zu allen Zonen ohne wahrnehmbare Latenz."
+        },
+        {
+          "title": "Zonen-Audio",
+          "description": "Unabhängige Steuerung pro Kabine mit angepassten Szenen."
+        },
+        {
+          "title": "Vielseitige Räume",
+          "description": "Salons bereit für Kino, Briefings oder Freizeit."
+        }
+      ],
+      "process": [
+        {
+          "title": "Nutzungs-Discovery",
+          "description": "Szenario-Definition mit Eigentümern und Besatzung."
+        },
+        {
+          "title": "Technisches Design",
+          "description": "Crestron-, Sonos-, IPTV- und Media-Server-Auswahl."
+        },
+        {
+          "title": "Hausautomation-Integration",
+          "description": "Touch-Interfaces und Steuerung von persönlichen Geräten."
+        },
+        {
+          "title": "Kontinuierliche Kalibrierung",
+          "description": "Fernsupport und Einstellungen während der Navigation."
+        }
+      ],
+      "hero": {
+        "tagline": "Kinoerlebnis auf See",
+        "description": "Transformation von Salons und Sky Lounges in Kino-, Meeting- oder Unterhaltungsräume, verwaltet über Crestron.",
+        "primaryCta": {
+          "label": "Netnautica kontaktieren",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Weitere Services ansehen",
+          "href": "/services"
+        }
+      },
+      "caseStudy": {
+        "company": "38m Yacht",
+        "challenge": "Fragmentiertes AV-Erlebnis und komplexe Steuerung",
+        "solution": "4K-Matrix, integriertes Audio und vordefinierte Crestron-Szenen.",
+        "result": "Intuitive Nutzung und vollständige Zufriedenheit."
+      },
+      "faq": [
+        {
+          "question": "Können wir vorhandene Ausrüstung wiederverwenden?",
+          "answer": "Ja, wir integrieren Ihre bestehende Ausrüstung und kombinieren sie bei Bedarf mit neuen Lösungen."
+        },
+        {
+          "question": "Bieten Sie Ferneinstellungen an?",
+          "answer": "Wir überwachen das System und wenden Updates oder Einstellungen auf Anfrage an."
+        }
+      ]
+    },
+    "iot-surveillance": {
+      "id": "iot-surveillance",
+      "slug": "iot-vigilancia-yates",
+      "icon": "automation",
+      "name": "IoT & Video Surveillance Systems",
+      "shortDescription": "Umfassende Automatisierung mit intelligenter Steuerung von Kabinen, Beleuchtung und sicherem CCTV.",
+      "metrics": [
+        {
+          "id": "automation",
+          "value": "Smart",
+          "label": "Automatisierung"
+        },
+        {
+          "id": "cctv",
+          "value": "360°",
+          "label": "CCTV-Abdeckung"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Zentralisierte Plattform",
+          "description": "Szenen, Alerts und Echtzeitstatus für Besatzung und Eigentümer."
+        },
+        {
+          "title": "Personalisierte Kabinen",
+          "description": "Jeder Gast passt Atmosphäre und Unterhaltung von seinem Gerät an."
+        },
+        {
+          "title": "Erweiterte Überwachung",
+          "description": "Multi-Zonen-Streaming, redundante Aufzeichnung und verschlüsselter Zugang."
+        }
+      ],
+      "process": [
+        {
+          "title": "IoT-Inventar",
+          "description": "Überprüfung vorhandener Sensoren, Aktoren und Kameras."
+        },
+        {
+          "title": "NMEA 2000 Integration",
+          "description": "Verbindung von Navigationsdaten und Alarmen zur Cloud."
+        },
+        {
+          "title": "Szenen-Automatisierung",
+          "description": "Programmierung von Tag-/Nacht-, Anker- oder Navigationsmodi."
+        },
+        {
+          "title": "Besatzungsschulung",
+          "description": "Schulung und Übergabe digitaler Handbücher."
+        }
+      ],
+      "hero": {
+        "tagline": "Vollständige Kontrolle und Sicherheit",
+        "description": "Integration von Beleuchtung, Klima, NMEA 2000-Monitoring und CCTV in einer überall zugänglichen Plattform.",
+        "primaryCta": {
+          "label": "Netnautica kontaktieren",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Weitere Services ansehen",
+          "href": "/services"
+        }
+      },
+      "caseStudy": {
+        "company": "30m Katamaran",
+        "challenge": "Fehlende zentrale Steuerung und sicherer Fernzugang.",
+        "solution": "IoT-Plattform mit Kabinen-Szenen und verstärktem CCTV.",
+        "result": "Reduzierte Reaktionszeiten und informierte Eigentümer vom Land aus."
+      },
+      "faq": [
+        {
+          "question": "Welche Geräte unterstützen Sie?",
+          "answer": "Wir integrieren KNX-Beleuchtung, Klimatisierung, NMEA 2000-Systeme und kompatible IP-Kameras."
+        },
+        {
+          "question": "Ist Fernzugang möglich?",
+          "answer": "Ja, verschlüsselter Zugang mit Multi-Faktor-Authentifizierung."
+        }
+      ]
+    }
+  },
+  "caseStudiesPage": {
+    "hero": {
+      "eyebrow": "Netnautica Projekte",
+      "title": "Aktuelle Implementierungen mit unseren Kunden",
+      "description": "Multi-WAN-Architekturen, Cyberüberwachungs-Verstärkungen und AV-Erlebnisse mit Kapitänen und Werften realisiert."
+    }
+  },
+  "blogPage": {
+    "hero": {
+      "eyebrow": "Blog",
+      "title": "Technische Ressourcen für vernetzte Yachten",
+      "description": "Netnautica-Ratschläge zu Konnektivität, Cyberüberwachung, AV und IoT auf See."
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "eyebrow": "Wer wir sind",
+      "title": "Boutique-Engineering für Luxusyachten",
+      "description": "Netnautica wurde in Palma de Mallorca gegründet, um Konnektivität, Cyberüberwachung, AV und IoT mit einem kompakten Spezialistenteam zu integrieren.",
+      "primaryCta": "Anruf buchen",
+      "secondaryCta": "Services ansehen"
+    },
+    "stats": [
+      {
+        "label": "Gründungsjahr",
+        "value": "2024"
+      },
+      {
+        "label": "Kernexpertise",
+        "value": "Telematik- und IT-Engineering"
+      },
+      {
+        "label": "Abdeckung",
+        "value": "Mittelmeer - Weltweite Operationen"
+      }
+    ],
+    "pillars": [
+      {
+        "title": "Strategie und Ausführung",
+        "description": "Planung, Integration und Monitoring als einziger Technologiepartner."
+      },
+      {
+        "title": "Direkte Beziehung",
+        "description": "Die Gründer koordinieren mit Kapitänen, Werften und Designern."
+      },
+      {
+        "title": "Fortschrittliche Technologie",
+        "description": "Starlink, Peplink, Ubiquiti, Fortinet und Crestron gewährleisten Leistung und Zuverlässigkeit."
+      }
+    ],
+    "team": {
+      "title": "Kernteam",
+      "members": [
+        {
+          "name": "Netnautica Team",
+          "role": "Telematik- und IT-Engineering",
+          "bio": "Spezialisten für Konnektivität, Cyberüberwachung, AV und IoT, die die Besatzung von Anfang bis Ende begleiten."
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "year": "2024",
+        "milestone": "Start von Palma de Mallorca."
+      },
+      {
+        "year": "2024",
+        "milestone": "Erstes Gesamtprojekt: Starlink, Cyberüberwachung und Multi-Room-AV."
+      },
+      {
+        "year": "2025",
+        "milestone": "24/7-Fernsupport und Abdeckung Balearen, Barcelona und Côte d'Azur."
+      }
+    ],
+    "culture": {
+      "title": "Unsere Arbeitsweise",
+      "items": [
+        "Technisches Erstaudit und klare Dokumentation für die Besatzung.",
+        "Direkte Kommunikation mit Kapitänen und Werften während der Integration.",
+        "Fernmonitoring, geplante Besuche und sofortiger Support in der Saison."
+      ]
+    }
+  },
+  "contactPage": {
+    "sidebar": {
+      "emailLabel": "E-Mail",
+      "whatsappLabel": "WhatsApp",
+      "addressLabel": "Adresse",
+      "scheduleLabel": "Öffnungszeiten",
+      "copy": "Wir koordinieren jede Implementierung mit Ihrer Besatzung, Werft und vertrauenswürdigen Partnern.",
+      "socialIntro": "Folgen Sie uns"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 ﻿// NETNAUTICA-EDIT: Casos de exito sintetizados a partir de implementaciones descritas en Netnautica.es
-const createCaseLocales = (es, en, fr) => ({ es, en, fr });
+const createCaseLocales = (es, en, fr, de) => ({ es, en, fr, de });
 
 export const caseStudies = [
   {
@@ -7,36 +7,42 @@ export const caseStudies = [
     slug: {
       es: 'flota-charter-conectividad',
       en: 'charter-fleet-connectivity',
-      fr: 'connectivite-flotte-charter'
+      fr: 'connectivite-flotte-charter',
+      de: 'charter-flotte-konnektivitaet'
     },
     industry: {
       es: 'Charter Mediterráneo',
       en: 'Mediterranean charter',
-      fr: 'Charter méditerranéen'
+      fr: 'Charter méditerranéen',
+      de: 'Mittelmeer-Charter'
     },
     metrics: [
       { 
         label: {
           es: 'Disponibilidad de red',
           en: 'Network availability',
-          fr: 'Disponibilité réseau'
+          fr: 'Disponibilité réseau',
+          de: 'Netzwerkverfügbarkeit'
         },
         value: {
           es: '>99 %',
           en: '>99 %',
-          fr: '>99 %'
+          fr: '>99 %',
+          de: '>99 %'
         }
       },
       {
         label: {
           es: 'Tiempo de failover',
           en: 'Failover time',
-          fr: 'Temps de bascule'
+          fr: 'Temps de bascule',
+          de: 'Failover-Zeit'
         },
         value: {
           es: '<10 s',
           en: '<10 s',
-          fr: '<10 s'
+          fr: '<10 s',
+          de: '<10 s'
         }
       }
     ],
@@ -58,6 +64,12 @@ export const caseStudies = [
         challenge: 'Une flotte charter subissait des coupures entre ports à couverture limitée et traversées en haute mer.',
         solution: 'Architecture multi-WAN conçue avec routeurs Peplink, Starlink maritime et backup VSAT géré.',
         result: 'Connectivité continue toute la saison et monitoring 24/7.'
+      },
+      de: {
+        title: 'Multi-WAN mit Starlink und 4G/5G für Saisonrouten',
+        challenge: 'Eine Charterflotte litt unter Ausfällen beim Wechsel von Häfen mit begrenzter Abdeckung zu Fahrten auf hoher See.',
+        solution: 'Wir entwickelten eine Multi-WAN-Architektur mit Peplink-Routern, maritimem Starlink und zentral verwaltetem VSAT-Backup.',
+        result: 'Kontinuierliche Konnektivität während der gesamten Saison und 24/7-Remote-Überwachung.'
       }
     }
   },
@@ -66,36 +78,42 @@ export const caseStudies = [
     slug: {
       es: 'refuerzo-ciberseguridad-superyate',
       en: 'superyacht-cybersecurity-reinforcement',
-      fr: 'renforcement-cybersecurite-superyacht'
+      fr: 'renforcement-cybersecurite-superyacht',
+      de: 'superyacht-cybersicherheit-verstaerkung'
     },
     industry: {
       es: 'Superyate 50 m',
       en: 'Superyacht 50 m',
-      fr: 'Superyacht 50 m'
+      fr: 'Superyacht 50 m',
+      de: 'Superyacht 50 m'
     },
     metrics: [
       {
         label: {
           es: 'Segmentos de red',
           en: 'Network segments',
-          fr: 'Segments réseau'
+          fr: 'Segments réseau',
+          de: 'Netzwerksegmente'
         },
         value: {
           es: '4 capas',
           en: '4 layers',
-          fr: '4 couches'
+          fr: '4 couches',
+          de: '4 Schichten'
         }
       },
       {
         label: {
           es: 'Incidentes críticos',
           en: 'Critical incidents',
-          fr: 'Incidents critiques'
+          fr: 'Incidents critiques',
+          de: 'Kritische Vorfälle'
         },
         value: {
           es: '0',
           en: '0',
-          fr: '0'
+          fr: '0',
+          de: '0'
         }
       }
     ],
@@ -117,6 +135,12 @@ export const caseStudies = [
         challenge: 'Les accès invités menaçaient les systèmes de navigation et divertissement.',
         solution: 'Mise en place Fortinet NGFW, VLAN dédiés et authentification multifacteur avec monitoring SIEM.',
         result: 'Aucun incident lors de la dernière saison et audit externe réussi.'
+      },
+      de: {
+        title: 'Erweiterte Segmentierung und Zero Trust für Besatzung und Gäste',
+        challenge: 'Gastzugänge gefährdeten Navigation- und Entertainment-Systeme.',
+        solution: 'Wir implementierten Fortinet NGFW, dedizierte VLANs und Multi-Faktor-Authentifizierung mit SIEM-Überwachung.',
+        result: 'Null Vorfälle in der letzten Kampagne und erfolgreich bestandenes externes Audit.'
       }
     }
   },
@@ -125,36 +149,42 @@ export const caseStudies = [
     slug: {
       es: 'integracion-av-38m',
       en: 'av-integration-38m',
-      fr: 'integration-av-38m'
+      fr: 'integration-av-38m',
+      de: 'av-integration-38m'
     },
     industry: {
       es: 'Mejora de entretenimiento',
       en: 'Entertainment upgrade',
-      fr: 'Amélioration divertissement'
+      fr: 'Amélioration divertissement',
+      de: 'Entertainment-Upgrade'
     },
     metrics: [
       {
         label: {
           es: 'Zonas AV',
           en: 'AV zones',
-          fr: 'Zones AV'
+          fr: 'Zones AV',
+          de: 'AV-Zonen'
         },
         value: {
           es: '8+',
           en: '8+',
-          fr: '8+'
+          fr: '8+',
+          de: '8+'
         }
       },
       {
         label: {
           es: 'Resolución',
           en: 'Resolution',
-          fr: 'Résolution'
+          fr: 'Résolution',
+          de: 'Auflösung'
         },
         value: {
           es: '4K HDR',
           en: '4K HDR',
-          fr: '4K HDR'
+          fr: '4K HDR',
+          de: '4K HDR'
         }
       }
     ],
@@ -176,6 +206,12 @@ export const caseStudies = [
         challenge: 'Un yacht de 38 mètres voulait unifier cinéma, réunions et musique avec contrôle simple.',
         solution: 'Matrice UHD, audio caché et scènes Crestron personnalisées intégrées.',
         result: 'Expérience multi-room fluide adoptée par équipage et invités.'
+      },
+      de: {
+        title: 'Kinoerlebnis auf See mit Crestron-Steuerung',
+        challenge: 'Eine 38-Meter-Yacht wollte Kino, Meetings und Musik mit einfacher Steuerung für die Besatzung vereinen.',
+        solution: 'Wir integrierten UHD-Matrix, verstecktes Audio, benutzerdefinierte Szenen und Crestron-Panels synchronisiert mit Hausautomation.',
+        result: 'Flüssiges Multi-Room-Erlebnis und vollständige Akzeptanz durch Besatzung und Gäste.'
       }
     }
   }

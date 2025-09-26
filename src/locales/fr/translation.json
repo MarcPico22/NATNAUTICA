@@ -3,7 +3,7 @@
     "home": "Accueil",
     "services": "Services",
     "cases": "Projets",
-    "about": "Ã€ propos",
+    "about": "À propos",
     "blog": "Blog",
     "contact": "Contact",
     "toggle": "Ouvrir ou fermer le menu",
@@ -14,12 +14,13 @@
     "toggleTheme": "Changer de mode",
     "viewAll": "Tout voir",
     "readMore": "En savoir plus",
-    "learnMore": "DÃ©tails",
+    "learnMore": "Détails",
     "next": "Suivant",
-    "previous": "PrÃ©cÃ©dent",
+    "previous": "Précédent",
     "submit": "Envoyer",
     "start": "Commencer"
   },
+
   "footer": {
     "about": "Ingénierie boutique pour yachts de luxe. Connectivité, cybersécurité, AV et IoT depuis Palma de Majorque.",
     "company": "Entreprise",
@@ -40,8 +41,8 @@
     "uxUi": "IoT & Video Surveillance"
   },
   "legal": {
-    "notice": "Mentions lï¿½gales",
-    "privacy": "Confidentialitï¿½",
+    "notice": "Mentions légales",
+    "privacy": "Confidentialité",
     "cookies": "Cookies"
   },
   "social": {
@@ -53,8 +54,8 @@
   "about": {
     "headings": {
       "pillars": "Notre ADN",
-      "timeline": "Notre ï¿½volution",
-      "culture": "Notre maniï¿½re de travailler"
+      "timeline": "Notre évolution",
+      "culture": "Notre manière de travailler"
     },
     "cta": {
       "primary": "Rï¿½server un appel",

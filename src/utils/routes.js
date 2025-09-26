@@ -40,7 +40,7 @@ export function getPath(pathKey, params = {}) {
  * @returns {string} El código de idioma detectado o el idioma por defecto
  */
 export const getLanguageFromURL = (pathname) => {
-  const match = pathname.match(/^\/(es|en|fr)/);
+  const match = pathname.match(/^\/(es|en|fr|de)/);
   return match ? match[1] : 'es';
 };
 
