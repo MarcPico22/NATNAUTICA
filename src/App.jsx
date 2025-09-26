@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { ScrollToTop } from '@/components/layout/ScrollToTop';
-import { LanguageRedirect } from '@/components/common/LanguageRedirect';
 
 const HomePage = lazy(() => import('@/pages/home/HomePage'));
 const ServicesPage = lazy(() => import('@/pages/services/ServicesPage'));

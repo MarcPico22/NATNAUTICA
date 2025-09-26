@@ -1,14 +1,7 @@
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+// DESHABILITADO: En sistema universal, no necesitamos redirecciones con idioma
+// Las rutas son universales: /, /services, /cases, /aboutus, /contact
 
 export function LanguageRedirect() {
-  const navigate = useNavigate();
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    navigate(`/${i18n.language}`, { replace: true });
-  }, [navigate, i18n.language]);
-
+  // No hacer nada - las rutas son universales
   return null;
 }

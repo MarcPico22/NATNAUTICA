@@ -34,7 +34,7 @@ const CaseStudiesPage = () => {
         '@type': 'ListItem',
         position: index + 1,
         name: getLocaleContent(study.locales, language).title,
-        url: `${SITE_URL}/casos-de-exito?highlight=${study.slug}`
+        url: `${SITE_URL}/cases?highlight=${study.slug}`
       }))
     }
   ];
@@ -116,7 +116,7 @@ const CaseStudiesPage = () => {
                     <li>{t('cases.integration')}</li>
                     <li>{t('cases.monitoring')}</li>
                   </ul>
-                  <Button as={Link} to="/contacto" variant="secondary">
+                  <Button as={Link} to="/contact" variant="secondary">
                     {t('actions.requestQuote')}
                   </Button>
                 </div>

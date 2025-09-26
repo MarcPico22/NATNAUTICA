@@ -18,7 +18,7 @@ const ServiceDetailPage = () => {
   const service = services.find((item) => item.slug === serviceSlug);
 
   if (!service) {
-    return <Navigate to="/servicios" replace />;
+    return <Navigate to="/services" replace />;
   }
 
   const locale = getLocaleContent(service.locales, language);
@@ -172,7 +172,7 @@ const ServiceDetailPage = () => {
                 {locale.caseStudy.result}
               </p>
             </div>
-            <Button as={Link} to="/casos-de-exito" className="mt-6" variant="secondary">
+            <Button as={Link} to="/cases" className="mt-6" variant="secondary">
               {t('actions.viewAll')}
             </Button>
           </div>
@@ -207,7 +207,7 @@ const ServiceDetailPage = () => {
             </Button>
             <Button
               as={Link}
-              to="/contacto"
+              to="/contact"
               variant="secondary"
               size="lg"
               className="!bg-white/10 !text-white hover:!bg-white/20"

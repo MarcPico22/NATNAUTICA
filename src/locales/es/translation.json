@@ -6,11 +6,11 @@
       "subtitle": "Diseñamos e implementamos sistemas tecnológicos inteligentes que elevan el confort a bordo y optimizan la experiencia del usuario en cada travesía.",
       "primaryCta": {
         "label": "Explorar servicios",
-        "href": "/servicios"
+        "href": "/services"
       },
       "secondaryCta": {
         "label": "Ver portfolio",
-        "href": "/proyectos"
+        "href": "/cases"
       }
     },
     "stats": [
@@ -223,12 +223,12 @@
       "title": "Preparados para tu próxima travesía",
       "description": "Comparte el estado actual de tu yate y diseñaremos una hoja de ruta tecnológica realista en menos de 48 horas.",
       "primary": {
-        "label": "Solicitar consulta",
-        "href": "/contacto"
+        "label": "Contactar Netnautica",
+        "href": "/contact"
       },
       "secondary": {
         "label": "Ver servicios",
-        "href": "/servicios"
+        "href": "/services"
       }
     }
   },

@@ -1,4 +1,4 @@
-﻿{
+{
   "navigation": {
     "home": "Home",
     "services": "Services",
@@ -124,7 +124,7 @@
       },
       "secondaryCta": {
         "label": "View portfolio",
-        "href": "/case-studies"
+        "href": "/cases"
       }
     },
     "intro": {
@@ -158,7 +158,7 @@
       },
       "secondaryCta": {
         "label": "View portfolio",
-        "href": "/case-studies"
+        "href": "/cases"
       }
     },
     "framework": {
@@ -355,7 +355,7 @@
       },
       "secondaryCta": {
         "label": "View portfolio",
-        "href": "/case-studies"
+        "href": "/cases"
       }
     },
     "stats": [
@@ -428,9 +428,9 @@
     "services": {
       "sectionHeaders": {
         "methodology": "Methodology",
-        "capabilities": "🚀 CAPABILITIES TEST",
-        "specializedServices": "🔧 SPECIALIZED SERVICES TEST",
-        "servicesDescription": "🌊 TEST: Comprehensive connectivity, cybersecurity, AV and IoT solutions designed specifically for the nautical environment and adapted to each vessel's needs."
+        "capabilities": "?? CAPABILITIES TEST",
+        "specializedServices": "?? SPECIALIZED SERVICES TEST",
+        "servicesDescription": "?? TEST: Comprehensive connectivity, cybersecurity, AV and IoT solutions designed specifically for the nautical environment and adapted to each vessel's needs."
       },
       "support": {
         "title": "24/7 Support",
@@ -568,7 +568,7 @@
       "title": "Ready for your next journey",
       "description": "Share your yacht's current state and we'll design a realistic technology roadmap in under 48 hours.",
       "primary": {
-        "label": "Request consultation",
+        "label": "Contact Netnautica",
         "href": "/contact"
       },
       "secondary": {

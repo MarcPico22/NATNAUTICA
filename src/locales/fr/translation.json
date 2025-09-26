@@ -3,7 +3,7 @@
     "home": "Accueil",
     "services": "Services",
     "cases": "Projets",
-    "about": "À propos",
+    "about": "Ã€ propos",
     "blog": "Blog",
     "contact": "Contact",
     "toggle": "Ouvrir ou fermer le menu",
@@ -14,9 +14,9 @@
     "toggleTheme": "Changer de mode",
     "viewAll": "Tout voir",
     "readMore": "En savoir plus",
-    "learnMore": "Détails",
+    "learnMore": "DÃ©tails",
     "next": "Suivant",
-    "previous": "Précédent",
+    "previous": "PrÃ©cÃ©dent",
     "submit": "Envoyer",
     "start": "Commencer"
   },
@@ -40,8 +40,8 @@
     "uxUi": "IoT & Video Surveillance"
   },
   "legal": {
-    "notice": "Mentions légales",
-    "privacy": "Confidentialité",
+    "notice": "Mentions lï¿½gales",
+    "privacy": "Confidentialitï¿½",
     "cookies": "Cookies"
   },
   "social": {
@@ -53,11 +53,11 @@
   "about": {
     "headings": {
       "pillars": "Notre ADN",
-      "timeline": "Notre évolution",
-      "culture": "Notre manière de travailler"
+      "timeline": "Notre ï¿½volution",
+      "culture": "Notre maniï¿½re de travailler"
     },
     "cta": {
-      "primary": "Réserver un appel",
+      "primary": "Rï¿½server un appel",
       "secondary": "Voir les services"
     }
   },
@@ -72,31 +72,31 @@
   "contact": {
     "title": "Parlez-nous de votre projet à bord",
     "subtitle": "Nous concevons des systèmes de connectivité, de sécurité et de divertissement adaptés à chaque route et équipage.",
-    "success": "Merci de votre message. Nous répondrons sous 24 heures ouvrées.",
+    "success": "Merci de votre message. Nous rï¿½pondrons sous 24 heures ouvrï¿½es.",
     "errors": {
-      "generic": "Une erreur est survenue. Merci de réessayer."
+      "generic": "Une erreur est survenue. Merci de rï¿½essayer."
     },
     "labels": {
       "name": "Nom",
       "email": "Email",
-      "phone": "Téléphone",
+      "phone": "Tï¿½lï¿½phone",
       "company": "Yacht ou entreprise",
       "role": "Poste",
       "website": "Site web",
       "service": "Service prioritaire",
-      "budget": "Budget estimé",
-      "timeline": "Échéance",
-      "message": "Décrivez les besoins techniques",
-      "consent": "J'ai lu et j'accepte la politique de confidentialité"
+      "budget": "Budget estimï¿½",
+      "timeline": "ï¿½chï¿½ance",
+      "message": "Dï¿½crivez les besoins techniques",
+      "consent": "J'ai lu et j'accepte la politique de confidentialitï¿½"
     },
     "placeholders": {
-      "name": "Nom et prénom",
+      "name": "Nom et prï¿½nom",
       "email": "nom@netnautica.com",
       "phone": "+34 600 000 000",
       "company": "Nom du yacht",
       "role": "Capitaine / ETO",
       "website": "https://",
-      "message": "Nous souhaitons déployer Starlink avec redondance 4G/5G..."
+      "message": "Nous souhaitons dï¿½ployer Starlink avec redondance 4G/5G..."
     },
     "options": {
       "budget": [
@@ -106,7 +106,7 @@
         "> 60 000 EUR"
       ],
       "timeline": [
-        "Immédiat",
+        "Immï¿½diat",
         "Dans 3 mois",
         "Saison prochaine",
         "Flexible"
@@ -114,11 +114,11 @@
     }
   },
   "cookieBanner": {
-    "title": "Votre confidentialité compte",
-    "description": "Nous utilisons des cookies techniques et analytiques pour offrir du support et améliorer l'expérience. Vous pouvez ajuster vos préférences à tout moment.",
+    "title": "Votre confidentialitï¿½ compte",
+    "description": "Nous utilisons des cookies techniques et analytiques pour offrir du support et amï¿½liorer l'expï¿½rience. Vous pouvez ajuster vos prï¿½fï¿½rences ï¿½ tout moment.",
     "accept": "Tout accepter",
     "decline": "Essentiels uniquement",
-    "manage": "Gérer les cookies"
+    "manage": "Gï¿½rer les cookies"
   },
   "home": {
     "hero": {
@@ -131,7 +131,7 @@
       },
       "secondaryCta": {
         "label": "Voir le portfolio",
-        "href": "/projets"
+        "href": "/cases"
       }
     },
     "stats": [
@@ -341,12 +341,12 @@
       "title": "Prets pour votre prochaine traversee",
       "description": "Partagez l etat actuel de votre yacht et nous livrerons une feuille de route technologique en moins de 48 heures.",
       "primary": {
-        "label": "Demander une consultation",
-        "href": "/contacto"
+        "label": "Contacter Netnautica",
+        "href": "/contact"
       },
       "secondary": {
         "label": "Voir les services",
-        "href": "/servicios"
+        "href": "/services"
       }
     }
   },
@@ -357,11 +357,11 @@
       "description": "Nous integrons connectivite, cybersurveillance, AV et IoT avec une equipe boutique d ingenierie telematique.",
       "primaryCta": {
         "label": "Contacter Netnautica",
-        "href": "/contacto"
+        "href": "/contact"
       },
       "secondaryCta": {
         "label": "Voir le portfolio",
-        "href": "/casos-de-exito"
+        "href": "/cases"
       }
     },
     "intro": {
@@ -391,11 +391,11 @@
       "description": "Plan technique detaille livre en moins de 48 heures.",
       "primaryCta": {
         "label": "Contacter Netnautica",
-        "href": "/contacto"
+        "href": "/contact"
       },
       "secondaryCta": {
         "label": "Voir le portfolio",
-        "href": "/casos-de-exito"
+        "href": "/cases"
       }
     },
     "framework": {
@@ -477,11 +477,11 @@
         "description": "Systemes de connectivite avec failover automatique, load balancing et monitoring proactif pour le Mediterranee et au-dela.",
         "primaryCta": {
           "label": "Contacter Netnautica",
-          "href": "/contacto"
+          "href": "/contact"
         },
         "secondaryCta": {
           "label": "Voir plus de services",
-          "href": "/servicios"
+          "href": "/services"
         }
       },
       "caseStudy": {
@@ -556,11 +556,11 @@
         "description": "Protection des reseaux, appareils IoT et donnees sensibles avec politiques adapte es a l equipage et aux systemes de navigation.",
         "primaryCta": {
           "label": "Contacter Netnautica",
-          "href": "/contacto"
+          "href": "/contact"
         },
         "secondaryCta": {
           "label": "Voir plus de services",
-          "href": "/servicios"
+          "href": "/services"
         }
       },
       "caseStudy": {
@@ -635,11 +635,11 @@
         "description": "Transformation des salons et sky lounges en espaces cinema, reunion ou divertissement geres via Crestron.",
         "primaryCta": {
           "label": "Contacter Netnautica",
-          "href": "/contacto"
+          "href": "/contact"
         },
         "secondaryCta": {
           "label": "Voir plus de services",
-          "href": "/servicios"
+          "href": "/services"
         }
       },
       "caseStudy": {
@@ -714,11 +714,11 @@
         "description": "Integration eclairage, climat, monitoring NMEA 2000 et CCTV dans une plateforme accessible partout.",
         "primaryCta": {
           "label": "Contacter Netnautica",
-          "href": "/contacto"
+          "href": "/contact"
         },
         "secondaryCta": {
           "label": "Voir plus de services",
-          "href": "/servicios"
+          "href": "/services"
         }
       },
       "caseStudy": {
@@ -834,3 +834,4 @@
     }
   }
 }
+

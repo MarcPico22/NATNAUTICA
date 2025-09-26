@@ -116,14 +116,14 @@ const HomePage = () => {
             )}
             <div className="flex flex-col gap-3 sm:flex-row">
               {hero.primaryCta?.href && (
-                <Button as={Link} to={`/${language}${hero.primaryCta.href}`} size="lg">
+                <Button as={Link} to={hero.primaryCta.href} size="lg">
                   {hero.primaryCta.label}
                 </Button>
               )}
               {hero.secondaryCta?.href && (
                 <Button
                   as={Link}
-                  to={`/${language}${hero.secondaryCta.href}`}
+                  to={hero.secondaryCta.href}
                   variant="secondary"
                   size="lg"
                   className="!border-brand-300 !text-slate-900 dark:!text-white hover:!bg-brand-500/20"
@@ -235,8 +235,8 @@ const HomePage = () => {
           )}
           <div className="flex flex-col gap-3 sm:flex-row">
             {contactCta.primary?.href && (
-                            <Button as={Link} to={`/${language}${contactCta.href}`} size="lg" className="w-full sm:w-auto">
-                {contactCta.label}
+                            <Button as={Link} to={contactCta.primary.href} size="lg" className="w-full sm:w-auto">
+                {contactCta.primary.label}
               </Button>
             )}
             {contactCta.secondary?.href && (

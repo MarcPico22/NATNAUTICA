@@ -5,11 +5,8 @@ import { cn } from '@/utils/cn';
 import { getLocaleContent, getLocaleString } from '@/utils/i18n';
 import { Icon } from '@/components/ui/Icon';
 
-const casesPath = {
-  es: '/casos-de-exito',
-  en: '/case-studies',
-  fr: '/projets'
-};
+// CORREGIDO: Usar ruta universal en lugar de rutas localizadas
+const CASES_PATH = '/cases';
 
 export function CaseCard({ caseStudy, ctaLabel, className = '' }) {
   const { i18n } = useTranslation();
@@ -56,7 +53,7 @@ export function CaseCard({ caseStudy, ctaLabel, className = '' }) {
       )}
       <div className="mt-auto pt-6">
         <Link
-          to={`${casesPath[language]}?highlight=${getLocaleString(caseStudy.slug, language)}`}
+          to={`${CASES_PATH}?highlight=${getLocaleString(caseStudy.slug, language)}`}
           className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 transition hover:translate-x-1"
         >
           {ctaLabel}

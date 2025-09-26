@@ -29,10 +29,10 @@ const AboutPage = () => {
             </h1>
             <p className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">{content.hero.description}</p>
             <div className="flex flex-wrap gap-3">
-              <Button as="a" href="/contacto" size="lg">
+              <Button as="a" href="/contact" size="lg">
                 {t('about.cta.primary')}
               </Button>
-              <Button as="a" href="/servicios" variant="secondary" size="lg">
+              <Button as="a" href="/services" variant="secondary" size="lg">
                 {t('about.cta.secondary')}
               </Button>
             </div>
