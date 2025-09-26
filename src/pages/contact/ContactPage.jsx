@@ -2,11 +2,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { Seo } from '@/components/seo/Seo';
-import { Button } from '@/components/                {CONTACT_DETAILS.address[language]}
-              </div>
-              <div>
-                <dt className="font-semibold text-slate-900 dark:text-white">{t('footer.schedule')}</dt>
-                {CONTACT_DETAILS.schedule[language]}tton';
+import { Button } from '@/components/ui/Button';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { services } from '@/data/services';
 import { CONTACT_DETAILS, FORM_STEPS, SOCIAL_LINKS } from '@/config/site';
