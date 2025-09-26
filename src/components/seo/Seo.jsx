@@ -79,7 +79,7 @@ export function Seo({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       
       {/* Favicons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       
       {/* PWA */}
