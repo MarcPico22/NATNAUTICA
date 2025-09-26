@@ -1,21 +1,39 @@
-﻿import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+﻿// ========================================
+// 🌓 PROVIDER DE TEMA CLARO/OSCURO
+// ========================================
+// Context Provider para manejar tema global de la aplicación
+// Persiste preferencia en localStorage
+// Detecta preferencia del sistema operativo
+// Aplica clases CSS automáticamente al <html>
 
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+// 💾 Clave para localStorage (persistencia)
 const STORAGE_KEY = 'netnautica-theme';
 
+// 🎯 Context con valores por defecto
 const ThemeContext = createContext({
-  theme: 'light',
-  toggleTheme: () => undefined,
-  setTheme: () => undefined
+  theme: 'light',                    // 🌅 Tema actual
+  toggleTheme: () => undefined,      // 🔄 Alternar tema
+  setTheme: () => undefined          // 🎯 Establecer tema específico
 });
 
+// 🔍 Detecta si el usuario prefiere tema oscuro
 const prefersDark = () =>
   typeof window !== 'undefined' && window.matchMedia?.('(prefers-color-scheme: dark)').matches;
 
+// ========================================
+// 🎯 PROVIDER COMPONENT
+// ========================================
+
 export function ThemeProvider({ children }) {
+  // 🎯 Estado del tema con inicialización inteligente
   const [theme, setTheme] = useState(() => {
+    // 🚑 SSR safety: evita hydration mismatches
     if (typeof window === 'undefined') {
       return 'light';
     }
+    // 📦 Prioridades: localStorage > preferencia sistema > light
     return localStorage.getItem(STORAGE_KEY) ?? (prefersDark() ? 'dark' : 'light');
   });
 

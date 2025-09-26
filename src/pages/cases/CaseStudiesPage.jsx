@@ -1,29 +1,53 @@
-﻿import { useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+﻿// ========================================
+// 📚 PÁGINA CASOS DE ESTUDIO - PORTFOLIO
+// ========================================
+// Muestra casos reales de conectividad y ciberseguridad
+// Permite destacar un caso específico via URL (?highlight=slug)
+// Incluye reordenamiento dinámico y structured data para SEO
+// Modificar caseStudies en data/cases.js para añadir casos
 
-import { Seo } from '@/components/seo/Seo';
-import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
-import { SectionHeader } from '@/components/common/SectionHeader';
-import { caseStudies } from '@/data/cases';
-import { getLocaleContent, getLocaleString } from '@/utils/i18n';
-import { SITE_URL } from '@/config/site';
+import { useMemo } from 'react';                     // ⚛️ Optimización React
+import { Link, useSearchParams } from 'react-router-dom'; // 🔗 Navegación + URL params
+import { useTranslation } from 'react-i18next';     // 🌍 Internacionalización
 
-// NETNAUTICA-EDIT: Pagina de proyectos alineada con casos reales de conectividad y ciberseguridad.
+// 📦 Componentes
+import { Seo } from '@/components/seo/Seo';          // 🎯 SEO dinámico
+import { Badge } from '@/components/ui/Badge';       // 🏷️ Etiquetas categorías
+import { Button } from '@/components/ui/Button';     // 🔘 Botones
+import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados
+
+// 📊 Datos
+import { caseStudies } from '@/data/cases';          // 📚 Lista casos de estudio
+import { getLocaleContent, getLocaleString } from '@/utils/i18n'; // 🌍 Utilidades i18n
+import { SITE_URL } from '@/config/site';            // ⚙️ URL base
+
+// ========================================
+// 🎯 COMPONENTE CASE STUDIES PAGE
+// ========================================
+
+// NETNAUTICA-EDIT: Página de proyectos alineada con casos reales de conectividad y ciberseguridad.
 const CaseStudiesPage = () => {
+  // 🌍 Hooks internacionalización
   const { i18n, t } = useTranslation();
   const language = i18n.language;
+  
+  // 🔗 URL search params para destacar casos
   const [searchParams] = useSearchParams();
-  const highlight = searchParams.get('highlight');
+  const highlight = searchParams.get('highlight'); // 🎆 ?highlight=yacht-connectivity
 
+  // 🔄 Reordenar casos: destacado primero si existe
+  // useMemo evita recalcular en cada render
   const orderedCases = useMemo(() => {
-    if (!highlight) return caseStudies;
+    if (!highlight) return caseStudies; // 📋 Sin highlight: orden original
+    
+    // 🔍 Buscar caso a destacar
     const index = caseStudies.findIndex((item) => item.slug === highlight);
-    if (index === -1) return caseStudies;
+    if (index === -1) return caseStudies; // ⚠️ No encontrado: orden original
+    
+    // 🎆 Mover caso destacado al principio
     const clone = [...caseStudies];
     const [selected] = clone.splice(index, 1);
-    return [selected, ...clone];
+    return [selected, ...clone]; // 🥇 Destacado + resto
   }, [highlight]);
 
   const structuredData = [

@@ -1,13 +1,28 @@
-﻿import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-import { useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
+﻿// ========================================
+// 🎯 COMPONENTE SEO - META TAGS DINÁMICOS
+// ========================================
+// Gestiona meta tags, Open Graph, Twitter Cards y structured data
+// Genera URLs canónicas y alternate links para idiomas
+// Se usa en todas las páginas para SEO consistente
+// Modificar aquí afecta el SEO de todo el sitio
 
+import { Helmet } from 'react-helmet-async';         // 🪖 Meta tags dinámicos
+import { useLocation } from 'react-router-dom';      // 📍 Ubicación actual
+import { useMemo } from 'react';                     // ⚛️ Optimización React
+import { useTranslation } from 'react-i18next';     // 🌍 Hook i18n
+
+// ⚙️ Configuración del sitio
 import { SITE_NAME, SITE_URL, SUPPORTED_LANGUAGES, SITE_TAGLINE } from '@/config/site';
 
+// ========================================
+// 🔗 UTILIDADES SEO
+// ========================================
+
+// 🎯 Construye URL canónica limpia
+// Elimina barras duplicadas y asegura formato correcto
 const buildCanonicalUrl = (path = '') => {
-  const sanitized = path.startsWith('/') ? path : `/${path}`;
-  return `${SITE_URL.replace(/\/$/, '')}${sanitized}`;
+  const sanitized = path.startsWith('/') ? path : `/${path}`; // 🧹 Añade / inicial si falta
+  return `${SITE_URL.replace(/\/$/, '')}${sanitized}`;         // 🔗 URL base + path
 };
 
 export function Seo({

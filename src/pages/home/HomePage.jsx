@@ -1,92 +1,137 @@
-﻿import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+﻿// ========================================
+// 🏠 PÁGINA DE INICIO - LANDING PRINCIPAL
+// ========================================
+// Página principal de Netnautica con hero, servicios, stats, casos y CTA
+// Implementa internacionalización completa (ES/EN/FR/DE)
+// Incluye Schema.org para SEO y structured data
+// Modificar secciones aquí afecta la primera impresión del sitio
 
-import { Seo } from '@/components/seo/Seo';
-import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
-import { Icon } from '@/components/ui/Icon';
-import { SectionHeader } from '@/components/common/SectionHeader';
-import { ServiceCard } from '@/components/common/ServiceCard';
-import { CaseCard } from '@/components/common/CaseCard';
-import { MetricCard } from '@/components/common/MetricCard';
-import { homeContent } from '@/data/home';
-import { services } from '@/data/services';
-import { CONTACT_DETAILS, SITE_NAME, SITE_URL, SOCIAL_LINKS } from '@/config/site';
-import { getLocaleContent } from '@/utils/i18n';
-import { getLocalizedValue } from '@/utils/translations';
+import { Link } from 'react-router-dom';              // 🔗 Navegación SPA
+import { useTranslation } from 'react-i18next';      // 🌍 Hook internacionalización
+
+// 📦 Componentes de la aplicación
+import { Seo } from '@/components/seo/Seo';           // 🎯 Meta tags y SEO
+import { Button } from '@/components/ui/Button';      // 🔘 Botón reutilizable
+import { Badge } from '@/components/ui/Badge';        // 🏷️ Etiquetas visuales
+import { Icon } from '@/components/ui/Icon';          // 🔣 Iconos SVG
+import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados sección
+import { ServiceCard } from '@/components/common/ServiceCard';     // 🔧 Tarjetas servicio
+import { CaseCard } from '@/components/common/CaseCard';           // 📚 Tarjetas casos
+import { MetricCard } from '@/components/common/MetricCard';       // 📊 Métricas/estadísticas
+
+// 📊 Datos y configuración
+import { homeContent } from '@/data/home';            // 🏠 Contenido página inicio
+import { services } from '@/data/services';           // 🔧 Lista servicios
+import { CONTACT_DETAILS, SITE_NAME, SITE_URL, SOCIAL_LINKS } from '@/config/site'; // ⚙️ Config sitio
+import { getLocaleContent } from '@/utils/i18n';      // 🌍 Utilidad i18n
+import { getLocalizedValue } from '@/utils/translations'; // 🔄 Traducciones
+
+// ========================================
+// 🎯 COMPONENTE PÁGINA DE INICIO
+// ========================================
 
 // NETNAUTICA-EDIT: HomePage consume contenido multilenguaje desde i18n y elimina el bloque de blog
 const HomePage = () => {
+  // 🌍 Hooks de internacionalización
   const { i18n, t } = useTranslation();
-  const language = i18n.language;
+  const language = i18n.language;                     // Idioma actual (es/en/fr/de)
+  
+  // 📊 Obtener contenido localizado para el idioma activo
   const content = getLocaleContent(homeContent, language);
 
-  // Procesar el contenido para asegurarnos de que las rutas son strings
+  // ========================================
+  // 🛡️ PROCESAMIENTO SEGURO DE DATOS
+  // ========================================
+  // Añade fallbacks para evitar errores si faltan propiedades
+  // Modificar estos fallbacks cambiará el comportamiento por defecto
+  
+  // 🎭 Sección Hero con CTAs seguros
   const hero = {
     ...content.hero,
     primaryCta: content.hero?.primaryCta ? {
       ...content.hero.primaryCta,
-      href: content.hero.primaryCta.href || '/'
+      href: content.hero.primaryCta.href || '/'       // Fallback a raíz si falta href
     } : undefined,
     secondaryCta: content.hero?.secondaryCta ? {
       ...content.hero.secondaryCta,
-      href: content.hero.secondaryCta.href || '/'
+      href: content.hero.secondaryCta.href || '/'     // Fallback a raíz si falta href
     } : undefined
   };
-  const stats = content.stats ?? [];
-  const highlights = content.highlights ?? [];
-  const servicesSection = content.servicesSection ?? {};
-  const technologySection = content.technologySection ?? {};
-  const casesSection = content.casesSection ?? {};
-  const cases = content.cases ?? [];
-  const contactCta = content.contactCta ?? {};
+  
+  // 📊 Secciones de contenido con fallbacks vacíos
+  const stats = content.stats ?? [];                 // Estadísticas/métricas
+  const highlights = content.highlights ?? [];       // Destacados de empresa
+  const servicesSection = content.servicesSection ?? {}; // Sección servicios
+  const technologySection = content.technologySection ?? {}; // Sección tecnología
+  const casesSection = content.casesSection ?? {};   // Sección casos de éxito
+  const cases = content.cases ?? [];                 // Lista casos destacados
+  const contactCta = content.contactCta ?? {};       // CTA final de contacto
 
+  // ========================================
+  // 🎯 STRUCTURED DATA PARA SEO (Schema.org)
+  // ========================================
+  // Datos estructurados que mejoran la visibilidad en buscadores
+  // Google los usa para rich snippets y Knowledge Graph
+  // Modificar aquí afecta cómo Google interpreta el sitio
+  
+  // 🏢 Schema de Organización (información empresa)
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.svg`,
-    sameAs: Object.values(SOCIAL_LINKS),
+    name: SITE_NAME,                                  // Nombre empresa
+    url: SITE_URL,                                    // URL sitio web
+    logo: `${SITE_URL}/logo.svg`,                     // Logo para rich snippets
+    sameAs: Object.values(SOCIAL_LINKS),             // Redes sociales (autoridad)
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: getLocalizedValue(CONTACT_DETAILS.phone, language),
-        contactType: 'sales',
-        areaServed: 'ES'
+        telephone: getLocalizedValue(CONTACT_DETAILS.phone, language), // Teléfono localizado
+        contactType: 'sales',                         // Tipo de contacto
+        areaServed: 'ES'                             // Área geográfica
       }
     ]
   };
 
+  // 🛠️ Schema de Servicio (servicios que ofrecemos)
   const structuredData = [
     organizationSchema,
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      name: hero.title,
+      name: hero.title,                               // Título del servicio principal
       provider: {
         '@type': 'Organization',
         name: SITE_NAME,
         url: SITE_URL
       },
-      areaServed: 'Mediterranean',
-      description: hero.subtitle
+      areaServed: 'Mediterranean',                    // Área de servicio (yates Mediterráneo)
+      description: hero.subtitle                      // Descripción del servicio
     }
   ];
 
+  // 🎯 Servicios destacados (primeros 4 para mostrar en home)
   const featuredServices = services.slice(0, 4);
 
   return (
     <>
+      {/* 🎯 SEO: Meta tags dinámicos + structured data */}
       <Seo title={hero.title} description={hero.subtitle} structuredData={structuredData} />
 
+      {/* ========================================
+          🎭 SECCIÓN HERO (Encabezado principal)
+          ======================================== */}
       <section className="relative overflow-hidden bg-white dark:bg-slate-950 py-20 text-slate-900 dark:text-white sm:py-28">
+        {/* 🌊 Fondo con gradiente radial (efecto visual) */}
         <div
           className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(65,172,194,0.12),_transparent_55%)] dark:bg-[radial-gradient(circle_at_top,_rgba(65,172,194,0.28),_transparent_55%)]"
           aria-hidden="true"
         />
+        
+        {/* 📐 Grid responsivo: 1 columna móvil, 2 columnas desktop */}
         <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:px-8">
+          {/* 📝 Columna izquierda: Contenido textual */}
           <div className="flex flex-col gap-6">
+            {/* 🏷️ Logo de la empresa */}
             <img
               src="/src/assets/logo.png"
               alt={SITE_NAME}

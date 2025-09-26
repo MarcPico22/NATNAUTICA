@@ -1,16 +1,35 @@
-﻿import { useLocation, useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+﻿// ========================================
+// 🌍 SELECTOR DE IDIOMA (4 idiomas)
+// ========================================
+// Componente para cambiar entre ES, EN, FR y DE
+// Botones tipo pill con estado activo visible
+// Sincroniza con localStorage y URL params
+// Modificar SUPPORTED_LANGUAGES en config/site.js para añadir idiomas
 
-import { SUPPORTED_LANGUAGES } from '@/config/site';
-import { getLanguageSwitchPath } from '@/utils/routes';
+import { useLocation, useNavigate } from 'react-router-dom'; // 🔗 Navegación SPA
+import { useTranslation } from 'react-i18next';              // 🌍 Hook i18n
+
+// 📦 Configuración y utilidades
+import { SUPPORTED_LANGUAGES } from '@/config/site';         // 🌍 Lista idiomas (ES/EN/FR/DE)
+import { getLanguageSwitchPath } from '@/utils/routes';      // 🔄 Rutas con idioma
+
+// ========================================
+// 🎯 COMPONENTE LANGUAGE TOGGLE
+// ========================================
 
 export function LanguageToggle({ className = '' }) {
+  // 🔗 Hooks de navegación y ubicación
   const location = useLocation();
   const navigate = useNavigate();
+  
+  // 🌍 Hook internacionalización (i18n = instancia, t = traductor)
   const { i18n, t } = useTranslation();
 
+  // 🔄 Manejador de cambio de idioma
+  // Actualiza el contexto i18n y se propaga automáticamente
+  // LanguageSync se encarga de sincronizar con localStorage/URL
   const handleChange = (code) => {
-    void i18n.changeLanguage(code);
+    void i18n.changeLanguage(code); // void para ignorar Promise
   };
 
   return (

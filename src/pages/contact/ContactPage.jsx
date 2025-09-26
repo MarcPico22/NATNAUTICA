@@ -1,32 +1,57 @@
-﻿import { useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+﻿// ========================================
+// 📧 PÁGINA DE CONTACTO - FORMULARIO MULTI-STEP
+// ========================================
+// Formulario de contacto con 3 pasos para mejorar conversión
+// Paso 1: Datos personales y empresa
+// Paso 2: Servicio, presupuesto y timeline  
+// Paso 3: Mensaje y consentimiento GDPR
+// Incluye validación por pasos y estados de carga
 
-import { Seo } from '@/components/seo/Seo';
-import { Button } from '@/components/ui/Button';
-import { SectionHeader } from '@/components/common/SectionHeader';
-import { services } from '@/data/services';
-import { CONTACT_DETAILS, FORM_STEPS, SOCIAL_LINKS } from '@/config/site';
-import { getLocaleContent } from '@/utils/i18n';
+import { useMemo, useState } from 'react';           // ⚛️ Hooks React
+import { useTranslation } from 'react-i18next';     // 🌍 Internacionalización
+
+// 📦 Componentes
+import { Seo } from '@/components/seo/Seo';          // 🎯 SEO dinámico
+import { Button } from '@/components/ui/Button';     // 🔘 Botones reutilizables
+import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados
+
+// 📊 Datos y configuración
+import { services } from '@/data/services';          // 🔧 Lista servicios
+import { CONTACT_DETAILS, FORM_STEPS, SOCIAL_LINKS } from '@/config/site'; // ⚙️ Config sitio
+import { getLocaleContent } from '@/utils/i18n';     // 🌍 Utilidades i18n
+
+// ========================================
+// 📋 CONFIGURACIÓN DEL FORMULARIO
+// ========================================
 
 // NETNAUTICA-EDIT: Formulario de contacto adaptado al funnel de Netnautica.es.
+
+// 📋 Estado inicial del formulario (valores vacíos)
 const initialForm = {
-  name: '',
-  email: '',
-  phone: '',
-  company: '',
-  role: '',
-  website: '',
-  service: '',
-  budget: '',
-  timeline: '',
-  message: '',
-  consent: false
+  // 🗂️ Paso 1: Información personal
+  name: '',        // Nombre completo
+  email: '',       // Email corporativo
+  phone: '',       // Teléfono contacto
+  company: '',     // Nombre empresa
+  role: '',        // Cargo en la empresa
+  
+  // 🔍 Paso 2: Detalles del proyecto
+  website: '',     // URL sitio web actual
+  service: '',     // Servicio de interés
+  budget: '',      // Presupuesto estimado
+  timeline: '',    // Timeline proyecto
+  
+  // 📝 Paso 3: Mensaje y legal
+  message: '',     // Descripción necesidades
+  consent: false   // Aceptación GDPR
 };
 
+// 📈 Campos por paso (para validación progresiva)
+// Modificar aquí para cambiar la distribución de campos
 const stepFields = [
-  ['name', 'email', 'phone', 'company', 'role'],
-  ['service', 'budget', 'timeline', 'website'],
-  ['message', 'consent']
+  ['name', 'email', 'phone', 'company', 'role'],      // 🗂️ Paso 1: Datos personales
+  ['service', 'budget', 'timeline', 'website'],        // 🔧 Paso 2: Detalles proyecto
+  ['message', 'consent']                               // 📝 Paso 3: Mensaje final
 ];
 
 const ContactPage = () => {

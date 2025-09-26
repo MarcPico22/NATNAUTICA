@@ -1,16 +1,34 @@
-﻿import { useTranslation } from 'react-i18next';
+﻿// ========================================
+// ℹ️ PÁGINA SOBRE NOSOTROS - CORPORATIVA
+// ========================================
+// Página que presenta la empresa, misión, valores y equipo
+// Incluye hero section, stats, team y call-to-action
+// Posiciona a Netnautica como expertos en conectividad náutica
+// Modificar aboutContent en data/about.js para cambiar contenido
 
-import { Seo } from '@/components/seo/Seo';
-import { Badge } from '@/components/ui/Badge';
-import { SectionHeader } from '@/components/common/SectionHeader';
-import { Button } from '@/components/ui/Button';
-import { aboutContent } from '@/data/about';
-import { getLocaleContent } from '@/utils/i18n';
+import { useTranslation } from 'react-i18next';      // 🌍 Internacionalización
 
-// NETNAUTICA-EDIT: Pagina corporativa ajustada al posicionamiento de Netnautica.es
+// 📦 Componentes
+import { Seo } from '@/components/seo/Seo';           // 🎯 SEO dinámico
+import { Badge } from '@/components/ui/Badge';        // 🏷️ Etiquetas
+import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados
+import { Button } from '@/components/ui/Button';      // 🔘 Botones CTA
+
+// 📊 Datos
+import { aboutContent } from '@/data/about';          // ℹ️ Contenido sobre nosotros
+import { getLocaleContent } from '@/utils/i18n';      // 🌍 Utilidades i18n
+
+// ========================================
+// 🎯 COMPONENTE ABOUT PAGE
+// ========================================
+
+// NETNAUTICA-EDIT: Página corporativa ajustada al posicionamiento de Netnautica.es
 const AboutPage = () => {
+  // 🌍 Hooks internacionalización
   const { t, i18n } = useTranslation();
   const language = i18n.language;
+  
+  // 📊 Contenido localizado para el idioma actual
   const content = getLocaleContent(aboutContent, language);
 
   return (

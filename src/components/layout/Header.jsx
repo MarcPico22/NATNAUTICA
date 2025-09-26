@@ -1,18 +1,37 @@
-﻿import { useEffect, useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { routes, getPath } from '@/utils/routes';
+﻿// ========================================
+// 🎯 HEADER - NAVEGACIÓN PRINCIPAL
+// ========================================
+// Navegación sticky con logo, menú, selector idioma/tema y CTA
+// Responsive: menú hamburguesa en móvil, navegación completa en desktop
+// Modificar aquí afecta la navegación en TODAS las páginas
 
-import { NAVIGATION_ITEMS } from '@/data/navigation';
-import { Logo } from '@/components/common/Logo';
-import { LanguageToggle } from '@/components/common/LanguageToggle';
-import { ThemeToggle } from '@/components/common/ThemeToggle';
+import { useEffect, useState } from 'react';              // ⚛️ Hooks React
+import { Link, NavLink, useLocation } from 'react-router-dom'; // 🔗 Navegación SPA
+import { useTranslation } from 'react-i18next';          // 🌍 Hook internacionalización
+import { routes, getPath } from '@/utils/routes';         // 🛣️ Utilidades rutas
+
+// 📊 Datos y componentes
+import { NAVIGATION_ITEMS } from '@/data/navigation';     // 📋 Lista elementos menú
+import { Logo } from '@/components/common/Logo';          // 🏷️ Logo Netnautica
+import { LanguageToggle } from '@/components/common/LanguageToggle'; // 🌍 Selector idioma
+import { ThemeToggle } from '@/components/common/ThemeToggle';       // 🌓 Toggle tema
+
+// ========================================
+// 🎯 COMPONENTE HEADER
+// ========================================
 
 export function Header() {
+  // 🌍 Hook internacionalización (i18n para idioma, t para traducciones)
   const { t, i18n } = useTranslation();
+  
+  // 📱 Estado del menú móvil (hamburguesa)
   const [isMenuOpen, setMenuOpen] = useState(false);
+  
+  // 📍 Hook para detectar cambios de ruta
   const location = useLocation();
 
+  // 🔄 Cierra el menú móvil automáticamente al cambiar de página
+  // Mejora UX: no queda el menú abierto tras navegar
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname, location.search]);

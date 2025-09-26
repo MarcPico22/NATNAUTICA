@@ -1,30 +1,53 @@
-﻿import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+﻿// ========================================
+// 🔧 PÁGINA DE SERVICIOS - LISTA COMPLETA
+// ========================================
+// Muestra todos los servicios de Netnautica organizados por categorías
+// Incluye hero section, metodología y listado de servicios con enlaces
+// Implementa SEO con ItemList schema y tipografía fluida
+// Modificar servicesPageContent en data/services.js para cambiar contenido
 
-import { Seo } from '@/components/seo/Seo';
-import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
-import { Icon } from '@/components/ui/Icon';
-import { SectionHeader } from '@/components/common/SectionHeader';
-import { services, servicesPageContent } from '@/data/services';
-import { getLocaleContent, getLocaleString } from '@/utils/i18n';
-import { SITE_URL } from '@/config/site';
+import { Link } from 'react-router-dom';              // 🔗 Navegación SPA
+import { useTranslation } from 'react-i18next';      // 🌍 Internacionalización
 
-// NETNAUTICA-EDIT: Pagina de servicios adaptada al contenido de Netnautica.es con tipografia fluida.
+// 📦 Componentes de la aplicación
+import { Seo } from '@/components/seo/Seo';           // 🎯 SEO dinámico
+import { Button } from '@/components/ui/Button';      // 🔘 Botones reutilizables
+import { Badge } from '@/components/ui/Badge';        // 🏷️ Etiquetas categorías
+import { Icon } from '@/components/ui/Icon';          // 🔣 Iconos SVG
+import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados
+
+// 📊 Datos de servicios
+import { services, servicesPageContent } from '@/data/services'; // 🔧 Lista servicios + contenido página
+import { getLocaleContent, getLocaleString } from '@/utils/i18n'; // 🌍 Utilidades i18n
+import { SITE_URL } from '@/config/site';             // ⚙️ URL base sitio
+
+// ========================================
+// 🎯 COMPONENTE PÁGINA DE SERVICIOS
+// ========================================
+
+// NETNAUTICA-EDIT: Página de servicios adaptada al contenido de Netnautica.es con tipografía fluida.
 const ServicesPage = () => {
+  // 🌍 Hooks de internacionalización
   const { i18n, t } = useTranslation();
-  const language = i18n.language;
+  const language = i18n.language;                     // Idioma actual
+  
+  // 📊 Contenido de página localizado (desde servicesPageContent)
   const pageContent = getLocaleContent(servicesPageContent, language);
 
+  // ========================================
+  // 🎯 STRUCTURED DATA PARA SEO
+  // ========================================
+  // ItemList schema para que Google entienda la lista de servicios
+  // Mejora la visibilidad en resultados de búsqueda
   const structuredData = [
     {
       '@context': 'https://schema.org',
-      '@type': 'ItemList',
+      '@type': 'ItemList',                           // 📋 Lista de elementos
       itemListElement: services.map((service, index) => ({
         '@type': 'ListItem',
-        position: index + 1,
-        url: `${SITE_URL}/services/${service.slug}`, // Ruta universal corregida
-        name: getLocaleContent(service.locales, language).name
+        position: index + 1,                         // ⚡ Posición en lista
+        url: `${SITE_URL}/services/${service.slug}`, // 🔗 URL del servicio específico
+        name: getLocaleContent(service.locales, language).name // 🏷️ Nombre localizado
       }))
     }
   ];

@@ -1,16 +1,37 @@
-﻿import { Link } from 'react-router-dom';
+﻿// ========================================
+// 🔧 TARJETA DE SERVICIO - COMPONENTE REUTILIZABLE
+// ========================================
+// Tarjeta con icono, título, descripción y beneficios
+// Se usa en HomePage y ServicesPage para mostrar servicios
+// Incluye hover effects y navegación a página de detalle
+// Modificar diseño aquí afecta todas las tarjetas del sitio
 
-import { Icon } from '@/components/ui/Icon';
-import { cn } from '@/utils/cn';
-import { getLocaleContent } from '@/utils/i18n';
+import { Link } from 'react-router-dom';              // 🔗 Navegación SPA
 
-export function ServiceCard({ service, language, ctaLabel, className = '' }) {
+// 📦 Componentes y utilidades
+import { Icon } from '@/components/ui/Icon';          // 🔣 Iconos SVG
+import { cn } from '@/utils/cn';                     // 🎨 Combinar clases CSS
+import { getLocaleContent } from '@/utils/i18n';     // 🌍 Contenido localizado
+
+// ========================================
+// 🎯 COMPONENTE SERVICE CARD
+// ========================================
+
+export function ServiceCard({ 
+  service,           // 📊 Objeto servicio con datos
+  language,          // 🌍 Idioma para localización
+  ctaLabel,          // 🔘 Texto botón (no usado actualmente)
+  className = ''     // 🎭 Clases CSS adicionales
+}) {
+  // 🌍 Obtener contenido localizado del servicio
   const locale = getLocaleContent(service.locales, language);
 
   return (
+    // 🔗 Tarjeta completa es clickeable (navegación a detalle)
     <Link
-      to={`/services/${service.slug}`}
+      to={`/services/${service.slug}`}  // 🎗️ Ruta al detalle del servicio
       className={cn(
+        // 🎨 Diseño base: flex, bordes redondeados, hover effects
         'group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900',
         className
       )}
