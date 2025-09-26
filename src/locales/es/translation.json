@@ -6,7 +6,19 @@
       "subtitle": "Diseñamos e implementamos sistemas tecnológicos inteligentes que elevan el confort a bordo y optimizan la experiencia del usuario en cada travesía.",
       "primaryCta": {
         "label": "Explorar servicios",
-        "href": "/services"
+  "cases": {
+    "pageTitle": "Proyectos Netnautica",
+    "pageDescription": "Implementaciones reales de multi-WAN, ciberseguridad y AV para yates de lujo.",
+    "heroEyebrow": "Proyectos Netnautica",
+    "heroTitle": "Implementaciones recientes a bordo de nuestros clientes",
+    "heroDescription": "Arquitecturas multi-WAN, refuerzos de ciberseguridad y experiencias AV diseñadas junto a capitanes y astilleros.",
+    "toolkit": "Herramientas",
+    "projectPillars": "Pilares del proyecto",
+    "description": "Ingeniería multi-WAN, políticas Zero Trust y automatización AV/IoT.",
+    "planning": "Planificación con capitanes y ETOs para dimensionar redes y racks.",
+    "integration": "Integración de Starlink, Peplink, Fortinet y Crestron según cada uso a bordo.",
+    "monitoring": "Monitorización remota 24/7 y soporte inmediato durante temporada."
+  },"href": "/services"
       },
       "secondaryCta": {
         "label": "Ver portfolio",
@@ -358,12 +370,20 @@
     "mainNavigation": "Navegación principal"
   },
   "cases": {
+    "pageTitle": "Proyectos Netnautica",
+    "pageDescription": "Implementaciones reales de multi-WAN, ciberseguridad y AV para yates de lujo.",
+    "heroEyebrow": "Proyectos Netnautica",
+    "heroTitle": "Implementaciones recientes a bordo de nuestros clientes",
+    "heroDescription": "Arquitecturas multi-WAN, refuerzos de ciberseguridad y experiencias AV diseñadas junto a capitanes y astilleros.",
     "toolkit": "Herramientas",
     "projectPillars": "Pilares del proyecto",
     "description": "Ingeniería multi-WAN, políticas Zero Trust y automatización AV/IoT.",
     "planning": "Planificación con capitanes y ETO para dimensionar redes y racks.",
     "integration": "Integración de Starlink, Peplink, Fortinet y Crestron según cada uso a bordo.",
-    "monitoring": "Monitorización remota 24/7 y soporte inmediato durante temporada."
+    "monitoring": "Monitorización remota 24/7 y soporte inmediato durante temporada.",
+    "challenge": "Reto",
+    "solution": "Solución",
+    "result": "Resultado"
   },
   "errors": {
     "pageNotFound": "Página no encontrada",

@@ -833,6 +833,27 @@
       "copy": "Nous coordonnons chaque deploiement avec votre equipage, chantier et partenaires de confiance.",
       "socialIntro": "Suivez-nous"
     }
+  },
+  "cases": {
+    "pageTitle": "Projets Netnautica",
+    "pageDescription": "Implémentations réelles de multi-WAN, cybersécurité et AV pour yachts de luxe.",
+    "heroEyebrow": "Projets Netnautica",
+    "heroTitle": "Implémentations récentes à bord de nos clients",
+    "heroDescription": "Architectures multi-WAN, renforcements de cybersécurité et expériences AV conçues avec capitaines et chantiers navals.",
+    "toolkit": "Outils",
+    "projectPillars": "Piliers du projet",
+    "description": "Ingénierie multi-WAN, politiques Zero Trust et automatisation AV/IoT.",
+    "planning": "Planification avec capitaines et ETOs pour dimensionner réseaux et racks.",
+    "integration": "Intégration de Starlink, Peplink, Fortinet et Crestron selon chaque usage à bord.",
+    "monitoring": "Surveillance à distance 24/7 et support immédiat pendant la saison.",
+    "challenge": "Défi",
+    "solution": "Solution",
+    "result": "Résultat"
+  },
+  "errors": {
+    "pageNotFound": "Page non trouvée",
+    "pageNotFoundDescription": "Désolé, nous n'avons pas pu trouver la page demandée. Vérifiez l'URL ou retournez à l'accueil.",
+    "backToHome": "Retour à l'accueil"
   }
 }
 

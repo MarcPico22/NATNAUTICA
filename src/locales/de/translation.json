@@ -828,5 +828,26 @@
       "copy": "Wir koordinieren jede Implementierung mit Ihrer Besatzung, Werft und vertrauenswürdigen Partnern.",
       "socialIntro": "Folgen Sie uns"
     }
+  },
+  "cases": {
+    "pageTitle": "Netnautica Projekte",
+    "pageDescription": "Echte Implementierungen von Multi-WAN, Cybersicherheit und AV für Luxusyachten.",
+    "heroEyebrow": "Netnautica Projekte",
+    "heroTitle": "Jüngste Implementierungen an Bord unserer Kunden",
+    "heroDescription": "Multi-WAN-Architekturen, Cybersicherheitsverstärkungen und AV-Erfahrungen, entwickelt mit Kapitänen und Werften.",
+    "toolkit": "Werkzeuge",
+    "projectPillars": "Projektpfeiler",
+    "description": "Multi-WAN-Engineering, Zero-Trust-Richtlinien und AV/IoT-Automatisierung.",
+    "planning": "Planung mit Kapitänen und ETOs zur Dimensionierung von Netzwerken und Racks.",
+    "integration": "Integration von Starlink, Peplink, Fortinet und Crestron entsprechend jedem Bordgebrauch.",
+    "monitoring": "24/7-Fernüberwachung und sofortige Unterstützung während der Saison.",
+    "challenge": "Herausforderung",
+    "solution": "Lösung",
+    "result": "Ergebnis"
+  },
+  "errors": {
+    "pageNotFound": "Seite nicht gefunden",
+    "pageNotFoundDescription": "Entschuldigung, wir konnten die angeforderte Seite nicht finden. Überprüfen Sie die URL oder kehren Sie zur Startseite zurück.",
+    "backToHome": "Zurück zur Startseite"
   }
 }

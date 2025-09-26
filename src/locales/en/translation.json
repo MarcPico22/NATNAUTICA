@@ -584,12 +584,20 @@
     "mainNavigation": "Main navigation"
   },
   "cases": {
+    "pageTitle": "Netnautica Projects",
+    "pageDescription": "Real implementations of multi-WAN, cybersecurity and AV for luxury yachts.",
+    "heroEyebrow": "Netnautica Projects",
+    "heroTitle": "Recent implementations aboard our clients",
+    "heroDescription": "Multi-WAN architectures, cybersecurity reinforcements and AV experiences designed alongside captains and shipyards.",
     "toolkit": "Toolkit",
     "projectPillars": "Project pillars",
     "description": "Multi-WAN engineering, Zero Trust policies and AV/IoT automation.",
     "planning": "Planning with captains and ETOs to size networks and racks.",
     "integration": "Integration of Starlink, Peplink, Fortinet and Crestron according to each onboard use.",
-    "monitoring": "24/7 remote monitoring and immediate support during season."
+    "monitoring": "24/7 remote monitoring and immediate support during season.",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "result": "Result"
   },
   "errors": {
     "pageNotFound": "Page not found",

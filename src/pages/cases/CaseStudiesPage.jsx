@@ -42,8 +42,8 @@ const CaseStudiesPage = () => {
   return (
     <>
       <Seo
-        title="Proyectos Netnautica"
-        description="Implementaciones reales de multi-WAN, ciberseguridad y AV para yates de lujo."
+        title={t('cases.pageTitle')}
+        description={t('cases.pageDescription')}
         structuredData={structuredData}
       />
       <section className="relative overflow-hidden pb-20 pt-24">
@@ -52,12 +52,12 @@ const CaseStudiesPage = () => {
           aria-hidden="true"
         />
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8">
-          <Badge>Proyectos Netnautica</Badge>
+          <Badge>{t('cases.heroEyebrow')}</Badge>
           <h1 className="text-[clamp(2.2rem,4.5vw,3.6rem)] font-semibold leading-tight text-slate-900 dark:text-white">
-            Implementaciones recientes a bordo de nuestros clientes
+            {t('cases.heroTitle')}
           </h1>
           <p className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">
-            Arquitecturas multi-WAN, refuerzos de ciberseguridad y experiencias AV disenadas junto a capitanes y astilleros.
+            {t('cases.heroDescription')}
           </p>
         </div>
       </section>
@@ -88,15 +88,15 @@ const CaseStudiesPage = () => {
                   </div>
                   <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
                     <p>
-                      <strong className="block text-slate-800 dark:text-slate-100">Reto</strong>
+                      <strong className="block text-slate-800 dark:text-slate-100">{t('cases.challenge')}</strong>
                       {locale.challenge}
                     </p>
                     <p>
-                      <strong className="block text-slate-800 dark:text-slate-100">Solucion</strong>
+                      <strong className="block text-slate-800 dark:text-slate-100">{t('cases.solution')}</strong>
                       {locale.solution}
                     </p>
                     <p>
-                      <strong className="block text-slate-800 dark:text-slate-100">Resultado</strong>
+                      <strong className="block text-slate-800 dark:text-slate-100">{t('cases.result')}</strong>
                       {locale.result}
                     </p>
                   </div>
