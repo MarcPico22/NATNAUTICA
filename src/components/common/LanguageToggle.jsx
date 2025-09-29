@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next';              // 🌍 Hook i18n
 // 📦 Configuración y utilidades
 import { SUPPORTED_LANGUAGES } from '@/config/site';         // 🌍 Lista idiomas (ES/EN/FR/DE)
 import { getLanguageSwitchPath } from '@/utils/routes';      // 🔄 Rutas con idioma
+import { getLocalizedBlogPostBySlug } from '@/data/Blogs/blog-index'; // 📝 Blogs
 
 // ========================================
 // 🎯 COMPONENTE LANGUAGE TOGGLE
@@ -29,6 +30,26 @@ export function LanguageToggle({ className = '' }) {
   // Actualiza el contexto i18n y se propaga automáticamente
   // LanguageSync se encarga de sincronizar con localStorage/URL
   const handleChange = (code) => {
+    // Verificar si estamos en una página de blog
+    const isBlogPost = location.pathname.startsWith('/blog/') && location.pathname.split('/').length === 3;
+    
+    if (isBlogPost) {
+      // Para páginas de blog, necesitamos encontrar el slug correcto del nuevo idioma
+      const currentSlug = location.pathname.split('/')[2];
+      const currentLang = i18n.language;
+      
+      // Buscar el post actual en el idioma actual
+      const currentPost = getLocalizedBlogPostBySlug(currentSlug, currentLang);
+      
+      if (currentPost) {
+        // Obtener el slug del nuevo idioma
+        const newSlug = currentPost.slug[code] || currentPost.slug.es;
+        // Navegar a la nueva URL con el slug correcto
+        navigate(`/blog/${newSlug}`, { replace: true });
+      }
+    }
+    
+    // Cambiar el idioma en i18n
     void i18n.changeLanguage(code); // void para ignorar Promise
   };
 

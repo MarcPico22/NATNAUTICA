@@ -82,7 +82,7 @@ export const getLocalizedBlogPostBySlug = (slug, locale = 'es') => {
   return {
     ...post,
     ...post.locales[locale],
-    slug: post.slug[locale] || post.slug.es
+    slug: post.slug // Mantener el objeto completo de slugs
   };
 };
 
