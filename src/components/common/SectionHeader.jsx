@@ -1,17 +1,10 @@
-﻿import { cn } from '@/utils/cn';
+﻿// import { cn } from '@/utils/cn';
 
 export function SectionHeader({ eyebrow, title, description, alignment = 'left', className = '' }) {
+  const alignmentClass = alignment === 'center' ? 'text-center' : 'text-left';
+  
   return (
-    <div
-      className={cn(
-        'flex flex-col gap-4',
-        {
-          'text-center': alignment === 'center',
-          'text-left': alignment === 'left'
-        },
-        className
-      )}
-    >
+    <div className={`flex flex-col gap-4 ${alignmentClass} ${className}`}>
       {eyebrow && (
         <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
           {eyebrow}

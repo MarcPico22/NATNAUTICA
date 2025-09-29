@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import blog styles */
+@import './styles/blog.css';
+
 :root {
   color-scheme: light;
   font-family: "Inter var", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -30,5 +33,52 @@ html {
 
   .skip-link {
     @apply absolute left-4 top-0 -translate-y-full rounded-md bg-brand-600 px-4 py-2 text-sm font-medium text-white transition focus-visible:translate-y-4;
+  }
+}
+
+/* Estilos específicos para el contenido del blog */
+@layer components {
+  .blog-meta {
+    @apply mb-6 rounded-lg bg-slate-100 p-4 text-sm text-slate-600 dark:bg-slate-800 dark:text-slate-300;
+  }
+
+  .blog-meta p {
+    @apply mb-1;
+  }
+
+  .featured-image {
+    @apply my-6 w-full rounded-xl shadow-lg;
+  }
+
+  .inline-image {
+    @apply my-4 max-w-xs rounded-lg shadow-md;
+  }
+
+  .image-caption {
+    @apply mt-2 text-center text-sm italic text-slate-500 dark:text-slate-400;
+  }
+
+  .punto-clave {
+    @apply my-6 rounded-lg border-l-4 border-brand-500 bg-brand-50 p-4 dark:bg-slate-800;
+  }
+
+  .punto-clave h4 {
+    @apply mb-2 font-semibold text-brand-700 dark:text-brand-300;
+  }
+
+  .punto-clave p {
+    @apply text-slate-700 dark:text-slate-300;
+  }
+
+  .ventaja-item {
+    @apply mb-6 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900;
+  }
+
+  .ventaja-item h3 {
+    @apply mb-3 text-lg font-semibold;
+  }
+
+  .ventaja-item p {
+    @apply text-slate-600 dark:text-slate-300;
   }
 }

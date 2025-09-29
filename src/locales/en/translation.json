@@ -18,7 +18,17 @@
     "next": "Next",
     "previous": "Previous",
     "submit": "Send",
-    "start": "Start"
+    "start": "Start",
+    "loading": "Loading..."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles about nautical navigation and marine technology",
+    "readMore": "Read more",
+    "backToBlog": "Back to blog",
+    "relatedPosts": "Related posts",
+    "noPosts": "No posts available at this time.",
+    "postNotFound": "Post not found"
   },
   "footer": {
     "about": "Boutique engineering for luxury yachts. Connectivity, cybersecurity, AV and IoT from Palma de Mallorca.",

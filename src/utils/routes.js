@@ -5,6 +5,7 @@ export const routes = {
   services: '/services',
   serviceDetail: '/services/:serviceSlug',
   cases: '/cases',
+  blog: '/blog',
   contact: '/contact',
   legal: '/legal',
   notice: '/legal/notice',
@@ -61,6 +62,7 @@ export const universalRoutes = {
   about: '/aboutus',
   services: '/services',
   cases: '/cases',
+  blog: '/blog',
   contact: '/contact',
   legal: '/legal'
 };

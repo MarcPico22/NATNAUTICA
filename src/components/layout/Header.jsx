@@ -8,7 +8,7 @@
 import { useEffect, useState } from 'react';              // ⚛️ Hooks React
 import { Link, NavLink, useLocation } from 'react-router-dom'; // 🔗 Navegación SPA
 import { useTranslation } from 'react-i18next';          // 🌍 Hook internacionalización
-import { routes, getPath } from '@/utils/routes';         // 🛣️ Utilidades rutas
+import { routes, getPath, getLocalizedPath } from '@/utils/routes';         // 🛣️ Utilidades rutas
 
 // 📊 Datos y componentes
 import { NAVIGATION_ITEMS } from '@/data/navigation';     // 📋 Lista elementos menú

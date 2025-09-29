@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { ScrollToTop } from '@/components/layout/ScrollToTop';
+import ErrorBoundary from '@/components/common/ErrorBoundary';
 
 // ========================================
 // 🚀 LAZY LOADING DE PÁGINAS (Code Splitting)
@@ -25,6 +26,8 @@ const ServiceDetailPage = lazy(() => import('@/pages/services/ServiceDetailPage'
 const CaseStudiesPage = lazy(() => import('@/pages/cases/CaseStudiesPage')); // 📚 Portfolio casos
 const AboutPage = lazy(() => import('@/pages/about/AboutPage'));           // ℹ️ Sobre nosotros
 const ContactPage = lazy(() => import('@/pages/contact/ContactPage'));     // 📧 Formulario contacto
+const BlogListPage = lazy(() => import('@/pages/blog/BlogListPage'));      // 📝 Lista entradas blog
+const BlogPostPage = lazy(() => import('@/pages/blog/BlogPostPage'));      // 📄 Entrada individual blog
 const LegalIndexPage = lazy(() => import('@/pages/legal/LegalIndexPage')); // ⚖️ Índice legal
 const LegalNoticePage = lazy(() => import('@/pages/legal/LegalNoticePage')); // 📋 Aviso legal
 const PrivacyPolicyPage = lazy(() => import('@/pages/legal/PrivacyPolicyPage')); // 🔒 Política privacidad
@@ -63,32 +66,37 @@ function App() {
       {/* 📜 Restaura scroll al top en cambios de ruta */}
       <ScrollToTop />
       
-      {/* ⏳ Suspense maneja la carga asíncrona de componentes lazy */}
-      <Suspense fallback={<LoadingFallback />}>
-        <Routes>
-          {/* 🏗️ Layout público: Header + Main + Footer para todas las rutas */}
-          <Route element={<PublicLayout />}>
-            {/* 🏠 Ruta raíz "/" apunta a HomePage */}
-            <Route index element={<HomePage />} />
-            
-            {/* 📄 Páginas principales del sitio */}
-            <Route path="aboutus" element={<AboutPage />} />             {/* /aboutus */}
-            <Route path="services" element={<ServicesPage />} />         {/* /services */}
-            <Route path="services/:serviceSlug" element={<ServiceDetailPage />} /> {/* /services/connectivity */}
-            <Route path="cases" element={<CaseStudiesPage />} />         {/* /cases */}
-            <Route path="contact" element={<ContactPage />} />           {/* /contact */}
-            
-            {/* ⚖️ Sección legal (GDPR/LOPD compliance) */}
-            <Route path="legal" element={<LegalIndexPage />} />          {/* /legal - índice */}
-            <Route path="legal/notice" element={<LegalNoticePage />} />  {/* /legal/notice */}
-            <Route path="legal/privacy" element={<PrivacyPolicyPage />} /> {/* /legal/privacy */}
-            <Route path="legal/cookies" element={<CookiePolicyPage />} /> {/* /legal/cookies */}
-            
-            {/* ❌ Catch-all: cualquier ruta no definida muestra 404 */}
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
-      </Suspense>
+      {/* 🛡️ Error Boundary captura errores en componentes lazy y rutas */}
+      <ErrorBoundary>
+        {/* ⏳ Suspense maneja la carga asíncrona de componentes lazy */}
+        <Suspense fallback={<LoadingFallback />}>
+          <Routes>
+            {/* 🏗️ Layout público: Header + Main + Footer para todas las rutas */}
+            <Route element={<PublicLayout />}>
+              {/* 🏠 Ruta raíz "/" apunta a HomePage */}
+              <Route index element={<HomePage />} />
+              
+              {/* 📄 Páginas principales del sitio */}
+              <Route path="aboutus" element={<AboutPage />} />             {/* /aboutus */}
+              <Route path="services" element={<ServicesPage />} />         {/* /services */}
+              <Route path="services/:serviceSlug" element={<ServiceDetailPage />} /> {/* /services/connectivity */}
+              <Route path="cases" element={<CaseStudiesPage />} />         {/* /cases */}
+              <Route path="blog" element={<BlogListPage />} />             {/* /blog */}
+              <Route path="blog/:slug" element={<BlogPostPage />} />       {/* /blog/introduccion-navegacion-nautica */}
+              <Route path="contact" element={<ContactPage />} />           {/* /contact */}
+              
+              {/* ⚖️ Sección legal (GDPR/LOPD compliance) */}
+              <Route path="legal" element={<LegalIndexPage />} />          {/* /legal - índice */}
+              <Route path="legal/notice" element={<LegalNoticePage />} />  {/* /legal/notice */}
+              <Route path="legal/privacy" element={<PrivacyPolicyPage />} /> {/* /legal/privacy */}
+              <Route path="legal/cookies" element={<CookiePolicyPage />} /> {/* /legal/cookies */}
+              
+              {/* ❌ Catch-all: cualquier ruta no definida muestra 404 */}
+              <Route path="*" element={<NotFoundPage />} />
+            </Route>
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
     </>
   );
 }

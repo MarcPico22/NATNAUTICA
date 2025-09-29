@@ -31,8 +31,13 @@ export const cn = (...values) =>
           .map(([key]) => key);                          // Extraer nombre clase
       }
       
-      // 🔄 Otros tipos: convertir a string
-      return String(value);
+      // 🔄 Otros tipos: convertir a string de forma segura
+      try {
+        return String(value);
+      } catch (error) {
+        console.warn('cn: Error converting value to string:', value, error);
+        return '';
+      }
     })
     .filter(Boolean) // 🧹 Eliminar valores vacíos finales
     .join(' ');

@@ -108,4 +108,28 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.netnautica.com/legales/politica-de-cookies?lang=en" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.netnautica.com/legales/politica-de-cookies?lang=fr" />
   </url>
+  <url>
+    <loc>https://www.netnautica.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.netnautica.com/blog?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.netnautica.com/blog?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.netnautica.com/blog?lang=fr" />
+  </url>
+  <url>
+    <loc>https://www.netnautica.com/blog/introduccion-navegacion-nautica</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.netnautica.com/blog/introduccion-navegacion-nautica?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.netnautica.com/blog/introduccion-navegacion-nautica?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.netnautica.com/blog/introduccion-navegacion-nautica?lang=fr" />
+  </url>
+  <url>
+    <loc>https://www.netnautica.com/blog/ciberseguridad-marina</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.netnautica.com/blog/ciberseguridad-marina?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.netnautica.com/blog/ciberseguridad-marina?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.netnautica.com/blog/ciberseguridad-marina?lang=fr" />
+  </url>
+  <url>
+    <loc>https://www.netnautica.com/blog/iot-embarcaciones</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.netnautica.com/blog/iot-embarcaciones?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.netnautica.com/blog/iot-embarcaciones?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.netnautica.com/blog/iot-embarcaciones?lang=fr" />
+  </url>
 </urlset>

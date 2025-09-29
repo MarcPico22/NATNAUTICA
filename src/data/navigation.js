@@ -9,6 +9,7 @@ export const NAVIGATION_ITEMS = [
   { id: 'home', translationKey: 'navigation.home' },
   { id: 'services', translationKey: 'navigation.services' },
   { id: 'cases', translationKey: 'navigation.cases' },
+  { id: 'blog', translationKey: 'navigation.blog' },
   { id: 'about', translationKey: 'navigation.about' },
   { id: 'contact', translationKey: 'navigation.contact' }
 ];
@@ -22,6 +23,7 @@ export const FOOTER_LINK_GROUPS = [
       // CORREGIDO: aboutus en lugar de about para coincidir con App.jsx
       { id: 'about', path: '/aboutus', translationKey: 'navigation.about' },
       { id: 'cases', path: '/cases', translationKey: 'navigation.cases' },
+      { id: 'blog', path: '/blog', translationKey: 'navigation.blog' },
       { id: 'contact', path: '/contact', translationKey: 'navigation.contact' }
     ]
   },

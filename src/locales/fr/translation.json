@@ -18,7 +18,17 @@
     "next": "Suivant",
     "previous": "Précédent",
     "submit": "Envoyer",
-    "start": "Commencer"
+    "start": "Commencer",
+    "loading": "Chargement..."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles sur la navigation nautique et la technologie marine",
+    "readMore": "En savoir plus",
+    "backToBlog": "Retour au blog",
+    "relatedPosts": "Articles connexes",
+    "noPosts": "Aucun article disponible pour le moment.",
+    "postNotFound": "Article non trouvé"
   },
 
   "footer": {

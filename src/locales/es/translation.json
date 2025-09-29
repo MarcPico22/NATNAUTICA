@@ -6,19 +6,7 @@
       "subtitle": "Diseñamos e implementamos sistemas tecnológicos inteligentes que elevan el confort a bordo y optimizan la experiencia del usuario en cada travesía.",
       "primaryCta": {
         "label": "Explorar servicios",
-  "cases": {
-    "pageTitle": "Proyectos Netnautica",
-    "pageDescription": "Implementaciones reales de multi-WAN, ciberseguridad y AV para yates de lujo.",
-    "heroEyebrow": "Proyectos Netnautica",
-    "heroTitle": "Implementaciones recientes a bordo de nuestros clientes",
-    "heroDescription": "Arquitecturas multi-WAN, refuerzos de ciberseguridad y experiencias AV diseñadas junto a capitanes y astilleros.",
-    "toolkit": "Herramientas",
-    "projectPillars": "Pilares del proyecto",
-    "description": "Ingeniería multi-WAN, políticas Zero Trust y automatización AV/IoT.",
-    "planning": "Planificación con capitanes y ETOs para dimensionar redes y racks.",
-    "integration": "Integración de Starlink, Peplink, Fortinet y Crestron según cada uso a bordo.",
-    "monitoring": "Monitorización remota 24/7 y soporte inmediato durante temporada."
-  },"href": "/services"
+        "href": "/services"
       },
       "secondaryCta": {
         "label": "Ver portfolio",
@@ -265,6 +253,15 @@
     "submit": "Enviar",
     "start": "Comenzar",
     "loading": "Cargando..."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artículos sobre navegación náutica y tecnología marina",
+    "readMore": "Leer más",
+    "backToBlog": "Volver al blog",
+    "relatedPosts": "Entradas relacionadas",
+    "noPosts": "No hay entradas disponibles en este momento.",
+    "postNotFound": "Entrada no encontrada"
   },
   "footer": {
     "about": "Ingenieria boutique para yates de lujo. Conectividad, ciberseguridad, AV e IoT desde Palma de Mallorca.",
