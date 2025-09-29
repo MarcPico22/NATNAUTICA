@@ -10,7 +10,7 @@ export const starlinkBlogPost = {
   category: 'connectivity',
   publishedAt: '2025-02-20',
   author: 'Netnautica Team',
-  readingTime: 8,
+  readingTime: 3,
   featured: true,
   slug: {
     es: 'starlink-yates-conectividad-satelital',
