@@ -16,7 +16,6 @@ import { Badge } from '@/components/ui/Badge';        // 🏷️ Etiquetas visua
 import { Icon } from '@/components/ui/Icon';          // 🔣 Iconos SVG
 import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados sección
 import { ServiceCard } from '@/components/common/ServiceCard';     // 🔧 Tarjetas servicio
-import { CaseCard } from '@/components/common/CaseCard';           // 📚 Tarjetas casos
 import { MetricCard } from '@/components/common/MetricCard';       // 📊 Métricas/estadísticas
 
 // 📊 Datos y configuración
@@ -63,8 +62,6 @@ const HomePage = () => {
   const highlights = content.highlights ?? [];       // Destacados de empresa
   const servicesSection = content.servicesSection ?? {}; // Sección servicios
   const technologySection = content.technologySection ?? {}; // Sección tecnología
-  const casesSection = content.casesSection ?? {};   // Sección casos de éxito
-  const cases = content.cases ?? [];                 // Lista casos destacados
   const contactCta = content.contactCta ?? {};       // CTA final de contacto
 
   // ========================================
@@ -248,20 +245,6 @@ const HomePage = () => {
                     </div>
                     <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{partner.copy}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-            <div className="space-y-6 rounded-3xl bg-gradient-to-br from-brand-500/10 via-white to-brand-500/10 p-8 shadow-lg dark:from-brand-500/20 dark:via-slate-950 dark:to-brand-500/20">
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{casesSection.heading}</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300">{casesSection.description}</p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {cases.map((caseStudy) => (
-                  <CaseCard
-                    key={caseStudy.id}
-                    caseStudy={caseStudy}
-                    language={language}
-                    ctaLabel={t('actions.readMore')}
-                  />
                 ))}
               </div>
             </div>
