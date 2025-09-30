@@ -7,6 +7,7 @@
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';              // 🎬 Animaciones suaves
 
 import { Seo } from '@/components/seo/Seo';
 import { SectionHeader } from '@/components/common/SectionHeader';
@@ -29,21 +30,55 @@ export function BlogListPage() {
       <Seo
         title={t('blog.title', 'Blog | Netnautica')}
         description={t('blog.subtitle', 'Artículos sobre navegación náutica y tecnología marina')}
+        image="/images/blog/yate.jpg"
+        imageAlt="Blog de Netnautica - Artículos sobre navegación náutica"
+        imageWidth={1200}
+        imageHeight={630}
+        type="website"
       />
 
       <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <SectionHeader
-            title={t('blog.title', 'Blog')}
-            description={t('blog.subtitle', 'Artículos sobre navegación náutica y tecnología marina')}
-            className="mb-12"
-          />
+        <motion.div 
+          className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <SectionHeader
+              title={t('blog.title', 'Blog')}
+              description={t('blog.subtitle', 'Artículos sobre navegación náutica y tecnología marina')}
+              className="mb-12"
+            />
+          </motion.div>
           {/* 📝 Grid de entradas del blog */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <motion.div 
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.2
+                }
+              }
+            }}
+          >
             {blogPosts.map((post) => (
-              <article
+              <motion.article
                 key={post.id}
                 className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-xl dark:bg-slate-900"
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 {/* 🖼️ Imagen destacada */}
                 <div className="aspect-video overflow-hidden">
@@ -103,17 +138,22 @@ export function BlogListPage() {
                     </svg>
                   </Link>
                 </div>
-              </article>
+              </motion.article>
             ))}
-          </div>
+          </motion.div>
           {blogPosts.length === 0 && (
-            <div className="text-center py-12">
+            <motion.div 
+              className="text-center py-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               <p className="text-slate-600 dark:text-slate-300">
                 {t('blog.noPosts', 'No hay entradas disponibles en este momento.')}
               </p>
-            </div>
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       </div>
     </BlogErrorBoundary>
   );

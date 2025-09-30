@@ -1,5 +1,6 @@
 ﻿import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 
 import { cn } from '@/utils/cn';
 import { getLocaleContent, getLocaleString } from '@/utils/i18n';
@@ -8,7 +9,7 @@ import { Icon } from '@/components/ui/Icon';
 // CORREGIDO: Usar ruta universal en lugar de rutas localizadas
 const CASES_PATH = '/cases';
 
-export function CaseCard({ caseStudy, ctaLabel, className = '' }) {
+export const CaseCard = memo(function CaseCard({ caseStudy, ctaLabel, className = '' }) {
   const { i18n } = useTranslation();
   const language = i18n.language;
   const locale = getLocaleContent(caseStudy.locales, language);
@@ -65,4 +66,4 @@ export function CaseCard({ caseStudy, ctaLabel, className = '' }) {
       </div>
     </article>
   );
-}
+});

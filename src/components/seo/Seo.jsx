@@ -30,9 +30,17 @@ export function Seo({
   description,
   type = 'website',
   image,
+  imageAlt,
+  imageWidth,
+  imageHeight,
   canonical,
   alternates,
-  structuredData
+  structuredData,
+  author,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags
 }) {
   const { i18n } = useTranslation();
   const location = useLocation();
@@ -73,20 +81,31 @@ export function Seo({
         <link key={link.hrefLang} rel="alternate" hrefLang={link.hrefLang} href={link.href} />
       ))}
       
-      {/* OpenGraph */}
+      {/* OpenGraph Completo */}
       <meta property="og:title" content={metaTitle} />
       {description && <meta property="og:description" content={description} />}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
-      {image && <meta property="og:image" content={image} />}
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content={i18n.language} />
+      {image && <meta property="og:image" content={image.startsWith('http') ? image : `${SITE_URL}${image}`} />}
+      {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+      {imageWidth && <meta property="og:image:width" content={imageWidth} />}
+      {imageHeight && <meta property="og:image:height" content={imageHeight} />}
+      {author && <meta property="article:author" content={author} />}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags && tags.map(tag => <meta key={tag} property="article:tag" content={tag} />)}
       
-      {/* Twitter */}
+      {/* Twitter Cards Completo */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={metaTitle} />
       {description && <meta name="twitter:description" content={description} />}
-      {image && <meta name="twitter:image" content={image} />}
+      {image && <meta name="twitter:image" content={image.startsWith('http') ? image : `${SITE_URL}${image}`} />}
+      {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
+      <meta name="twitter:site" content="@netnautica" />
+      {author && <meta name="twitter:creator" content={author} />}
       
       {/* Additional Meta */}
       <meta name="language" content={i18n.language} />

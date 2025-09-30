@@ -8,6 +8,7 @@
 
 import { Link } from 'react-router-dom';              // 🔗 Navegación SPA
 import { useTranslation } from 'react-i18next';      // 🌍 Hook internacionalización
+import { motion } from 'framer-motion';              // 🎬 Animaciones suaves
 
 // 📦 Componentes de la aplicación
 import { Seo } from '@/components/seo/Seo';           // 🎯 Meta tags y SEO
@@ -117,7 +118,12 @@ const HomePage = () => {
       {/* ========================================
           🎭 SECCIÓN HERO (Encabezado principal)
           ======================================== */}
-      <section className="relative overflow-hidden bg-white dark:bg-slate-950 py-20 text-slate-900 dark:text-white sm:py-28">
+      <motion.section 
+        className="relative overflow-hidden bg-white dark:bg-slate-950 py-20 text-slate-900 dark:text-white sm:py-28"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         {/* 🌊 Fondo con gradiente radial (efecto visual) */}
         <div
           className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(65,172,194,0.12),_transparent_55%)] dark:bg-[radial-gradient(circle_at_top,_rgba(65,172,194,0.28),_transparent_55%)]"
@@ -127,24 +133,57 @@ const HomePage = () => {
         {/* 📐 Grid responsivo: 1 columna móvil, 2 columnas desktop */}
         <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:px-8">
           {/* 📝 Columna izquierda: Contenido textual */}
-          <div className="flex flex-col gap-6">
+          <motion.div 
+            className="flex flex-col gap-6"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             {/* 🏷️ Logo de la empresa */}
-            <img
+            <motion.img
               src="/src/assets/logo.png"
               alt={SITE_NAME}
               className="mb-6 h-16 w-auto"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             />
             {hero.eyebrow && <Badge>{hero.eyebrow}</Badge>}
             {hero.title && (
-              <h1 className="text-[clamp(2.5rem,6vw,4.2rem)] font-semibold leading-tight">{hero.title}</h1>
+              <motion.h1 
+                className="text-[clamp(2.5rem,6vw,4.2rem)] font-semibold leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                {hero.title}
+              </motion.h1>
             )}
             {hero.subtitle && (
-              <p className="max-w-xl text-base text-slate-600 dark:text-slate-200 sm:text-lg">{hero.subtitle}</p>
+              <motion.p 
+                className="max-w-xl text-base text-slate-600 dark:text-slate-200 sm:text-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                {hero.subtitle}
+              </motion.p>
             )}
             {content.features && (
-              <div className="mt-8 space-y-6">
+              <motion.div 
+                className="mt-8 space-y-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
                 {content.features.map((feature, index) => (
-                  <div key={feature.title} className="flex items-start gap-4">
+                  <motion.div 
+                    key={feature.title} 
+                    className="flex items-start gap-4"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+                  >
                     <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-500/10 dark:text-brand-200">
                       <Icon name="star" className="h-4 w-4" />
                     </span>
@@ -152,11 +191,16 @@ const HomePage = () => {
                       <h3 className="text-base font-semibold text-slate-900 dark:text-white">{feature.title}</h3>
                       <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{feature.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             )}
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <motion.div 
+              className="flex flex-col gap-3 sm:flex-row"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
               {hero.primaryCta?.href && (
                 <Button as={Link} to={hero.primaryCta.href} size="lg">
                   {hero.primaryCta.label}
@@ -173,7 +217,7 @@ const HomePage = () => {
                   {hero.secondaryCta.label}
                 </Button>
               )}
-            </div>
+            </motion.div>
             {stats.length > 0 && (
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {stats.map((stat) => (
@@ -186,7 +230,7 @@ const HomePage = () => {
                 ))}
               </div>
             )}
-          </div>
+          </motion.div>
           {highlights.length > 0 && (
             <div className="flex flex-col gap-6 rounded-3xl border border-slate-200/20 dark:border-white/20 bg-white/80 dark:bg-white/5 p-8 backdrop-blur">
               {highlights.map((item) => (
@@ -203,7 +247,7 @@ const HomePage = () => {
             </div>
           )}
         </div>
-      </section>
+      </motion.section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <SectionHeader

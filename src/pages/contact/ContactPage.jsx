@@ -9,6 +9,7 @@
 
 import { useMemo, useState } from 'react';           // ⚛️ Hooks React
 import { useTranslation } from 'react-i18next';     // 🌍 Internacionalización
+import { motion, AnimatePresence } from 'framer-motion'; // 🎬 Animaciones suaves
 
 // 📦 Componentes
 import { Seo } from '@/components/seo/Seo';          // 🎯 SEO dinámico
@@ -178,10 +179,25 @@ const ContactPage = () => {
   return (
     <ContactErrorBoundary>
       <Seo title={t('contact.title')} description={t('contact.subtitle')} />
-      <section className="mx-auto grid max-w-6xl gap-12 px-4 pb-24 pt-24 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
-        <div className="space-y-8">
+      <motion.section 
+        className="mx-auto grid max-w-6xl gap-12 px-4 pb-24 pt-24 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div 
+          className="space-y-8"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <SectionHeader title={t('contact.title')} description={t('contact.subtitle')} />
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <motion.div 
+            className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <h3 className="text-sm font-semibold text-slate-900 dark:text-white">{CONTACT_DETAILS.email}</h3>
             <a className="mt-2 block text-sm text-brand-600" href={`mailto:${CONTACT_DETAILS.email}`}>
               {CONTACT_DETAILS.email}
@@ -217,8 +233,8 @@ const ContactPage = () => {
                 </a>
               ))} */}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <form className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg dark:border-slate-800 dark:bg-slate-900" noValidate>
           <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">
@@ -231,30 +247,45 @@ const ContactPage = () => {
             </div>
           ) : (
             <div className="mt-6 space-y-6">
-              {step === 0 && (
-                <div className="grid gap-5 md:grid-cols-2">
-                  {['name', 'email', 'phone', 'company'].map((field) => (
+              <AnimatePresence mode="wait">
+                {step === 0 && (
+                  <motion.div
+                    key="step-0"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="grid gap-5 md:grid-cols-2"
+                  >
+                    {['name', 'email', 'phone', 'company'].map((field) => (
+                      <Field
+                        key={field}
+                        name={field}
+                        value={form[field]}
+                        onChange={handleChange}
+                        error={errors[field]}
+                        {...fieldProps[field]}
+                      />
+                    ))}
                     <Field
-                      key={field}
-                      name={field}
-                      value={form[field]}
+                      name="role"
+                      value={form.role}
                       onChange={handleChange}
-                      error={errors[field]}
-                      {...fieldProps[field]}
+                      error={errors.role}
+                      {...fieldProps.role}
                     />
-                  ))}
-                  <Field
-                    name="role"
-                    value={form.role}
-                    onChange={handleChange}
-                    error={errors.role}
-                    {...fieldProps.role}
-                  />
-                </div>
-              )}
+                  </motion.div>
+                )}
 
               {step === 1 && (
-                <div className="grid gap-5">
+                <motion.div
+                  key="step-1"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="grid gap-5"
+                >
                   <SelectField
                     name="service"
                     value={form.service}
@@ -289,11 +320,18 @@ const ContactPage = () => {
                     error={errors.website}
                     {...fieldProps.website}
                   />
-                </div>
+                </motion.div>
               )}
 
               {step === 2 && (
-                <div className="space-y-6">
+                <motion.div
+                  key="step-2"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6"
+                >
                   <TextareaField
                     name="message"
                     value={form.message}
@@ -318,8 +356,9 @@ const ContactPage = () => {
                       {errors.consent && <span className="block text-xs text-red-500">{errors.consent}</span>}
                     </span>
                   </label>
-                </div>
+                </motion.div>
               )}
+              </AnimatePresence>
 
               <div className="flex flex-wrap items-center gap-3">
                 {step > 0 && (
@@ -334,7 +373,7 @@ const ContactPage = () => {
             </div>
           )}
         </form>
-      </section>
+      </motion.section>
     </ContactErrorBoundary>
   );
 };

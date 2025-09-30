@@ -8,6 +8,7 @@
 
 import { Link } from 'react-router-dom';              // 🔗 Navegación SPA
 import { useTranslation } from 'react-i18next';      // 🌍 Internacionalización
+import { motion } from 'framer-motion';              // 🎬 Animaciones suaves
 
 // 📦 Componentes de la aplicación
 import { Seo } from '@/components/seo/Seo';           // 🎯 SEO dinámico
@@ -56,29 +57,55 @@ const ServicesPage = () => {
   return (
     <ServicesErrorBoundary>
       <Seo title={pageContent.hero.title} description={pageContent.hero.description} structuredData={structuredData} />
-      <section className="relative overflow-hidden pb-20 pt-24">
+      <motion.section 
+        className="relative overflow-hidden pb-20 pt-24"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <div
           className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 via-transparent to-transparent dark:from-brand-500/10"
           aria-hidden="true"
         />
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8">
-          <Badge>{pageContent.hero.eyebrow}</Badge>
-          <h1 className="text-[clamp(2.4rem,5vw,3.8rem)] font-semibold leading-tight text-slate-900 dark:text-white">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <Badge>{pageContent.hero.eyebrow}</Badge>
+          </motion.div>
+          <motion.h1 
+            className="text-[clamp(2.4rem,5vw,3.8rem)] font-semibold leading-tight text-slate-900 dark:text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             {pageContent.hero.title}
-          </h1>
-          <p className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">
+          </motion.h1>
+          <motion.p 
+            className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             {pageContent.hero.description}
-          </p>
-          <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          </motion.p>
+          <motion.div 
+            className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
             <Button as={Link} to={pageContent.hero.primaryCta.href} size="lg">
               {pageContent.hero.primaryCta.label}
             </Button>
             <Button as={Link} to={pageContent.hero.secondaryCta.href} variant="secondary" size="lg">
               {pageContent.hero.secondaryCta.label}
             </Button>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeader
@@ -88,18 +115,29 @@ const ServicesPage = () => {
           alignment="center"
           className="mx-auto max-w-3xl"
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <motion.div 
+          className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           {pageContent.steps.map((step, idx) => (
-            <div
+            <motion.div
               key={step.title}
               className="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
               <span className="text-sm font-semibold text-brand-500">{String(idx + 1).padStart(2, '0')}</span>
               <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{step.title}</h3>
               <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{step.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
@@ -110,13 +148,24 @@ const ServicesPage = () => {
           alignment="center"
           className="mx-auto max-w-3xl"
         />
-        <div className="mt-12 space-y-10">
-          {services.map((service) => {
+        <motion.div 
+          className="mt-12 space-y-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          {services.map((service, idx) => {
             const locale = getLocaleContent(service.locales, language);
             return (
-              <article
+              <motion.article
                 key={service.id}
                 className="grid gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-[1.1fr_0.9fr]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 <div className="flex flex-col gap-4">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10">
@@ -158,10 +207,10 @@ const ServicesPage = () => {
                     ))}
                   </ul>
                 </div>
-              </article>
+              </motion.article>
             );
           })}
-        </div>
+        </motion.div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">

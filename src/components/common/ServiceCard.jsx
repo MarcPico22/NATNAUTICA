@@ -7,6 +7,7 @@
 // Modificar diseño aquí afecta todas las tarjetas del sitio
 
 import { Link } from 'react-router-dom';              // 🔗 Navegación SPA
+import { memo } from 'react';                        // ⚡ Memoización para optimización
 
 // 📦 Componentes y utilidades
 import { Icon } from '@/components/ui/Icon';          // 🔣 Iconos SVG
@@ -17,7 +18,7 @@ import { getLocaleContent } from '@/utils/i18n';     // 🌍 Contenido localizad
 // 🎯 COMPONENTE SERVICE CARD
 // ========================================
 
-export function ServiceCard({ 
+export const ServiceCard = memo(function ServiceCard({ 
   service,           // 📊 Objeto servicio con datos
   language,          // 🌍 Idioma para localización
   ctaLabel,          // 🔘 Texto botón (no usado actualmente)
@@ -55,4 +56,4 @@ export function ServiceCard({
       </ul>
     </Link>
   );
-}
+});

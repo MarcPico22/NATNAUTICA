@@ -9,6 +9,7 @@
 import { useMemo } from 'react';                     // ⚛️ Optimización React
 import { Link, useSearchParams } from 'react-router-dom'; // 🔗 Navegación + URL params
 import { useTranslation } from 'react-i18next';     // 🌍 Internacionalización
+import { motion } from 'framer-motion';             // 🎬 Animaciones suaves
 
 // 📦 Componentes
 import { Seo } from '@/components/seo/Seo';          // 🎯 SEO dinámico
@@ -70,30 +71,76 @@ const CaseStudiesPage = () => {
         description={t('cases.pageDescription')}
         structuredData={structuredData}
       />
-      <section className="relative overflow-hidden pb-20 pt-24">
+      <motion.section 
+        className="relative overflow-hidden pb-20 pt-24"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <div
           className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 via-transparent to-transparent dark:from-brand-500/10"
           aria-hidden="true"
         />
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8">
-          <Badge>{t('cases.heroEyebrow')}</Badge>
-          <h1 className="text-[clamp(2.2rem,4.5vw,3.6rem)] font-semibold leading-tight text-slate-900 dark:text-white">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <Badge>{t('cases.heroEyebrow')}</Badge>
+          </motion.div>
+          <motion.h1 
+            className="text-[clamp(2.2rem,4.5vw,3.6rem)] font-semibold leading-tight text-slate-900 dark:text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             {t('cases.heroTitle')}
-          </h1>
-          <p className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">
+          </motion.h1>
+          <motion.p 
+            className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             {t('cases.heroDescription')}
-          </p>
+          </motion.p>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="grid gap-10">
+      <motion.section 
+        className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div 
+          className="grid gap-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.3
+              }
+            }
+          }}
+        >
           {orderedCases.map((study) => {
             const locale = getLocaleContent(study.locales, language);
             return (
-              <article
+              <motion.article
                 key={study.id}
                 className="grid gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-[1.1fr_0.9fr]"
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                transition={{ duration: 0.6 }}
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
               >
                 <div className="flex flex-col gap-4">
                   <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-500">
@@ -144,11 +191,11 @@ const CaseStudiesPage = () => {
                     {t('actions.requestQuote')}
                   </Button>
                 </div>
-              </article>
+              </motion.article>
             );
           })}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </>
   );
 };

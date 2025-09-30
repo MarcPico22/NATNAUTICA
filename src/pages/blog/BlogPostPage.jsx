@@ -7,6 +7,7 @@
 
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';              // 🎬 Animaciones suaves
 
 import { Seo } from '@/components/seo/Seo';
 import { SectionHeader } from '@/components/common/SectionHeader';
@@ -81,30 +82,57 @@ export function BlogPostPage() {
       <Seo
         title={post.seo?.title || `${post.title} | Netnautica Blog`}
         description={post.seo?.description || post.excerpt}
-        image={post.image}
+        image={post.featuredImage?.src || post.image}
+        imageAlt={post.featuredImage?.alt || post.title}
+        imageWidth={post.featuredImage?.width || 1200}
+        imageHeight={post.featuredImage?.height || 630}
         type="article"
+        author={post.author}
+        publishedTime={post.publishedAt}
+        section={post.category}
+        tags={post.tags}
         structuredData={articleSchema}
       />
 
       {/* 🏗️ Estructura de la página */}
       <div className="min-h-screen bg-white dark:bg-slate-900">
-        <article className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+        <motion.article 
+          className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           {/* 🏷️ Tags */}
-          <div className="mb-6 flex flex-wrap gap-2">
+          <motion.div 
+            className="mb-6 flex flex-wrap gap-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             {post.tags.map((tag) => (
               <Badge key={tag} variant="secondary">
                 {tag}
               </Badge>
             ))}
-          </div>
+          </motion.div>
 
           {/* 📖 Título */}
-          <h1 className="mb-4 text-3xl font-bold text-slate-900 dark:text-slate-100 sm:text-4xl">
+          <motion.h1 
+            className="mb-4 text-3xl font-bold text-slate-900 dark:text-slate-100 sm:text-4xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             {post.title}
-          </h1>
+          </motion.h1>
 
           {/* 👤 Metadata del autor y fecha */}
-          <div className="mb-8 flex items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+          <motion.div 
+            className="mb-8 flex items-center gap-6 text-sm text-slate-600 dark:text-slate-400"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <span className="font-medium">{post.author}</span>
             <time dateTime={post.publishedAt}>
               {new Date(post.publishedAt).toLocaleDateString(currentLang, {
@@ -114,16 +142,24 @@ export function BlogPostPage() {
               })}
             </time>
             <span>{post.readingTime} min de lectura</span>
-          </div>
+          </motion.div>
 
           {/* 📝 Contenido de la entrada */}
-          <div
+          <motion.div
             className="prose prose-lg mx-auto max-w-none dark:prose-invert prose-headings:text-slate-900 prose-headings:dark:text-slate-100 prose-p:text-slate-700 prose-p:dark:text-slate-300 prose-strong:text-slate-900 prose-strong:dark:text-slate-100 prose-ul:text-slate-700 prose-ul:dark:text-slate-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
           {/* 🔙 Navegación */}
-          <div className="mt-12 border-t border-slate-200 pt-8 dark:border-slate-700">
+          <motion.div 
+            className="mt-12 border-t border-slate-200 pt-8 dark:border-slate-700"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
             <Link
               to="/blog"
               className="inline-flex items-center text-brand-600 transition-colors hover:text-brand-500 dark:text-brand-300 dark:hover:text-brand-400"
@@ -133,23 +169,48 @@ export function BlogPostPage() {
               </svg>
               {t('blog.backToBlog', 'Volver al blog')}
             </Link>
-          </div>
-        </article>
+          </motion.div>
+        </motion.article>
 
         {/* 📚 Entradas relacionadas */}
         {relatedPosts.length > 0 && (
-          <section className="border-t border-slate-200 bg-slate-100 py-16 dark:border-slate-700 dark:bg-slate-900">
+          <motion.section 
+            className="border-t border-slate-200 bg-slate-100 py-16 dark:border-slate-700 dark:bg-slate-900"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
               <SectionHeader
                 title={t('blog.relatedPosts', 'Entradas relacionadas')}
                 className="mb-8"
               />
 
-              <div className="grid gap-6 md:grid-cols-3">
+              <motion.div 
+                className="grid gap-6 md:grid-cols-3"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: {},
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.2
+                    }
+                  }
+                }}
+              >
                 {relatedPosts.map((relatedPost) => (
-                  <article
+                  <motion.article
                     key={relatedPost.id}
                     className="overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-slate-800"
+                    variants={{
+                      hidden: { opacity: 0, y: 30 },
+                      visible: { opacity: 1, y: 0 }
+                    }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ y: -5, transition: { duration: 0.2 } }}
                   >
                     <div className="aspect-video overflow-hidden">
                       <img
@@ -172,11 +233,11 @@ export function BlogPostPage() {
                         {relatedPost.excerpt}
                       </p>
                     </div>
-                  </article>
+                  </motion.article>
                 ))}
-              </div>
+              </motion.div>
             </div>
-          </section>
+          </motion.section>
         )}
       </div>
     </BlogErrorBoundary>
