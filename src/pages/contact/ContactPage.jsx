@@ -204,7 +204,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="mt-6 flex gap-3">
-              {Object.entries(SOCIAL_LINKS).map(([network, url]) => (
+              {/* {Object.entries(SOCIAL_LINKS).map(([network, url]) => (
                 <a
                   key={network}
                   href={url}
@@ -214,7 +214,7 @@ const ContactPage = () => {
                 >
                   {network}
                 </a>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
