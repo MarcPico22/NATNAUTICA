@@ -7,10 +7,11 @@
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
 
+import { Seo } from '@/components/seo/Seo';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { Badge } from '@/components/ui/Badge';
+import BlogErrorBoundary from '@/components/common/BlogErrorBoundary';
 import { getLocalizedBlogPosts } from '@/data/Blogs/blog-index';
 
 // ========================================
@@ -24,13 +25,11 @@ export function BlogListPage() {
   const blogPosts = getLocalizedBlogPosts(currentLang) || [];
 
   return (
-    <>
-      <Helmet>
-        <title>{t('blog.title', 'Blog | Netnautica')}</title>
-        <meta name="description" content={t('blog.subtitle', 'Artículos sobre navegación náutica y tecnología marina')} />
-        <meta name="keywords" content="blog navegación náutica, tecnología marina, embarcaciones, conectividad, IoT" />
-        <link rel="canonical" href={`${window.location.origin}/${currentLang}/blog`} />
-      </Helmet>
+    <BlogErrorBoundary>
+      <Seo
+        title={t('blog.title', 'Blog | Netnautica')}
+        description={t('blog.subtitle', 'Artículos sobre navegación náutica y tecnología marina')}
+      />
 
       <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
@@ -116,7 +115,7 @@ export function BlogListPage() {
           )}
         </div>
       </div>
-    </>
+    </BlogErrorBoundary>
   );
 }
 

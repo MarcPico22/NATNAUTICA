@@ -24,7 +24,7 @@ export const starlinkBlogPost = {
             excerpt: 'Descubre cómo Starlink está transformando la vida a bordo con internet de alta velocidad, baja latencia y cobertura global en cualquier rincón del océano.',
             content: `
   <div class="blog-hero">
-    <img src="/images/blog/starlink-yacht.jpg" alt="Yate equipado con antena satelital Starlink" class="featured-image" />
+    <img src="/images/blog/starlink-yacht.jpg" alt="Yate equipado con antena satelital Starlink para conectividad global" class="featured-image" loading="lazy" />
   </div>
 
   <div class="table-of-contents">
@@ -117,7 +117,7 @@ export const starlinkBlogPost = {
             excerpt: 'Discover how Starlink is transforming life at sea with high-speed internet, low latency, and global coverage for yachts anywhere in the ocean.',
             content: `
   <div class="blog-hero">
-    <img src="/images/blog/starlink-yacht.jpg" alt="Yacht equipped with Starlink satellite antenna" class="featured-image" />
+    <img src="/images/blog/starlink-yacht.jpg" alt="Yacht equipped with Starlink satellite antenna for global connectivity" class="featured-image" loading="lazy" />
   </div>
 
   <div class="table-of-contents">
@@ -211,7 +211,7 @@ export const starlinkBlogPost = {
             excerpt: 'Découvrez comment Starlink transforme la vie à bord grâce à un internet haut débit, une faible latence et une couverture mondiale pour les yachts partout en mer.',
             content: `
   <div class="blog-hero">
-    <img src="/images/blog/starlink-yacht.jpg" alt="Yacht équipé d’une antenne satellite Starlink" class="featured-image" />
+    <img src="/images/blog/starlink-yacht.jpg" alt="Yacht équipé d'une antenne satellite Starlink pour connectivité globale" class="featured-image" loading="lazy" />
   </div>
 
   <div class="table-of-contents">
@@ -305,7 +305,7 @@ export const starlinkBlogPost = {
             excerpt: 'Entdecken Sie, wie Starlink das Leben an Bord verändert – mit Hochgeschwindigkeitsinternet, niedriger Latenz und globaler Abdeckung für Yachten überall auf dem Ozean.',
             content: `
   <div class="blog-hero">
-    <img src="/images/blog/starlink-yacht.jpg" alt="Yacht mit Starlink-Satellitenantenne" class="featured-image" />
+    <img src="/images/blog/starlink-yacht.jpg" alt="Yacht mit Starlink-Satellitenantenne für globale Konnektivität" class="featured-image" loading="lazy" />
   </div>
 
   <div class="table-of-contents">

@@ -24,7 +24,7 @@ export const cybersecurityBlogPost = {
       excerpt: 'En un mundo hiperconectado, los yates modernos enfrentan nuevas amenazas cibernéticas. Descubre cómo proteger tu embarcación y datos.',
       content: `
       <div class="blog-hero">
-        <img src="/images/blog/cybersecurity-yacht.jpg" alt="Yate con sistemas de seguridad digital" class="featured-image" />
+        <img src="/images/blog/cybersecurity-yacht.jpg" alt="Yate con sistemas de seguridad digital integrada para navegación segura" class="featured-image" loading="lazy" />
       </div>
 
       <div class="table-of-contents">
@@ -213,7 +213,7 @@ export const cybersecurityBlogPost = {
       excerpt: 'In a hyperconnected world, modern yachts face new cyber threats. Discover how to protect your vessel and data.',
       content: `
       <div class="blog-hero">
-        <img src="/images/blog/cybersecurity-yacht.jpg" alt="Yacht with digital security systems" class="featured-image" />
+        <img src="/images/blog/cybersecurity-yacht.jpg" alt="Yacht with integrated digital security systems for safe navigation" class="featured-image" loading="lazy" />
       </div>
 
       <div class="table-of-contents">
@@ -402,7 +402,7 @@ export const cybersecurityBlogPost = {
       excerpt: 'Dans un monde hyperconnecté, les yachts modernes font face à de nouvelles menaces cybernétiques. Découvrez comment protéger votre navire et vos données.',
       content: `
       <div class="blog-hero">
-        <img src="/images/blog/cybersecurity-yacht.jpg" alt="Yacht avec systèmes de sécurité numérique" class="featured-image" />
+        <img src="/images/blog/cybersecurity-yacht.jpg" alt="Yacht avec systèmes de sécurité numérique intégrés pour navigation sécurisée" class="featured-image" loading="lazy" />
       </div>
 
       <div class="table-of-contents">
@@ -591,7 +591,7 @@ export const cybersecurityBlogPost = {
       excerpt: 'In einer hypervernetzten Welt stehen moderne Yachten vor neuen Cyber-Bedrohungen. Entdecken Sie, wie Sie Ihr Schiff und Ihre Daten schützen.',
       content: `
       <div class="blog-hero">
-        <img src="/images/blog/cybersecurity-yacht.jpg" alt="Yacht mit digitalen Sicherheitssystemen" class="featured-image" />
+        <img src="/images/blog/cybersecurity-yacht.jpg" alt="Yacht mit integrierten digitalen Sicherheitssystemen für sichere Navigation" class="featured-image" loading="lazy" />
       </div>
 
       <div class="table-of-contents">

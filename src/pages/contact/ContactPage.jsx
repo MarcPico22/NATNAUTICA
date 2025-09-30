@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';     // 🌍 Internacionalizació
 import { Seo } from '@/components/seo/Seo';          // 🎯 SEO dinámico
 import { Button } from '@/components/ui/Button';     // 🔘 Botones reutilizables
 import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados
+import ContactErrorBoundary from '@/components/common/ContactErrorBoundary'; // 🛡️ Error boundary específico
 
 // 📊 Datos y configuración
 import { services } from '@/data/services';          // 🔧 Lista servicios
@@ -175,7 +176,7 @@ const ContactPage = () => {
   };
 
   return (
-    <>
+    <ContactErrorBoundary>
       <Seo title={t('contact.title')} description={t('contact.subtitle')} />
       <section className="mx-auto grid max-w-6xl gap-12 px-4 pb-24 pt-24 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
         <div className="space-y-8">
@@ -334,7 +335,7 @@ const ContactPage = () => {
           )}
         </form>
       </section>
-    </>
+    </ContactErrorBoundary>
   );
 };
 

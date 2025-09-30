@@ -7,11 +7,12 @@
 
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
 
+import { Seo } from '@/components/seo/Seo';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import BlogErrorBoundary from '@/components/common/BlogErrorBoundary';
 import { getLocalizedBlogPostBySlug, getRelatedPosts } from '@/data/Blogs/blog-index';
 
 // ========================================
@@ -48,32 +49,42 @@ export function BlogPostPage() {
   // Obtener entradas relacionadas
   const relatedPosts = getRelatedPosts(post, 3, currentLang);
 
+  // ========================================
+  // 🎯 STRUCTURED DATA PARA SEO
+  // ========================================
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    author: {
+      '@type': 'Person',
+      name: post.author
+    },
+    datePublished: post.publishDate,
+    dateModified: post.publishDate,
+    image: post.image,
+    url: `${window.location.origin}/${currentLang}/blog/${post.slug}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Netnautica',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${window.location.origin}/logo.svg`
+      }
+    },
+    keywords: post.tags.join(', ')
+  };
+
   return (
-    <>
-      {/* 🔍 SEO: Meta tags específicos de la entrada */}
-      <Helmet>
-        <title>{post.seo?.title || `${post.title} | Netnautica Blog`}</title>
-        <meta name="description" content={post.seo?.description || post.excerpt} />
-        <meta name="keywords" content={post.seo?.keywords || post.tags.join(', ')} />
-        <meta name="author" content={post.author} />
-        <meta property="article:published_time" content={post.publishedAt} />
-        <meta property="article:author" content={post.author} />
-        <meta property="article:tag" content={post.tags.join(',')} />
-        <link rel="canonical" href={`${window.location.origin}/${currentLang}/blog/${post.slug}`} />
-
-        {/* Open Graph para redes sociales */}
-        <meta property="og:title" content={post.seo?.title || post.title} />
-        <meta property="og:description" content={post.seo?.description || post.excerpt} />
-        <meta property="og:image" content={post.image} />
-        <meta property="og:url" content={`${window.location.origin}/${currentLang}/blog/${post.slug}`} />
-        <meta property="og:type" content="article" />
-
-        {/* Twitter Cards */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.seo?.title || post.title} />
-        <meta name="twitter:description" content={post.seo?.description || post.excerpt} />
-        <meta name="twitter:image" content={post.image} />
-      </Helmet>
+    <BlogErrorBoundary>
+      <Seo
+        title={post.seo?.title || `${post.title} | Netnautica Blog`}
+        description={post.seo?.description || post.excerpt}
+        image={post.image}
+        type="article"
+        structuredData={articleSchema}
+      />
 
       {/* 🏗️ Estructura de la página */}
       <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -168,7 +179,7 @@ export function BlogPostPage() {
           </section>
         )}
       </div>
-    </>
+    </BlogErrorBoundary>
   );
 }
 

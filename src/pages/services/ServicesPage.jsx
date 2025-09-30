@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/Button';      // 🔘 Botones reutilizab
 import { Badge } from '@/components/ui/Badge';        // 🏷️ Etiquetas categorías
 import { Icon } from '@/components/ui/Icon';          // 🔣 Iconos SVG
 import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados
+import ServicesErrorBoundary from '@/components/common/ServicesErrorBoundary'; // 🛡️ Error boundary específico
 
 // 📊 Datos de servicios
 import { services, servicesPageContent } from '@/data/services'; // 🔧 Lista servicios + contenido página
@@ -53,7 +54,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <>
+    <ServicesErrorBoundary>
       <Seo title={pageContent.hero.title} description={pageContent.hero.description} structuredData={structuredData} />
       <section className="relative overflow-hidden pb-20 pt-24">
         <div
@@ -198,7 +199,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </ServicesErrorBoundary>
   );
 };
 

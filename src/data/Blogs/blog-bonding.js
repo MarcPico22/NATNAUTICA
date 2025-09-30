@@ -24,7 +24,7 @@ export const bondingBlogPost = {
         excerpt: 'La tecnología de bonding permite la combinación inteligente de múltiples conexiones de internet en una sola interfaz virtual, creando un enlace agregado de mayor capacidad y redundancia para yates modernos.',
         content: `
       <div class="blog-hero">
-        <img src="/images/blog/yate.jpg" alt="Yate de lujo con tecnologías de conectividad avanzada" class="featured-image" />
+        <img src="/images/blog/yate.jpg" alt="Yate de lujo con tecnologías de conectividad avanzada integrada" class="featured-image" loading="lazy" />
       </div>
 
       <div class="table-of-contents">
@@ -335,7 +335,7 @@ export const bondingBlogPost = {
         excerpt: 'Bonding technology enables the intelligent combination of multiple internet connections into a single virtual interface, creating an aggregated link with greater capacity and redundancy for modern yachts.',
         content: `
       <div class="blog-hero">
-        <img src="/images/blog/yate.jpg" alt="Luxury yacht with advanced connectivity technologies" class="featured-image" />
+        <img src="/images/blog/yate.jpg" alt="Luxury yacht with advanced connectivity technologies integrated" class="featured-image" loading="lazy" />
       </div>
 
       <div class="table-of-contents">
