@@ -248,6 +248,16 @@ const HomePage = () => {
                 ))}
               </div>
             </div>
+            <div className="flex items-center justify-center">
+              <div className="hero-visual">
+                <div className="tech-circle">
+                  <div className="orbit orbit1"></div>
+                  <div className="orbit orbit2"></div>
+                  <div className="orbit orbit3"></div>
+                  <div className="center-node"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

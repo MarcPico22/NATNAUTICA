@@ -9,6 +9,9 @@
   color-scheme: light;
   font-family: "Inter var", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   scroll-behavior: smooth;
+  --primary-color: #0011ff;
+  --gradient-primary: linear-gradient(135deg, #0080ff, #0481ff);
+  --shadow-glow: 0 0 20px rgb(0, 128, 255);
 }
 
 html {
@@ -81,4 +84,104 @@ html {
   .ventaja-item p {
     @apply text-slate-600 dark:text-slate-300;
   }
+}
+
+/* Enhanced Tech Circle Animation */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-circle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .tech-circle {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-circle {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+.orbit {
+    position: absolute;
+    border: 2px solid rgb(0, 132, 255);
+    border-radius: 50%;
+    animation: rotate 20s infinite linear;
+}
+
+.orbit::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.orbit1 {
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: var(--primary-color);
+    border-width: 3px;
+}
+
+.orbit2 {
+    width: 220px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 30s;
+    animation-direction: reverse;
+}
+
+.orbit3 {
+    width: 320px;
+    height: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 40s;
+}
+
+.center-node {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: var(--shadow-glow);
+    animation: pulse 2s infinite;
+}
+
+@keyframes rotate {
+    0% { transform: translate3d(-50%, -50%, 0) rotate(0deg); }
+    100% { transform: translate3d(-50%, -50%, 0) rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
