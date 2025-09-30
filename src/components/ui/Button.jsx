@@ -15,7 +15,7 @@ const baseClasses =
 
 // 🎨 Variantes de estilo (colores y apariencia)
 const variants = {
-  primary: 'rounded-full bg-brand-600 text-white hover:bg-brand-500 shadow-lg shadow-brand-600/30', // 🔵 Botón principal azul
+  primary: 'rounded-full bg-brand-600 text-white hover:bg-brand-500 hover:text-white shadow-lg shadow-brand-600/30', // 🔵 Botón principal azul
   secondary: 'rounded-full border border-slate-200 bg-white text-slate-800 hover:border-brand-400 hover:text-brand-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-brand-400 dark:hover:text-brand-200', // ⚪ Botón secundario blanco
   ghost: 'rounded-full text-brand-600 hover:bg-brand-50 dark:hover:bg-slate-800' // 👻 Botón sin fondo
 };
