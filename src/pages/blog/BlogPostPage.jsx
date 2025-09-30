@@ -8,12 +8,14 @@
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';              // 🎬 Animaciones suaves
+import { useState, useEffect } from 'react';         // ⚛️ Estado y efectos
 
 import { Seo } from '@/components/seo/Seo';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import BlogErrorBoundary from '@/components/common/BlogErrorBoundary';
+import { BlogPostContentSkeleton, RelatedPostsSkeleton } from '@/components/ui/LoadingSkeleton';
 import { getLocalizedBlogPostBySlug, getRelatedPosts } from '@/data/Blogs/blog-index';
 
 // ========================================
@@ -24,11 +26,24 @@ export function BlogPostPage() {
   const { t, i18n } = useTranslation();
   const { slug } = useParams();
   const currentLang = i18n.language;
+  const [isLoading, setIsLoading] = useState(true);
 
   // Buscar la entrada del blog por slug
   const post = getLocalizedBlogPostBySlug(slug, currentLang);
 
-  // Si no se encuentra la entrada, mostrar mensaje de error
+  // Obtener entradas relacionadas
+  const relatedPosts = getRelatedPosts(post, 3, currentLang);
+
+  // Simular tiempo de carga
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 600); // 600ms para mostrar skeleton
+
+    return () => clearTimeout(timer);
+  }, [slug, currentLang]);
+
+  // Si no se encuentra la entrada y terminó de cargar, mostrar mensaje de error
   if (!post) {
     return (
       <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex items-center justify-center">
@@ -46,9 +61,6 @@ export function BlogPostPage() {
       </div>
     );
   }
-
-  // Obtener entradas relacionadas
-  const relatedPosts = getRelatedPosts(post, 3, currentLang);
 
   // ========================================
   // 🎯 STRUCTURED DATA PARA SEO
@@ -96,12 +108,15 @@ export function BlogPostPage() {
 
       {/* 🏗️ Estructura de la página */}
       <div className="min-h-screen bg-white dark:bg-slate-900">
-        <motion.article 
-          className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        {isLoading ? (
+          <BlogPostContentSkeleton />
+        ) : (
+          <motion.article
+            className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
           {/* 🏷️ Tags */}
           <motion.div 
             className="mb-6 flex flex-wrap gap-2"
@@ -171,9 +186,12 @@ export function BlogPostPage() {
             </Link>
           </motion.div>
         </motion.article>
+        )}
 
         {/* 📚 Entradas relacionadas */}
-        {relatedPosts.length > 0 && (
+        {isLoading ? (
+          <RelatedPostsSkeleton />
+        ) : relatedPosts.length > 0 && (
           <motion.section 
             className="border-t border-slate-200 bg-slate-100 py-16 dark:border-slate-700 dark:bg-slate-900"
             initial={{ opacity: 0, y: 30 }}

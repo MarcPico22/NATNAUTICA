@@ -16,6 +16,7 @@ import i18n from './i18n.js';                          // ⚙️ Configuración 
 import './index.css';                                  // 🎨 Estilos globales
 import { ThemeProvider } from './providers/ThemeProvider.jsx';   // 🌓 Tema claro/oscuro
 import { LanguageSync } from './providers/LanguageSync.jsx';     // 🔄 Sincronización idioma
+import { AnalyticsProvider } from './hooks/useAnalytics.js';     // 📊 Analytics tracking
 
 // ========================================
 // 🌳 ÁRBOL DE PROVIDERS (Jerarquía importante)
@@ -25,9 +26,10 @@ import { LanguageSync } from './providers/LanguageSync.jsx';     // 🔄 Sincron
 // 2. HelmetProvider: Manejo de meta tags para SEO
 // 3. I18nextProvider: Context de internacionalización (4 idiomas)
 // 4. ThemeProvider: Context de tema claro/oscuro
-// 5. BrowserRouter: Routing SPA con History API
-// 6. LanguageSync: Sincronización de idioma con localStorage/URL
-// 7. App: Componente raíz con todas las rutas
+// 5. AnalyticsProvider: Tracking de métricas de usuario
+// 6. BrowserRouter: Routing SPA con History API
+// 7. LanguageSync: Sincronización de idioma con localStorage/URL
+// 8. App: Componente raíz con todas las rutas
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -37,13 +39,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <I18nextProvider i18n={i18n}>
         {/* 🌓 Tema: Maneja el estado global claro/oscuro */}
         <ThemeProvider>
-          {/* 🔗 Router: Habilita navegación SPA */}
-          <BrowserRouter>
-            {/* 🔄 Sincroniza idioma con URL params y localStorage */}
-            <LanguageSync />
-            {/* 📱 Aplicación principal con todas las rutas */}
-            <App />
-          </BrowserRouter>
+          {/* � Analytics: Tracking de métricas de usuario */}
+          <AnalyticsProvider>
+            {/* �🔗 Router: Habilita navegación SPA */}
+            <BrowserRouter>
+              {/* 🔄 Sincroniza idioma con URL params y localStorage */}
+              <LanguageSync />
+              {/* 📱 Aplicación principal con todas las rutas */}
+              <App />
+            </BrowserRouter>
+          </AnalyticsProvider>
         </ThemeProvider>
       </I18nextProvider>
     </HelmetProvider>

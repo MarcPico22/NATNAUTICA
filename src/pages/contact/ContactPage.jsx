@@ -17,6 +17,9 @@ import { Button } from '@/components/ui/Button';     // 🔘 Botones reutilizabl
 import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados
 import ContactErrorBoundary from '@/components/common/ContactErrorBoundary'; // 🛡️ Error boundary específico
 
+// 📊 Analytics
+import { useAnalytics } from '@/hooks/useAnalytics'; // 📊 Tracking de eventos
+
 // 📊 Datos y configuración
 import { services } from '@/data/services';          // 🔧 Lista servicios
 import { CONTACT_DETAILS, FORM_STEPS, SOCIAL_LINKS } from '@/config/site'; // ⚙️ Config sitio
@@ -63,6 +66,9 @@ const ContactPage = () => {
   const [step, setStep] = useState(0);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
+
+  // 📊 Analytics tracking
+  const { trackFormSubmit, trackEvent } = useAnalytics();
 
   const selectPlaceholder = t('forms.selectPlaceholder');
 
@@ -111,10 +117,23 @@ const ContactPage = () => {
     if (!validate(step)) return;
     if (step < FORM_STEPS - 1) {
       setStep((prev) => prev + 1);
+      // Track step progression
+      trackEvent('form_step', {
+        step_number: step + 1,
+        form_name: 'contact'
+      });
     } else {
       setStatus('submitting');
+      // Track form submission
+      trackFormSubmit('contact_form');
+      trackEvent('contact_form_submit', {
+        service: form.service,
+        budget: form.budget,
+        timeline: form.timeline
+      });
       setTimeout(() => {
         setStatus('success');
+        trackEvent('contact_form_success');
       }, 600);
     }
   };

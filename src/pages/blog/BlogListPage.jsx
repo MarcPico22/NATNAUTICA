@@ -8,11 +8,13 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';              // 🎬 Animaciones suaves
+import { useState, useEffect } from 'react';         // ⚛️ Estado y efectos
 
 import { Seo } from '@/components/seo/Seo';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { Badge } from '@/components/ui/Badge';
 import BlogErrorBoundary from '@/components/common/BlogErrorBoundary';
+import { BlogListSkeleton } from '@/components/ui/LoadingSkeleton';
 import { getLocalizedBlogPosts } from '@/data/Blogs/blog-index';
 
 // ========================================
@@ -21,9 +23,19 @@ import { getLocalizedBlogPosts } from '@/data/Blogs/blog-index';
 
 export function BlogListPage() {
   const { t, i18n } = useTranslation();
+  const [isLoading, setIsLoading] = useState(true);
 
   const currentLang = i18n.language;
   const blogPosts = getLocalizedBlogPosts(currentLang) || [];
+
+  // Simular tiempo de carga para mostrar skeleton
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800); // 800ms para mostrar skeleton
+
+    return () => clearTimeout(timer);
+  }, [currentLang]);
 
   return (
     <BlogErrorBoundary>
@@ -55,20 +67,23 @@ export function BlogListPage() {
               className="mb-12"
             />
           </motion.div>
-          {/* 📝 Grid de entradas del blog */}
-          <motion.div 
-            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.2
+          {/* 📝 Lista de posts o skeleton loading */}
+          {isLoading ? (
+            <BlogListSkeleton />
+          ) : (
+            <motion.div
+              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: 0.2
+                  }
                 }
-              }
-            }}
-          >
+              }}
+            >
             {blogPosts.map((post) => (
               <motion.article
                 key={post.id}
@@ -141,8 +156,11 @@ export function BlogListPage() {
               </motion.article>
             ))}
           </motion.div>
-          {blogPosts.length === 0 && (
-            <motion.div 
+          )}
+
+          {/* 📭 Mensaje cuando no hay posts */}
+          {!isLoading && blogPosts.length === 0 && (
+            <motion.div
               className="text-center py-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

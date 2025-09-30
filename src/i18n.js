@@ -18,12 +18,17 @@ const initI18n = async () => {
       // Configuración de debugging
       debug: true, // Activar logs para diagnosticar
       
-      // Configuración de detección de idioma
+      // Configuración de detección de idioma mejorada
       detection: {
-        order: ['localStorage', 'navigator'],
+        order: ['localStorage', 'navigator', 'htmlTag'],
         caches: ['localStorage'],
         lookupLocalStorage: 'netnautica-lang',
-        checkWhitelist: true
+        checkWhitelist: true,
+        // Mejorar la detección del navegador
+        convertDetectedLanguage: (lng) => {
+          // Convertir códigos de idioma complejos (es-ES -> es)
+          return lng.split('-')[0];
+        }
       },
       
       // Recursos de traducción
