@@ -47,7 +47,18 @@
     "customDevelopment": "Worldwide Connectivity",
     "growthMarketing": "Cybersecurity",
     "marketingAutomation": "AV System Integration",
-    "uxUi": "IoT & Video Surveillance"
+    "uxUi": "IoT & Video Surveillance",
+    "iot": {
+      "title": "IoT & Video Surveillance Systems",
+      "description": "Comprehensive automation with intelligent cabin control, lighting and secure camera access.",
+      "features": {
+        "automation": "Automation",
+        "smart": "Smart",
+        "cctv": "CCTV Coverage",
+        "degrees": "360 degrees"
+      },
+      "cta": "Contact Netnautica"
+    }
   },
   "legal": {
     "notice": "Legal notice",
@@ -78,6 +89,16 @@
     "invalidPhone": "Enter a valid phone",
     "consent": "I accept the privacy policy",
     "selectPlaceholder": "Select an option"
+  },
+  "search": {
+    "placeholder": "Search services and articles...",
+    "noResults": "No results found for",
+    "tryDifferent": "Try different keywords",
+    "services": "Services",
+    "blog": "Blog",
+    "title": "Search Netnautica",
+    "close": "Close search",
+    "open": "Open search"
   },
   "contact": {
     "title": "Tell us about your onboard project",
@@ -167,8 +188,8 @@
         "href": "/contact"
       },
       "secondaryCta": {
-        "label": "View portfolio",
-        "href": "/cases"
+        "label": "View blogs",
+        "href": "/blog"
       }
     },
     "framework": {
@@ -364,8 +385,8 @@
         "href": "/services"
       },
       "secondaryCta": {
-        "label": "View portfolio",
-        "href": "/cases"
+        "label": "View blogs",
+        "href": "/blog"
       }
     },
     "stats": [
@@ -406,7 +427,14 @@
         "eyebrow": "Services",
         "title": "Smart technology for seamless yachting",
         "description": "We integrate connectivity, cybersecurity, AV and IoT with a boutique telematics engineering team.",
-        "viewPortfolio": "View portfolio"
+        "primaryCta": {
+          "label": "Contact Netnautica",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "View blogs",
+          "href": "/blog"
+        }
       },
       "intro": {
         "title": "Onboard methodology",
@@ -442,6 +470,36 @@
         "specializedServices": "Specialized Services",
         "servicesDescription": "Comprehensive connectivity, cybersecurity, AV and IoT solutions designed specifically for the nautical environment and adapted to each vessel's needs.",
         "nextStep": "Next step"
+      },
+      "connectivity": {
+        "title": "Global Connectivity",
+        "description": "Multi-WAN architectures with Starlink, VSAT and 4G/5G for uninterrupted connectivity across any ocean.",
+        "features": {
+          "redundancy": "Automatic redundancy across multiple providers",
+          "starlink": "Certified Starlink maritime integration",
+          "peplink": "Peplink routers with link bonding"
+        },
+        "cta": "View connectivity"
+      },
+      "cybersecurity": {
+        "title": "Maritime Cybersecurity",
+        "description": "Zero Trust protection with Fortinet, network segmentation and 24/7 monitoring for critical assets.",
+        "features": {
+          "firewall": "AI-powered next-generation firewall",
+          "encryption": "End-to-end encryption on all data",
+          "monitoring": "SIEM monitoring and automated response"
+        },
+        "cta": "View cybersecurity"
+      },
+      "av": {
+        "title": "AV Integration",
+        "description": "Unified entertainment and control systems with Crestron for premium onboard experiences.",
+        "features": {
+          "crestron": "Crestron control with custom interfaces",
+          "distribution": "UHD 4K distribution across multiple zones",
+          "automation": "Integrated automation with smart home systems"
+        },
+        "cta": "View AV integration"
       },
       "support": {
         "title": "24/7 Support",
@@ -609,6 +667,57 @@
     "challenge": "Challenge",
     "solution": "Solution",
     "result": "Result"
+  },
+  "carousel": {
+    "eyebrow": "Featured Services",
+    "title": {
+      "line1": "Solutions that",
+      "line2": "make the difference"
+    },
+    "description": "Discover our most innovative solutions, designed specifically for the nautical environment",
+    "services": {
+      "connectivity": {
+        "title": "Global Connectivity",
+        "description": "Resilient Multi-WAN combining Starlink, 4G/5G and WiFi 6 to keep the yacht always online.",
+        "features": {
+          "redundancy": "Multi-WAN active redundancy",
+          "starlink": "Starlink+ satellite coverage",
+          "peplink": "Professional Peplink routers"
+        },
+        "cta": "View connectivity"
+      },
+      "cybersecurity": {
+        "title": "Maritime Cybersecurity",
+        "description": "Advanced protection with Fortinet, end-to-end encryption and 24/7 proactive monitoring.",
+        "features": {
+          "firewall": "Next-generation firewall",
+          "encryption": "Point-to-point encryption",
+          "monitoring": "Continuous monitoring"
+        },
+        "cta": "View cybersecurity"
+      },
+      "av": {
+        "title": "AV Integration",
+        "description": "Crestron entertainment and automation systems with HDMI distribution and unified control.",
+        "features": {
+          "crestron": "Crestron automation",
+          "distribution": "Professional HDMI distribution",
+          "automation": "Unified control"
+        },
+        "cta": "View AV integration"
+      },
+      "iot": {
+        "title": "IoT & Surveillance",
+        "description": "Smart automation, 360° CCTV and environmental control systems for maximum efficiency.",
+        "features": {
+          "automation": "Smart automation",
+          "smart": "Intelligent control",
+          "cctv": "360° CCTV",
+          "degrees": "360° coverage"
+        },
+        "cta": "View IoT & surveillance"
+      }
+    }
   },
   "errors": {
     "pageNotFound": "Page not found",

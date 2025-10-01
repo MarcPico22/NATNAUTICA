@@ -140,8 +140,8 @@
         "href": "/services"
       },
       "secondaryCta": {
-        "label": "Portfolio ansehen",
-        "href": "/cases"
+        "label": "Blogs ansehen",
+        "href": "/blog"
       }
     },
     "stats": [
@@ -182,7 +182,14 @@
         "eyebrow": "Services",
         "title": "Intelligente Technologie für reibungslose Navigation",
         "description": "Wir integrieren Konnektivität, Cybersicherheit, AV und IoT mit einem Boutique-Team für Telematik-Engineering.",
-        "viewPortfolio": "Portfolio ansehen"
+        "primaryCta": {
+          "label": "Netnautica kontaktieren",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Blogs ansehen",
+          "href": "/blog"
+        }
       },
       "intro": {
         "title": "Bordmethodik",
@@ -855,6 +862,57 @@
     "challenge": "Herausforderung",
     "solution": "Lösung",
     "result": "Ergebnis"
+  },
+  "carousel": {
+    "eyebrow": "Ausgewählte Dienstleistungen",
+    "title": {
+      "line1": "Lösungen die",
+      "line2": "den Unterschied machen"
+    },
+    "description": "Entdecken Sie unsere innovativsten Lösungen, speziell für die nautische Umgebung entwickelt",
+    "services": {
+      "connectivity": {
+        "title": "Globale Konnektivität",
+        "description": "Resilientes Multi-WAN kombiniert Starlink, 4G/5G und WiFi 6, um die Yacht immer online zu halten.",
+        "features": {
+          "redundancy": "Multi-WAN aktive Redundanz",
+          "starlink": "Starlink+ Satellitenabdeckung",
+          "peplink": "Professionelle Peplink-Router"
+        },
+        "cta": "Konnektivität ansehen"
+      },
+      "cybersecurity": {
+        "title": "Maritime Cybersicherheit",
+        "description": "Erweiterter Schutz mit Fortinet, Ende-zu-Ende-Verschlüsselung und 24/7 proaktive Überwachung.",
+        "features": {
+          "firewall": "Next-Generation-Firewall",
+          "encryption": "Punkt-zu-Punkt-Verschlüsselung",
+          "monitoring": "Kontinuierliche Überwachung"
+        },
+        "cta": "Cybersicherheit ansehen"
+      },
+      "av": {
+        "title": "AV-Integration",
+        "description": "Crestron Unterhaltungs- und Automatisierungssysteme mit HDMI-Verteilung und einheitlicher Steuerung.",
+        "features": {
+          "crestron": "Crestron-Automatisierung",
+          "distribution": "Professionelle HDMI-Verteilung",
+          "automation": "Einheitliche Steuerung"
+        },
+        "cta": "AV-Integration ansehen"
+      },
+      "iot": {
+        "title": "IoT & Überwachung",
+        "description": "Intelligente Automatisierung, 360° CCTV und Umweltsteuerungssysteme für maximale Effizienz.",
+        "features": {
+          "automation": "Intelligente Automatisierung",
+          "smart": "Intelligente Steuerung",
+          "cctv": "360° CCTV",
+          "degrees": "360° Abdeckung"
+        },
+        "cta": "IoT & Überwachung ansehen"
+      }
+    }
   },
   "errors": {
     "pageNotFound": "Seite nicht gefunden",

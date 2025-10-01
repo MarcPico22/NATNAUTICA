@@ -48,7 +48,18 @@
     "customDevelopment": "Worldwide Connectivity",
     "growthMarketing": "Cybersecurity",
     "marketingAutomation": "AV System Integration",
-    "uxUi": "IoT & Video Surveillance"
+    "uxUi": "IoT & Video Surveillance",
+    "iot": {
+      "title": "IoT & Systèmes de Vidéosurveillance",
+      "description": "Automatisation complète avec contrôle intelligent des cabines, éclairage et accès sécurisé aux caméras.",
+      "features": {
+        "automation": "Automatisation",
+        "smart": "Smart",
+        "cctv": "Couverture CCTV",
+        "degrees": "360 degrés"
+      },
+      "cta": "Contacter Netnautica"
+    }
   },
   "legal": {
     "notice": "Mentions légales",
@@ -79,6 +90,16 @@
     "invalidPhone": "Saisissez un téléphone valide",
     "consent": "J'accepte la politique de confidentialité",
     "selectPlaceholder": "Sélectionnez une option"
+  },
+  "search": {
+    "placeholder": "Rechercher services et articles...",
+    "noResults": "Aucun résultat trouvé pour",
+    "tryDifferent": "Essayez différents mots-clés",
+    "services": "Services",
+    "blog": "Blog",
+    "title": "Rechercher Netnautica",
+    "close": "Fermer la recherche",
+    "open": "Ouvrir la recherche"
   },
   "contact": {
     "title": "Parlez-nous de votre projet à bord",
@@ -141,8 +162,8 @@
         "href": "/services"
       },
       "secondaryCta": {
-        "label": "Voir le portfolio",
-        "href": "/cases"
+        "label": "Voir les blogs",
+        "href": "/blog"
       }
     },
     "stats": [
@@ -183,7 +204,14 @@
         "eyebrow": "Services",
         "title": "Technologie intelligente pour navigation fluide",
         "description": "Nous integrons connectivite, cybersecurite, AV et IoT avec une equipe boutique d'ingenierie telematique.",
-        "viewPortfolio": "Voir le portfolio"
+        "primaryCta": {
+          "label": "Contacter Netnautica",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Voir les blogs",
+          "href": "/blog"
+        }
       },
       "intro": {
         "title": "Methodologie a bord",
@@ -219,6 +247,36 @@
         "specializedServices": "Services specialises", 
         "servicesDescription": "Solutions completes de connectivite, cybersecurite, AV et IoT concues specifiquement pour l'environnement nautique et adaptees aux besoins de chaque navire.",
         "nextStep": "Prochaine etape"
+      },
+      "connectivity": {
+        "title": "Connectivite Globale",
+        "description": "Architectures multi-WAN avec Starlink, VSAT et 4G/5G pour une connectivite ininterrompue dans n'importe quel ocean.",
+        "features": {
+          "redundancy": "Redondance automatique entre plusieurs fournisseurs",
+          "starlink": "Integration Starlink maritime certifiee",
+          "peplink": "Routeurs Peplink avec bonding de liens"
+        },
+        "cta": "Voir connectivite"
+      },
+      "cybersecurity": {
+        "title": "Cybersecurite Maritime",
+        "description": "Protection Zero Trust avec Fortinet, segmentation reseau et surveillance 24/7 pour les actifs critiques.",
+        "features": {
+          "firewall": "Pare-feu nouvelle generation avec IA",
+          "encryption": "Chiffrement de bout en bout sur toutes les donnees",
+          "monitoring": "Surveillance SIEM et reponse automatique"
+        },
+        "cta": "Voir cybersecurite"
+      },
+      "av": {
+        "title": "Integration AV",
+        "description": "Systemes de divertissement et de controle unifies avec Crestron pour des experiences premium a bord.",
+        "features": {
+          "crestron": "Controle Crestron avec interfaces personnalisees",
+          "distribution": "Distribution UHD 4K sur plusieurs zones",
+          "automation": "Automatisation integree avec systemes domotiques"
+        },
+        "cta": "Voir integration AV"
       },
       "support": {
         "title": "Support 24/7",
@@ -860,6 +918,57 @@
     "challenge": "Défi",
     "solution": "Solution",
     "result": "Résultat"
+  },
+  "carousel": {
+    "eyebrow": "Services en Vedette",
+    "title": {
+      "line1": "Solutions qui",
+      "line2": "font la différence"
+    },
+    "description": "Découvrez nos solutions les plus innovantes, conçues spécifiquement pour l'environnement nautique",
+    "services": {
+      "connectivity": {
+        "title": "Connectivité Globale",
+        "description": "Multi-WAN résilient combinant Starlink, 4G/5G et WiFi 6 pour maintenir le yacht toujours connecté.",
+        "features": {
+          "redundancy": "Redondance active Multi-WAN",
+          "starlink": "Couverture satellitaire Starlink+",
+          "peplink": "Routeurs Peplink professionnels"
+        },
+        "cta": "Voir connectivité"
+      },
+      "cybersecurity": {
+        "title": "Cybersécurité Maritime",
+        "description": "Protection avancée avec Fortinet, chiffrement de bout en bout et surveillance proactive 24/7.",
+        "features": {
+          "firewall": "Pare-feu nouvelle génération",
+          "encryption": "Chiffrement point à point",
+          "monitoring": "Surveillance continue"
+        },
+        "cta": "Voir cybersécurité"
+      },
+      "av": {
+        "title": "Intégration AV",
+        "description": "Systèmes de divertissement et d'automatisation Crestron avec distribution HDMI et contrôle unifié.",
+        "features": {
+          "crestron": "Automatisation Crestron",
+          "distribution": "Distribution HDMI professionnelle",
+          "automation": "Contrôle unifié"
+        },
+        "cta": "Voir intégration AV"
+      },
+      "iot": {
+        "title": "IoT & Surveillance",
+        "description": "Automatisation intelligente, CCTV 360° et systèmes de contrôle environnemental pour efficacité maximale.",
+        "features": {
+          "automation": "Automatisation intelligente",
+          "smart": "Contrôle intelligent",
+          "cctv": "CCTV 360°",
+          "degrees": "Couverture 360°"
+        },
+        "cta": "Voir IoT & surveillance"
+      }
+    }
   },
   "errors": {
     "pageNotFound": "Page non trouvée",

@@ -17,6 +17,7 @@ import { Badge } from '@/components/ui/Badge';        // 🏷️ Etiquetas categ
 import { Icon } from '@/components/ui/Icon';          // 🔣 Iconos SVG
 import { SectionHeader } from '@/components/common/SectionHeader'; // 📄 Encabezados
 import ServicesErrorBoundary from '@/components/common/ServicesErrorBoundary'; // 🛡️ Error boundary específico
+import { ServicesCarousel } from '@/components/services/ServicesCarousel'; // 🎠 Carrusel servicios destacados
 
 // 📊 Datos de servicios
 import { services, servicesPageContent } from '@/data/services'; // 🔧 Lista servicios + contenido página
@@ -100,12 +101,12 @@ const ServicesPage = () => {
             <Button as={Link} to={pageContent.hero.primaryCta.href} size="lg">
               {pageContent.hero.primaryCta.label}
             </Button>
-            <Button as={Link} to={pageContent.hero.secondaryCta.href} variant="secondary" size="lg">
-              {pageContent.hero.secondaryCta.label}
-            </Button>
           </motion.div>
         </div>
       </motion.section>
+
+      {/* 🎠 CARRUSEL DE SERVICIOS DESTACADOS */}
+      <ServicesCarousel />
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeader
@@ -225,9 +226,6 @@ const ServicesPage = () => {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button as={Link} to={pageContent.cta.primaryCta.href} size="lg">
                   {pageContent.cta.primaryCta.label}
-                </Button>
-                <Button as={Link} to={pageContent.hero.secondaryCta.href} variant="secondary" size="lg">
-                  {pageContent.hero.secondaryCta.label}
                 </Button>
               </div>
             </div>
