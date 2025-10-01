@@ -49,6 +49,13 @@ html {
     @apply mb-1;
   }
 
+  .hero-bg {
+    background-image: url('/src/assets/yate.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1);
+  }
+
   .featured-image {
     @apply my-6 w-full rounded-xl shadow-lg;
   }

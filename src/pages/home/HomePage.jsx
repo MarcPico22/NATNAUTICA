@@ -119,19 +119,19 @@ const HomePage = () => {
           🎭 SECCIÓN HERO (Encabezado principal)
           ======================================== */}
       <motion.section 
-        className="relative overflow-hidden bg-white dark:bg-slate-950 py-20 text-slate-900 dark:text-white sm:py-28"
+        className="relative overflow-hidden py-20 text-white sm:py-28 hero-bg"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        {/* 🌊 Fondo con gradiente radial (efecto visual) */}
-        <div
-          className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(65,172,194,0.12),_transparent_55%)] dark:bg-[radial-gradient(circle_at_top,_rgba(65,172,194,0.28),_transparent_55%)]"
-          aria-hidden="true"
-        />
+        {/* 🌊 Overlay para mejorar legibilidad del texto */}
+        <div className="absolute inset-0 -z-10" aria-hidden="true">
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-black/40 to-transparent" />
+        </div>
         
         {/* 📐 Grid responsivo: 1 columna móvil, 2 columnas desktop */}
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:px-8">
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:px-8 relative z-10">
           {/* 📝 Columna izquierda: Contenido textual */}
           <motion.div 
             className="flex flex-col gap-6"
@@ -250,17 +250,130 @@ const HomePage = () => {
       </motion.section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <SectionHeader
-          eyebrow={servicesSection.eyebrow}
-          title={servicesSection.title}
-          description={servicesSection.description}
-          alignment="center"
-          className="mx-auto max-w-3xl"
-        />
+        <div className="flex flex-col gap-4 text-center mx-auto max-w-3xl">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">Servicios</span>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white sm:text-3xl">Cuatro pilares para una experiencia perfecta a bordo</h2>
+          <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">Conectividad global, ciberseguridad, integración AV y IoT &amp; videovigilancia desplegados como un único ecosistema, diseñado para tripulación e invitados.</p>
+        </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {featuredServices.map((service) => (
-            <ServiceCard key={service.id} service={service} language={language} />
-          ))}
+          <Link className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900" to="/services/conectividad-global-yates">
+            <div className="flex items-start gap-4">
+              <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition group-hover:bg-brand-500 group-hover:text-white dark:bg-brand-500/10 dark:text-brand-200">
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5" fill="none"></circle>
+                  <path d="M4 12h16" stroke="currentColor" strokeWidth="1.5"></path>
+                  <path d="M12 4c-2 3-2 13 0 16 2-3 2-13 0-16Z" stroke="currentColor" strokeWidth="1.5" fill="none"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Conectividad Global</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Multi-WAN resiliente que combina Starlink, 4G/5G y WiFi 6 para mantener el yate siempre en línea.</p>
+              </div>
+            </div>
+            <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Multi-WAN inteligente</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>WiFi 6 premium</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Gestión remota 24/7</span>
+              </li>
+            </ul>
+          </Link>
+          <Link className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900" to="/services/ciberseguridad-yates">
+            <div className="flex items-start gap-4">
+              <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition group-hover:bg-brand-500 group-hover:text-white dark:bg-brand-500/10 dark:text-brand-200">
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true">
+                  <path d="M12 3 5 6v6c0 4.2 3.6 7.8 7 9 3.4-1.2 7-4.8 7-9V6l-7-3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" fill="none"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Ciberseguridad</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Perímetros digitales robustos con firewalls de nueva generación, segmentación y auditorías periódicas.</p>
+              </div>
+            </div>
+            <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Firewalls NGFW</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Segmentación avanzada</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Hardening IoT</span>
+              </li>
+            </ul>
+          </Link>
+          <Link className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900" to="/services/integracion-av-yates">
+            <div className="flex items-start gap-4">
+              <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition group-hover:bg-brand-500 group-hover:text-white dark:bg-brand-500/10 dark:text-brand-200">
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true">
+                  <path d="M12 2.5 9.9 7.4 4 8.1l4.8 3.7L7.5 18l4.5-2.8 4.5 2.8-1.3-6.2L20 8.1l-5.9-0.7L12 2.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" fill="none"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Integración AV</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Entretenimiento inmersivo con distribución 4K, audio zonificado y control domótico personalizado.</p>
+              </div>
+            </div>
+            <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Distribución 4K</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Audio por zonas</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Espacios polivalentes</span>
+              </li>
+            </ul>
+          </Link>
+          <Link className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900" to="/services/iot-vigilancia-yates">
+            <div className="flex items-start gap-4">
+              <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition group-hover:bg-brand-500 group-hover:text-white dark:bg-brand-500/10 dark:text-brand-200">
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5" fill="none"></circle>
+                  <path d="M12 5V3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
+                  <path d="M12 21v-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
+                  <path d="m7.1 7.1-1.4-1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
+                  <path d="m18.3 18.3-1.4-1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
+                  <path d="M5 12H3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
+                  <path d="M21 12h-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
+                  <path d="m7.1 16.9-1.4 1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
+                  <path d="m18.3 5.7-1.4 1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">IoT y Sistemas de Videovigilancia</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Automatización integral con control inteligente de cabinas, iluminación y cámaras con acceso seguro.</p>
+              </div>
+            </div>
+            <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Plataforma centralizada</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Cabinas personalizadas</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                <span>Vigilancia avanzada</span>
+              </li>
+            </ul>
+          </Link>
         </div>
       </section>
 
