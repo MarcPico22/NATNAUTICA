@@ -155,27 +155,6 @@ const ServiceDetailPage = () => {
               ))}
             </ol>
           </div>
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg dark:border-slate-800 dark:bg-slate-900">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-500">Caso real</h3>
-            <p className="mt-3 text-lg font-semibold text-slate-900 dark:text-white">{locale.caseStudy.company}</p>
-            <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-              <p>
-                <strong className="block text-slate-800 dark:text-slate-100">Reto</strong>
-                {locale.caseStudy.challenge}
-              </p>
-              <p>
-                <strong className="block text-slate-800 dark:text-slate-100">Solucion</strong>
-                {locale.caseStudy.solution}
-              </p>
-              <p>
-                <strong className="block text-slate-800 dark:text-slate-100">Resultado</strong>
-                {locale.caseStudy.result}
-              </p>
-            </div>
-            <Button as={Link} to="/cases" className="mt-6" variant="secondary">
-              {t('actions.viewAll')}
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -202,17 +181,13 @@ const ServiceDetailPage = () => {
           <h2 className="text-3xl font-semibold sm:text-4xl">{locale.hero.tagline}</h2>
           <p className="mt-4 max-w-2xl text-base text-white/80">{locale.hero.description}</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Button as={Link} to={locale.hero.primaryCta.href} size="lg">
-              {locale.hero.primaryCta.label}
-            </Button>
             <Button
               as={Link}
-              to="/contact"
-              variant="secondary"
+              to={locale.hero.primaryCta.href}
               size="lg"
-              className="!bg-white/10 !text-white hover:!bg-white/20"
+              className="!bg-white !text-blue-600 hover:!bg-blue-50 hover:!text-blue-700 !shadow-lg hover:!shadow-xl"
             >
-              {t('actions.requestQuote')}
+              {locale.hero.primaryCta.label}
             </Button>
           </div>
         </div>
