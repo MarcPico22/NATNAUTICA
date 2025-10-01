@@ -199,18 +199,24 @@ const ContactPage = () => {
     <ContactErrorBoundary>
       <Seo title={t('contact.title')} description={t('contact.subtitle')} />
       <motion.section 
-        className="mx-auto grid max-w-6xl gap-12 px-4 pb-24 pt-24 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8"
+        className="relative overflow-hidden contact-hero-bg text-white"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
+        {/* 🌊 Overlay para mejorar legibilidad del texto */}
+        <div className="absolute inset-0 -z-10" aria-hidden="true">
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-black/40 to-transparent" />
+        </div>
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 pb-24 pt-24 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 relative z-10">
         <motion.div 
           className="space-y-8"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <SectionHeader title={t('contact.title')} description={t('contact.subtitle')} />
+          <SectionHeader title={t('contact.title')} description={t('contact.subtitle')} className="contact-section-header" />
           <motion.div 
             className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
             initial={{ opacity: 0, y: 20 }}
@@ -392,6 +398,7 @@ const ContactPage = () => {
             </div>
           )}
         </form>
+        </div>
       </motion.section>
     </ContactErrorBoundary>
   );

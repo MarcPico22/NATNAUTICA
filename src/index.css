@@ -53,7 +53,7 @@ html {
     background-image: url('/src/assets/yate.jpg');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.6);
+    filter: brightness(1);
   }
 
   .services-hero-bg {
@@ -61,6 +61,21 @@ html {
     background-size: cover;
     background-position: center;
     filter: brightness(1);
+  }
+
+  .contact-hero-bg {
+    background-image: url('/public/images/blog/oceano.webp');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1);
+  }
+
+  .contact-section-header h2 {
+    color: white !important;
+  }
+
+  .contact-section-header p {
+    color: rgba(255, 255, 255, 0.9) !important;
   }
 
   .featured-image {
