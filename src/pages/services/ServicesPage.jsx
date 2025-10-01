@@ -59,15 +59,16 @@ const ServicesPage = () => {
     <ServicesErrorBoundary>
       <Seo title={pageContent.hero.title} description={pageContent.hero.description} structuredData={structuredData} />
       <motion.section 
-        className="relative overflow-hidden pb-20 pt-24"
+        className="relative overflow-hidden pb-20 pt-24 services-hero-bg text-white"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div
-          className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 via-transparent to-transparent dark:from-brand-500/10"
-          aria-hidden="true"
-        />
+        {/* 🌊 Overlay para mejorar legibilidad del texto */}
+        <div className="absolute inset-0 -z-10" aria-hidden="true">
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-black/40 to-transparent" />
+        </div>
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -77,7 +78,7 @@ const ServicesPage = () => {
             <Badge>{pageContent.hero.eyebrow}</Badge>
           </motion.div>
           <motion.h1 
-            className="text-[clamp(2.4rem,5vw,3.8rem)] font-semibold leading-tight text-slate-900 dark:text-white"
+            className="text-[clamp(2.4rem,5vw,3.8rem)] font-semibold leading-tight text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -85,7 +86,7 @@ const ServicesPage = () => {
             {pageContent.hero.title}
           </motion.h1>
           <motion.p 
-            className="text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg"
+            className="text-base leading-7 text-white/90 sm:text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}

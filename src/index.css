@@ -53,6 +53,13 @@ html {
     background-image: url('/src/assets/yate.jpg');
     background-size: cover;
     background-position: center;
+    filter: brightness(0.6);
+  }
+
+  .services-hero-bg {
+    background-image: url('/public/images/blog/mastil.jpg');
+    background-size: cover;
+    background-position: center;
     filter: brightness(1);
   }
 
