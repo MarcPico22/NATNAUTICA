@@ -5,7 +5,7 @@ export function Logo({ className = '' }) {
   return (
     <Link to="/" className={`group inline-flex items-center ${className}`}>
       <img
-        src="/src/assets/netnautica-logo.png"
+        src="/images/netnautica-logo.png"
         alt={SITE_NAME}
         className="h-10 w-auto"
       />

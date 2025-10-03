@@ -141,7 +141,7 @@ const HomePage = () => {
           >
             {/* 🏷️ Logo de la empresa */}
             <motion.img
-              src="/src/assets/logo.png"
+              src="/images/logo.png"
               alt={SITE_NAME}
               className="mb-6 h-16 w-auto"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -394,7 +394,7 @@ const HomePage = () => {
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <img
-                        src={`/src/assets/tech/${partner.name.toLowerCase() === 'ubiquiti' ? 'unifi' : partner.name.toLowerCase()}.${partner.name.toLowerCase() === 'peplink' ? 'png' : 'svg'}`}
+                        src={`/images/tech/${partner.name.toLowerCase() === 'ubiquiti' ? 'unifi' : partner.name.toLowerCase()}.${partner.name.toLowerCase() === 'peplink' ? 'png' : 'svg'}`}
                         alt={partner.name}
                         className="h-8 w-8 object-contain dark:brightness-0 dark:invert"
                       />
