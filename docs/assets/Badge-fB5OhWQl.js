@@ -1,0 +1,1 @@
+import{j as t}from"./animations-DS2FomTf.js";function n({children:e,className:r=""}){return t.jsx("span",{className:`inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-600 dark:bg-brand-500/10 dark:text-brand-200 ${r}`,children:e})}export{n as B};
