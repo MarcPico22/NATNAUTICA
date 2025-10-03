@@ -66,6 +66,13 @@
     "privacy": "Confidentialité",
     "cookies": "Cookies"
   },
+  "cookies": {
+    "title": "Utilisation des Cookies",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et personnaliser le contenu. En continuant à naviguer, vous acceptez notre utilisation des cookies.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "manage": "Gérer"
+  },
   "social": {
     "linkedin": "LinkedIn",
     "twitter": "X/Twitter",

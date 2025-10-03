@@ -65,6 +65,13 @@
     "privacy": "Privacy",
     "cookies": "Cookies"
   },
+  "cookies": {
+    "title": "Cookie Usage",
+    "description": "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By continuing to browse, you accept our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "manage": "Manage"
+  },
   "social": {
     "linkedin": "LinkedIn",
     "twitter": "X/Twitter",

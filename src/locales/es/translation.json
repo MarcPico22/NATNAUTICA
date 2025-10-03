@@ -354,6 +354,13 @@
     "privacy": "Privacidad",
     "cookies": "Cookies"
   },
+  "cookies": {
+    "title": "Uso de Cookies",
+    "description": "Utilizamos cookies para mejorar tu experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Al continuar navegando, aceptas nuestro uso de cookies.",
+    "accept": "Aceptar",
+    "decline": "Rechazar",
+    "manage": "Gestionar"
+  },
   "social": {
     "linkedin": "LinkedIn",
     "twitter": "X/Twitter",

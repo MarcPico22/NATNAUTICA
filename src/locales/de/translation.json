@@ -54,6 +54,13 @@
     "privacy": "Datenschutz",
     "cookies": "Cookies"
   },
+  "cookies": {
+    "title": "Cookie-Nutzung",
+    "description": "Wir verwenden Cookies, um Ihr Browsing-Erlebnis zu verbessern, den Website-Traffic zu analysieren und Inhalte zu personalisieren. Durch die weitere Nutzung akzeptieren Sie unsere Cookie-Verwendung.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "manage": "Verwalten"
+  },
   "social": {
     "linkedin": "LinkedIn",
     "twitter": "X/Twitter",
