@@ -429,6 +429,28 @@
       "title": "Four pillars for a seamless onboard experience",
       "description": "Worldwide connectivity, cybersecurity, AV integration and IoT & surveillance are deployed as a single ecosystem, designed for crew and guests."
     },
+    "featuredServices": {
+      "connectivity": {
+        "title": "Global Connectivity",
+        "description": "Resilient multi-WAN combining Starlink, 4G/5G and WiFi 6 to keep the yacht always online.",
+        "features": ["Intelligent multi-WAN", "Premium WiFi 6", "24/7 remote management"]
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Robust digital perimeters with next-generation firewalls, segmentation and periodic audits.",
+        "features": ["NGFW Firewalls", "Advanced segmentation", "IoT hardening"]
+      },
+      "avIntegration": {
+        "title": "AV Integration",
+        "description": "Immersive entertainment with 4K distribution, zoned audio and personalized home automation control.",
+        "features": ["4K distribution", "Zone audio", "Multipurpose spaces"]
+      },
+      "iotSurveillance": {
+        "title": "IoT and Video Surveillance Systems",
+        "description": "Comprehensive automation with intelligent cabin control, lighting and cameras with secure access.",
+        "features": ["Centralized platform", "Custom cabins", "Advanced surveillance"]
+      }
+    },
     "servicesPageContent": {
       "hero": {
         "eyebrow": "Services",

@@ -206,6 +206,28 @@
       "title": "Quatre piliers pour une experience fluide",
       "description": "Connectivite mondiale, cybersurveillance, integration AV et IoT deployes comme un ecosysteme unique pour equipage et invites."
     },
+    "featuredServices": {
+      "connectivity": {
+        "title": "Connectivité Globale",
+        "description": "Multi-WAN résilient combinant Starlink, 4G/5G et WiFi 6 pour maintenir le yacht toujours en ligne.",
+        "features": ["Multi-WAN intelligent", "WiFi 6 premium", "Gestion 24/7 à distance"]
+      },
+      "cybersecurity": {
+        "title": "Cybersécurité",
+        "description": "Périmètres numériques robustes avec pare-feu nouvelle génération, segmentation et audits périodiques.",
+        "features": ["Pare-feu NGFW", "Segmentation avancée", "Durcissement IoT"]
+      },
+      "avIntegration": {
+        "title": "Intégration AV",
+        "description": "Divertissement immersif avec distribution 4K, audio zoné et contrôle domotique personnalisé.",
+        "features": ["Distribution 4K", "Audio par zones", "Espaces polyvalents"]
+      },
+      "iotSurveillance": {
+        "title": "IoT et Systèmes de Vidéosurveillance",
+        "description": "Automatisation complète avec contrôle intelligent des cabines, éclairage et caméras avec accès sécurisé.",
+        "features": ["Plateforme centralisée", "Cabines personnalisées", "Surveillance avancée"]
+      }
+    },
     "servicesPageContent": {
       "hero": {
         "eyebrow": "Services",

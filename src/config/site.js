@@ -18,22 +18,22 @@ export const SUPPORTED_LANGUAGES = [
 export const CONTACT_DETAILS = {
   email: 'cliente@netnautica.es',
   phone: {
-    es: '+34 900 123 456',
-    en: '+34 900 123 456',
-    fr: '+34 900 123 456',
-    de: '+34 900 123 456'
+    es: '+34 606 765 068',
+    en: '+34 606 765 068',
+    fr: '+34 606 765 068',
+    de: '+34 606 765 068'
   },
   whatsapp: {
-    es: '+34 600 123 456',
-    en: '+34 600 123 456',
-    fr: '+34 600 123 456',
-    de: '+34 600 123 456'
+    es: '+34 606 765 068',
+    en: '+34 606 765 068',
+    fr: '+34 606 765 068',
+    de: '+34 606 765 068'
   },
   address: {
-    es: 'Passeig de Gracia 21, 08007 Barcelona, España',
-    en: 'Passeig de Gracia 21, 08007 Barcelona, Spain',
-    fr: 'Passeig de Gracia 21, 08007 Barcelona, Espagne',
-    de: 'Passeig de Gracia 21, 08007 Barcelona, Spanien'
+    es: 'Palma de Mallorca, España',
+    en: 'Palma de Mallorca, Spain',
+    fr: 'Palma de Mallorca, Espagne',
+    de: 'Palma de Mallorca, Spanien'
   },
   schedule: {
     es: 'Lunes a Viernes de 9:00 a 18:00',

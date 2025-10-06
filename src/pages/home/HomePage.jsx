@@ -1,10 +1,13 @@
-﻿// ========================================
-// 🏠 PÁGINA DE INICIO - LANDING PRINCIPAL
-// ========================================
-// Página principal de Netnautica con hero, servicios, stats, casos y CTA
-// Implementa internacionalización completa (ES/EN/FR/DE)
-// Incluye Schema.org para SEO y structured data
-// Modificar secciones aquí afecta la primera impresión del sitio
+﻿// ===================================  // 🔧️ Helper function para obtener features de manera segura
+  const getServiceFeatures = (serviceKey) => {
+    try {
+      const features = t(`home.featuredServices.${serviceKey}.features`, { returnObjects: true });
+      return Array.isArray(features) ? features : [];
+    } catch (error) {
+      console.warn(`Error loading features for ${serviceKey}:`, error);
+      return [];
+    }
+  };
 
 import { Link } from 'react-router-dom';              // 🔗 Navegación SPA
 import { useTranslation } from 'react-i18next';      // 🌍 Hook internacionalización
@@ -35,6 +38,17 @@ const HomePage = () => {
   // 🌍 Hooks de internacionalización
   const { i18n, t } = useTranslation();
   const language = i18n.language;                     // Idioma actual (es/en/fr/de)
+  
+  // 🛠️ Helper function para obtener features de manera segura
+  const getServiceFeatures = (serviceKey) => {
+    try {
+      const features = t(`featuredServices.${serviceKey}.features`, { returnObjects: true });
+      return Array.isArray(features) ? features : [];
+    } catch (error) {
+      console.warn(`Error loading features for ${serviceKey}:`, error);
+      return [];
+    }
+  };
   
   // 📊 Obtener contenido localizado para el idioma activo
   const content = getLocaleContent(homeContent, language);
@@ -251,11 +265,12 @@ const HomePage = () => {
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 text-center mx-auto max-w-3xl">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">Servicios</span>
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white sm:text-3xl">Cuatro pilares para una experiencia perfecta a bordo</h2>
-          <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">Conectividad global, ciberseguridad, integración AV y IoT &amp; videovigilancia desplegados como un único ecosistema, diseñado para tripulación e invitados.</p>
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">{t('home.servicesSection.eyebrow')}</span>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white sm:text-3xl">{t('home.servicesSection.title')}</h2>
+          <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">{t('home.servicesSection.description')}</p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {/* Conectividad Global */}
           <Link className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900" to="/services/conectividad-global-yates">
             <div className="flex items-start gap-4">
               <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition group-hover:bg-brand-500 group-hover:text-white dark:bg-brand-500/10 dark:text-brand-200">
@@ -266,25 +281,21 @@ const HomePage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Conectividad Global</h3>
-                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Multi-WAN resiliente que combina Starlink, 4G/5G y WiFi 6 para mantener el yate siempre en línea.</p>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('home.featuredServices.connectivity.title')}</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{t('home.featuredServices.connectivity.description')}</p>
               </div>
             </div>
             <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Multi-WAN inteligente</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>WiFi 6 premium</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Gestión remota 24/7</span>
-              </li>
+              {getServiceFeatures('connectivity').map((feature, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                  <span>{feature}</span>
+                </li>
+              ))}
             </ul>
           </Link>
+          
+          {/* Ciberseguridad */}
           <Link className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900" to="/services/ciberseguridad-yates">
             <div className="flex items-start gap-4">
               <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition group-hover:bg-brand-500 group-hover:text-white dark:bg-brand-500/10 dark:text-brand-200">
@@ -293,25 +304,21 @@ const HomePage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Ciberseguridad</h3>
-                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Perímetros digitales robustos con firewalls de nueva generación, segmentación y auditorías periódicas.</p>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('home.featuredServices.cybersecurity.title')}</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{t('home.featuredServices.cybersecurity.description')}</p>
               </div>
             </div>
             <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Firewalls NGFW</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Segmentación avanzada</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Hardening IoT</span>
-              </li>
+              {getServiceFeatures('cybersecurity').map((feature, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                  <span>{feature}</span>
+                </li>
+              ))}
             </ul>
           </Link>
+          
+          {/* Integración AV */}
           <Link className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900" to="/services/integracion-av-yates">
             <div className="flex items-start gap-4">
               <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition group-hover:bg-brand-500 group-hover:text-white dark:bg-brand-500/10 dark:text-brand-200">
@@ -320,25 +327,21 @@ const HomePage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Integración AV</h3>
-                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Entretenimiento inmersivo con distribución 4K, audio zonificado y control domótico personalizado.</p>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('home.featuredServices.avIntegration.title')}</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{t('home.featuredServices.avIntegration.description')}</p>
               </div>
             </div>
             <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Distribución 4K</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Audio por zonas</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Espacios polivalentes</span>
-              </li>
+              {getServiceFeatures('avIntegration').map((feature, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                  <span>{feature}</span>
+                </li>
+              ))}
             </ul>
           </Link>
+          
+          {/* IoT y Videovigilancia */}
           <Link className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900" to="/services/iot-vigilancia-yates">
             <div className="flex items-start gap-4">
               <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition group-hover:bg-brand-500 group-hover:text-white dark:bg-brand-500/10 dark:text-brand-200">
@@ -355,23 +358,17 @@ const HomePage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">IoT y Sistemas de Videovigilancia</h3>
-                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Automatización integral con control inteligente de cabinas, iluminación y cámaras con acceso seguro.</p>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('home.featuredServices.iotSurveillance.title')}</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{t('home.featuredServices.iotSurveillance.description')}</p>
               </div>
             </div>
             <ul className="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Plataforma centralizada</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Cabinas personalizadas</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
-                <span>Vigilancia avanzada</span>
-              </li>
+              {getServiceFeatures('iotSurveillance').map((feature, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+                  <span>{feature}</span>
+                </li>
+              ))}
             </ul>
           </Link>
         </div>

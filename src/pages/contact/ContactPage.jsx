@@ -223,14 +223,18 @@ const ContactPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-white">{CONTACT_DETAILS.email}</h3>
+            {/* <h3 className="text-sm font-semibold text-slate-900 dark:text-white">{CONTACT_DETAILS.email}</h3>
             <a className="mt-2 block text-sm text-brand-600" href={`mailto:${CONTACT_DETAILS.email}`}>
               {CONTACT_DETAILS.email}
-            </a>
+            </a> */}
             <div className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-              <div>
+              {/* <div>
                 <span className="font-semibold text-slate-900 dark:text-white">{t('footer.phone')}:</span>{' '}
                                 <a href={`tel:${CONTACT_DETAILS.phone[language].replace(/\s+/g, '')}`}>{CONTACT_DETAILS.phone[language]}</a>
+              </div> */}
+              <div>
+                <span className="font-semibold text-slate-900 dark:text-white">Email:</span>{' '}
+                <a href={`mailto:${CONTACT_DETAILS.email}`}>{CONTACT_DETAILS.email}</a>
               </div>
               <div>
                 <span className="font-semibold text-slate-900 dark:text-white">WhatsApp:</span>{' '}
@@ -240,10 +244,10 @@ const ContactPage = () => {
                 <span className="font-semibold text-slate-900 dark:text-white">{t('footer.address')}:</span>{' '}
                 {CONTACT_DETAILS.address[language]}
               </div>
-              <div>
+              {/* <div>
                 <span className="font-semibold text-slate-900 dark:text-white">{t('footer.schedule')}:</span>{' '}
                 {CONTACT_DETAILS.schedule[language]}
-              </div>
+              </div> */}
             </div>
             <div className="mt-6 flex gap-3">
               {/* {Object.entries(SOCIAL_LINKS).map(([network, url]) => (

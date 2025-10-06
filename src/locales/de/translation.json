@@ -184,6 +184,28 @@
       "title": "Vier Säulen für ein reibungsloses Erlebnis",
       "description": "Globale Konnektivität, Cyberüberwachung, AV-Integration und IoT als einheitliches Ökosystem für Besatzung und Gäste."
     },
+    "featuredServices": {
+      "connectivity": {
+        "title": "Globale Konnektivität",
+        "description": "Widerstandsfähiges Multi-WAN mit Starlink, 4G/5G und WiFi 6, um die Yacht immer online zu halten.",
+        "features": ["Intelligentes Multi-WAN", "Premium WiFi 6", "24/7 Fernverwaltung"]
+      },
+      "cybersecurity": {
+        "title": "Cybersicherheit",
+        "description": "Robuste digitale Perimeter mit Next-Generation-Firewalls, Segmentierung und regelmäßigen Audits.",
+        "features": ["NGFW-Firewalls", "Erweiterte Segmentierung", "IoT-Härtung"]
+      },
+      "avIntegration": {
+        "title": "AV-Integration",
+        "description": "Immersive Unterhaltung mit 4K-Verteilung, zonierten Audio und personalisierter Hausautomation.",
+        "features": ["4K-Verteilung", "Zonen-Audio", "Mehrzweckräume"]
+      },
+      "iotSurveillance": {
+        "title": "IoT und Videoüberwachungssysteme",
+        "description": "Umfassende Automatisierung mit intelligenter Kabinensteuerung, Beleuchtung und Kameras mit sicherem Zugang.",
+        "features": ["Zentralisierte Plattform", "Personalisierte Kabinen", "Erweiterte Überwachung"]
+      }
+    },
     "servicesPageContent": {
       "hero": {
         "eyebrow": "Services",

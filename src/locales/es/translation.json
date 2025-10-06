@@ -46,6 +46,28 @@
       "title": "Cuatro pilares para una experiencia perfecta a bordo",
       "description": "Conectividad global, ciberseguridad, integración AV y IoT & videovigilancia desplegados como un único ecosistema, diseñado para tripulación e invitados."
     },
+    "featuredServices": {
+      "connectivity": {
+        "title": "Conectividad Global",
+        "description": "Multi-WAN resiliente que combina Starlink, 4G/5G y WiFi 6 para mantener el yate siempre en línea.",
+        "features": ["Multi-WAN inteligente", "WiFi 6 premium", "Gestión remota 24/7"]
+      },
+      "cybersecurity": {
+        "title": "Ciberseguridad",
+        "description": "Perímetros digitales robustos con firewalls de nueva generación, segmentación y auditorías periódicas.",
+        "features": ["Firewalls NGFW", "Segmentación avanzada", "Hardening IoT"]
+      },
+      "avIntegration": {
+        "title": "Integración AV",
+        "description": "Entretenimiento inmersivo con distribución 4K, audio zonificado y control domótico personalizado.",
+        "features": ["Distribución 4K", "Audio por zonas", "Espacios polivalentes"]
+      },
+      "iotSurveillance": {
+        "title": "IoT y Sistemas de Videovigilancia",
+        "description": "Automatización integral con control inteligente de cabinas, iluminación y cámaras con acceso seguro.",
+        "features": ["Plataforma centralizada", "Cabinas personalizadas", "Vigilancia avanzada"]
+      }
+    },
     "servicesPageContent": {
       "hero": {
         "eyebrow": "Servicios",

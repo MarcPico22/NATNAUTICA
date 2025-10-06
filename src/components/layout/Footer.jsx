@@ -27,12 +27,12 @@ export function Footer() {
                   {CONTACT_DETAILS.email}
                 </a>
               </div>
-              <div>
+              {/* <div>
                 <span className="font-semibold text-slate-700 dark:text-slate-200">{t('footer.phone')}:</span>{' '}
                 <a href={`tel:${CONTACT_DETAILS.phone[language].replace(/\s+/g, '')}`} className="hover:text-brand-600 dark:hover:text-brand-300">
                   {CONTACT_DETAILS.phone[language]}
                 </a>
-              </div>
+              </div> */}
               <div>
                 <span className="font-semibold text-slate-700 dark:text-slate-200">WhatsApp:</span>{' '}
                 <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp[language].replace(/[^0-9]/g, '')}`} className="hover:text-brand-600 dark:hover:text-brand-300">
@@ -43,10 +43,10 @@ export function Footer() {
                 <span className="font-semibold text-slate-700 dark:text-slate-200">{t('footer.address')}:</span>{' '}
                 <span>{CONTACT_DETAILS.address[language]}</span>
               </div>
-              <div>
+              {/* <div>
                 <span className="font-semibold text-slate-700 dark:text-slate-200">{t('footer.schedule')}:</span>{' '}
                 <span>{CONTACT_DETAILS.schedule[language]}</span>
-              </div>
+              </div> */}
             </div>
             <div className="flex gap-3 pt-2">
               <a
