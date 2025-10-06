@@ -73,3 +73,16 @@ Tras modificar datos o traducciones no es necesario reiniciar el servidor, Vite 
 - Integrar el formulario con CRM (HubSpot, Salesforce) o email transaccional.
 - Conectar analítica (GTM/GA4) dentro del proveedor preferido respetando el banner de consentimiento.
 - Sustituir las imágenes de Unsplash por activos propios optimizados para el negocio.
+
+
+## Subir cosas a la página
+npm install
+npm run build
+Remove-Item -Recurse -Force docs\* -ErrorAction SilentlyContinue
+Copy-Item -Recurse -Force dist\* docs\
+if (!(Test-Path docs\.nojekyll)) { New-Item docs\.nojekyll -ItemType File | Out-Null }
+Copy-Item CNAME docs\ -Force 2>$null
+git add .
+git commit -m "deploy from dist to docs"
+git push
+
