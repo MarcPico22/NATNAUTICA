@@ -16,7 +16,7 @@ export const SUPPORTED_LANGUAGES = [
 ];
 
 export const CONTACT_DETAILS = {
-  email: 'client@netnautica.com',
+  email: 'cliente@netnautica.com',
   phone: {
     es: '+34 900 123 456',
     en: '+34 900 123 456',
